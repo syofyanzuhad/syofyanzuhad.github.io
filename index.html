@@ -78,7 +78,7 @@
 	    </ul>
 	  </div>
 	</div>
-	</nav>
+
 	<!-- Akhir Navbar -->
 
 	<!-- Jumbotron -->
@@ -151,7 +151,7 @@
 		<div class="row mb-5">
 			<div class="col-sm-4">
 				<div class="card" >
-	  				<img src="img/portofolio/1.JPG" class="card-img-top img-thumbnail" alt="...">
+	  				<img src="img/portfolio/1.JPG" class="card-img-top img-thumbnail" alt="...">
 	  				<div class="card-body">
 	   				<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 	   				</div>
@@ -159,7 +159,7 @@
 			</div>
 			<div class="col-sm-4">
 				<div class="card" >
-	  				<img src="img/portofolio/2.JPG" class="card-img-top img-thumbnail" alt="...">
+	  				<img src="img/portfolio/2.JPG" class="card-img-top img-thumbnail" alt="...">
 	  				<div class="card-body">
 	   				<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 	   				</div>
@@ -167,7 +167,7 @@
 			</div>
 			<div class="col-sm-4">
 				<div class="card" >
-	  				<img src="img/portofolio/3.JPG" class="card-img-top img-thumbnail" alt="...">
+	  				<img src="img/portfolio/3.JPG" class="card-img-top img-thumbnail" alt="...">
 	  				<div class="card-body">
 	   				<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 	   				</div>
@@ -177,7 +177,7 @@
    		<div class="row">
 			<div class="col-sm-4">
 				<div class="card" >
-	  				<img src="img/portofolio/4.JPG" class="card-img-top img-thumbnail" alt="...">
+	  				<img src="img/portfolio/4.JPG" class="card-img-top img-thumbnail" alt="...">
 	  				<div class="card-body">
 	   				<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 	   				</div>
@@ -185,7 +185,7 @@
 			</div>
 			<div class="col-sm-4">
 				<div class="card" >
-	  				<img src="img/portofolio/5.JPG" class="card-img-top img-thumbnail" alt="...">
+	  				<img src="img/portfolio/5.JPG" class="card-img-top img-thumbnail" alt="...">
 	  				<div class="card-body">
 	   				<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 	   				</div>
@@ -193,7 +193,7 @@
 			</div>
 			<div class="col-sm-4">
 				<div class="card" >
-	  				<img src="img/portofolio/6.JPG" class="card-img-top img-thumbnail" alt="...">
+	  				<img src="img/portfolio/6.JPG" class="card-img-top img-thumbnail" alt="...">
 	  				<div class="card-body">
 	   				<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 	   				</div>
@@ -215,14 +215,14 @@
 		</div>
 			<div class="row justify-content-center">
 				<div class="col-md-6">
-				<form>
+				<form method="post" action="contact.php">
 				  <div class="form-group ">
 				  	<label for="name">Nama</label>
-				    <input type="name" class="form-control" id="name" placeholder="Enter your name">
+				    <input type="name" class="form-control" name="nama" id="name" placeholder="Enter your name">
 				   </div>	
 				   <div class="form-group">
 				    <label for="email">Email</label>
-				    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter your email">
+				    <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp" placeholder="Enter your email">
 				    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
 				  </div>
 				  <div class="form-group ">
@@ -233,7 +233,7 @@
 				    <input type="checkbox" class="form-check-input" id="exampleCheck1">
 				    <label class="form-check-label" for="exampleCheck1">Check me out</label>
 				  </div>
-				  <button type="submit" class="btn btn-success">Submit</button>
+				  <button type="submit" class="btn btn-success" name="kirim">Submit</button>
 				</form>
 				</div>
 			<div class="col-md-4 mb-2 mt-3">
@@ -280,16 +280,6 @@
     		var scroll = new SmoothScroll('a[href*="#section-"]');
     	});
     </script>
-<!--     <script src="js/script.js"></script>
-    <script type="text/javascript">
-    	$('.page-scroll').on('click', function(e) {
-		var tujuan = $(this).attr('href');
-		var elementujuan = $(tujuan);
-		$('body').animate({
-		scrollTop: elemenTujuan.offset().top - 50
-		}, 1000, 'easeInOutExpo');
-			console.log(elementujuan.offset().top-100);
-		e.preventDefault();
-		});</script> -->
+
   </body>
 </html>
