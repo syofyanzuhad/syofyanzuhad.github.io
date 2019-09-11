@@ -58,7 +58,6 @@
 		}
 
 		.overlay img {
-			transition: 0.5;
 			max-width: 70%;
 			margin: 5% 0;
 		}
@@ -81,6 +80,44 @@
 			text-decoration: unset;
 		}
 
+		.overlay .navig-n {
+			position: absolute;
+			top: 50%;
+			right: 10%;
+			color: white;
+		}
+
+		.overlay .navig-b {
+			position: absolute;
+			top: 50%;
+			left: 10%;
+			color: white;
+		}
+
+		@media (max-width:600px) {
+			.card {
+				margin-bottom: 3%;
+			}
+
+			.overlay img {
+				max-width: 90%;
+				margin: 30% 0;
+			}
+			.overlay .navig-n {
+				position: absolute;
+				margin-top: 22%;
+				right: 40%;
+				color: white;
+			}
+
+			.overlay .navig-b {
+				position: absolute;
+				margin-top: 22%;
+				left: 40%;
+				color: white;
+			}
+		}
+
 		@keyframes zoomfade {
 			0% {
 				transform: scale(0);
@@ -90,12 +127,6 @@
 				transform: scale(1);
 				opacity: 1;
 			}
-		}
-		
-		@media (max-width:600px) {
-		.overlay img {
-			max-width: 90%;
-			margin: 20% 0;
 		}
 	</style>
 
@@ -231,10 +262,13 @@
 						<a href="#img-1">
 							<img src="img/portofolio/1.JPG" class="card-img-top img-thumbnail" alt="Garden"> 
 						</a>
-						<div class="overlay" id="img-1">
-							<img src="img/portofolio/1.JPG" class="img-thumbnail" alt="Garden">
-							<a href="#img" class="closes"> <h2>X</h2></a>
-						</div>
+							<div class="overlay" id="img-1">
+								<a href="#img" class="closes"> <h2>X</h2></a>
+
+								<a href="#img-6" class="navig-b"> <h1> < </h1> </a>
+								<img src="img/portofolio/1.JPG" class="img-thumbnail" alt="Garden">
+								<a href="#img-2" class="navig-n"> <h1> > </h1> </a>
+							</div>
 						<div class="card-body">
 							<p class="card-text">Some quick example text to build on the card title and make up the bulk
 								of the card's content.</p>
@@ -247,10 +281,11 @@
 							<img src="img/portofolio/2.JPG" class="card-img-top img-thumbnail" alt="..."> 
 						</a>
 						<div class="overlay" id="img-2">
-							<img src="img/portofolio/2.JPG" class="img-thumbnail" alt="Garden">
-							<a href="#img" class="closes">
-								<h2>X</h2>
-							</a>
+							<a href="#img" class="closes"> <h2>X</h2> </a>
+
+							<a href="#img-1" class="navig-b"> <h1> < </h1> </a>
+							<img src="img/portofolio/2.JPG" class="img-thumbnail" alt="">
+							<a href="#img-3" class="navig-n"> <h1> > </h1> </a>	
 						</div>
 						<div class="card-body">
 							<p class="card-text">Some quick example text to build on the card title and make up the bulk
@@ -264,10 +299,11 @@
 							<img src="img/portofolio/3.JPG" class="card-img-top img-thumbnail" alt="..."> 
 						</a>
 						<div class="overlay" id="img-3">
-							<img src="img/portofolio/3.JPG" class="img-thumbnail" alt="Garden">
-							<a href="#img" class="closes">
-								<h2>X</h2>
-							</a>
+							<a href="#img" class="closes"> <h2>X</h2> </a>
+
+							<a href="#img-2" class="navig-b"> <h1> < </h1> </a>
+							<img src="img/portofolio/3.JPG" class="img-thumbnail" alt="">
+							<a href="#img-4" class="navig-n"> <h1> > </h1> </a>
 						</div>
 						<div class="card-body">
 							<p class="card-text">Some quick example text to build on the card title and make up the bulk
@@ -283,10 +319,12 @@
 							<img src="img/portofolio/4.JPG" class="card-img-top img-thumbnail" alt="..."> 
 						</a>
 						<div class="overlay" id="img-4">
-							<img src="img/portofolio/4.JPG" class="img-thumbnail" alt="Garden">
-							<a href="#img" class="closes">
-								<h2>X</h2>
-							</a>
+							<a href="#img" class="closes"> <h2>X</h2> </a>
+
+							<a href="#img-3" class="navig-b"> <h1> < </h1> </a>
+							<img src="img/portofolio/4.JPG" class="img-thumbnail" alt="">
+							<a href="#img-5" class="navig-n"> <h1> > </h1> </a>
+
 						</div>
 						<div class="card-body">
 							<p class="card-text">Some quick example text to build on the card title and make up the bulk
@@ -300,10 +338,11 @@
 							<img src="img/portofolio/5.JPG" class="card-img-top img-thumbnail" alt="..."> 
 						</a>
 						<div class="overlay" id="img-5">
-							<img src="img/portofolio/5.JPG" class="img-thumbnail" alt="Garden">
-							<a href="#img" class="closes">
-								<h2>X</h2>
-							</a>
+							<a href="#img" class="closes"> <h2>X</h2> </a>
+
+							<a href="#img-4" class="navig-b"> <h1> < </h1> </a>	
+							<img src="img/portofolio/5.JPG" class="img-thumbnail" alt="">
+							<a href="#img-6" class="navig-n"> <h1> > </h1> </a>
 						</div>
 						<div class="card-body">
 							<p class="card-text">Some quick example text to build on the card title and make up the bulk
@@ -317,10 +356,11 @@
 							<img src="img/portofolio/6.JPG" class="card-img-top img-thumbnail" alt="..."> 
 						</a>
 						<div class="overlay" id="img-6">
-							<img src="img/portofolio/6.JPG" class="img-thumbnail" alt="Garden">
-							<a href="#img" class="closes">
-								<h2>X</h2>
-							</a>
+							<a href="#img" class="closes"> <h2>X</h2> </a>
+
+							<a href="#img-5" class="navig-b"> <h1> < </h1> </a>
+							<img src="img/portofolio/6.JPG" class="img-thumbnail" alt="">
+							<a href="#img-1" class="navig-n"> <h1> > </h1> </a>
 						</div>
 						<div class="card-body">
 							<p class="card-text">Some quick example text to build on the card title and make up the bulk
