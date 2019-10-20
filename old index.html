@@ -1,0 +1,557 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<style type="text/css">
+		section {
+<<<<<<< HEAD
+			padding: 2% 1%;
+			min-height: 500px;
+		}
+
+		/*     	@media (min-width:300px) { */
+		.jumbotron {
+			height: 530px;
+			position: relative;
+			background: url("img/jumbotron.png") no-repeat center center;
+			background-color: black;
+			background-size: cover;
+			background-attachment: fixed;
+			background-position: -5rem 50px;
+			box-shadow: 2px 2px 20px 2px;
+			overflow: hidden;
+		}
+
+		hr {
+			/* box-shadow: 2px 3px 5px 0.5px rgba(0, 0, 0, 0.5); */
+			padding-bottom: 5%;
+			border-top: 1px solid black;
+		}
+
+		hr#jumbo {
+			width: 70%; 
+			border-color: grey;
+			margin: 0px 0px;
+			padding-bottom: 10px;
+		}
+
+=======
+			padding-bottom: 2%;
+			min-height: 500px;
+		}
+
+		hr {
+			border-width: 2px;
+			border-color: #333;
+			padding-bottom: 5px;
+		}
+
+		/*     	@media (min-width:300px) { */
+		.jumbotron {
+			position: relative;
+			background: url("img/jumbotron.png") no-repeat center center;
+			background-size: cover;
+			text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+		}
+
+>>>>>>> f67d4b22a977ab852566dfa19098c6a6a98c5af0
+		.nav-item .dropdown {
+			margin-left: 125px;
+		}
+
+		.overlay {
+			width: 0;
+			height: 0;
+			overflow: hidden;
+			position: fixed;
+			top : 0;
+			left: 0;
+			z-index: 999;
+			background-color: rgba(0, 0, 0, 0);
+			transition: 0.8s;
+			text-align: center;
+		}
+
+		.overlay:target {
+			width: auto;
+			height: auto;
+			bottom: 0;
+			right: 0;
+			background-color: rgba(0, 0, 0, 0.7);
+		}
+
+		.overlay img {
+			max-width: 70%;
+			margin: 5% 0;
+		}
+
+		.overlay:target img {
+			animation: zoomfade 1s;
+		}
+
+		.overlay .closes {
+			background-size: cover;
+			border-radius: 50%;
+			opacity: 0.5;
+			position: absolute;
+			top: 10%;
+			right: 5%;
+			color: white;
+		}
+
+		.overlay a:hover {
+			text-decoration: unset;
+		}
+
+		.overlay .navig-n {
+			position: absolute;
+			top: 50%;
+			right: 10%;
+			color: white;
+		}
+
+		.overlay .navig-b {
+			position: absolute;
+			top: 50%;
+			left: 10%;
+			color: white;
+		}
+
+		@media (max-width:600px) {
+<<<<<<< HEAD
+			.jumbotron {
+				background-position: 0% -10%;
+				height: 550px;
+				background-position: -43rem 13rem;
+			}
+
+			hr#jumbo {
+				width: 100%;
+			}		
+
+			.jumbotron img {
+				width: 60%;
+			}
+
+			.jumbotron h2{
+				font-size: 275%;
+			}
+
+=======
+>>>>>>> f67d4b22a977ab852566dfa19098c6a6a98c5af0
+			.card {
+				margin-bottom: 3%;
+			}
+
+			.overlay img {
+				max-width: 90%;
+				margin: 50% 0;
+			}
+			.overlay .navig-n {
+				position: absolute;
+				margin-top: 22%;
+				right: 40%;
+				color: white;
+			}
+
+			.overlay .navig-b {
+				position: absolute;
+				margin-top: 22%;
+				left: 40%;
+				color: white;
+			}
+			
+			section  {
+				padding-bottom: 3%;
+			}
+
+<<<<<<< HEAD
+			/* footer {
+				padding-bottom: 20%;
+			} */
+=======
+			footer {
+				padding-bottom: 20%;
+			}
+
+
+>>>>>>> f67d4b22a977ab852566dfa19098c6a6a98c5af0
+		}
+
+		@keyframes zoomfade {
+			0% {
+				transform: scale(0);
+				opacity: 0;
+			}
+			100% {
+				transform: scale(1);
+				opacity: 1;
+			}
+		}
+	</style>
+
+	<title>My Portfolio</title>
+</head>
+
+<body class="mt-5">
+	<!-- Navbar -->
+	<div class="container text-right ">
+		<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+			<a class="navbar-brand" href="#">Syofyan Zuhad</a>
+
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="#section-home">HOME<span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link page-scrool" href="#section-about">ABOUT</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link page-scrool" href="#section-portfolio">PORTFOLIO</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link page-scrool " href="#section-contact">CONTACT</a>
+					</li>
+				</ul>
+<<<<<<< HEAD
+=======
+				<!-- 	    <ul class="navbar-nav ">
+	      <li class="nav-item dropdown" >
+	        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	          Dropdown
+	        </a>
+	        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+	          <a class="dropdown-item" href="#">Action</a>
+	          <a class="dropdown-item" href="#">Another action</a>
+	          <div class="dropdown-divider"></div>
+	          <a class="dropdown-item" href="#">Something else here</a>
+	        </div>
+	      </li>
+	    </ul> -->
+>>>>>>> f67d4b22a977ab852566dfa19098c6a6a98c5af0
+			</div>
+	</div>
+
+	<!-- Akhir Navbar -->
+
+	<!-- Jumbotron -->
+	<div class="jumbotron" id="section-home">
+		<div class="col-sm-12 text-left text-white">
+			<img src="img/me.jpg" width="250" class="rounded-circle img-thumbnail">
+			<h2 class="display-4">Syofyan Zuhad</h2>
+			<p class="lead">Programmer | Web Developer | Photographer | Muslim</p>
+<<<<<<< HEAD
+			<hr id="jumbo">
+			<p> < ? php ?> | < html > | < Javascript > | < Python > </p>
+=======
+			<hr align="left" width="60%">
+			<p>
+				< ? php ?> | < html> | < Javascript> | < Python>
+			</p>
+		</div>
+		<div class="text-right">
+			<a href="https://www.linkedin.com/in/syofyan-zuhad-583385191/">LinkedIn</a>
+>>>>>>> f67d4b22a977ab852566dfa19098c6a6a98c5af0
+		</div>
+	</div>
+	<!-- Akhir Jumbutron -->
+
+	<!-- About -->
+	<section id="section-about" class="pt-3">
+		<div class="container" id="about">
+			<div class="row">
+				<div class="col text-center">
+					<h2>ABOUT</h2>
+					<hr>
+				</div>
+			</div>
+			<div class="row menu_about">
+				<div class="col-sm-2">
+					<div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+						<a class="about nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#aboutme"
+							role="tab" aria-controls="v-pills-home" aria-selected="true">ABOUT ME</a>
+						<a class="about nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#goal" role="tab"
+							aria-controls="v-pills-profile" aria-selected="false">GOAL</a>
+						<a class="about nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#skill" role="tab"
+							aria-controls="v-pills-messages" aria-selected="false">SKILL</a>
+						<a class="about nav-link " id="v-pills-settings-tab" data-toggle="pill" href="#education"
+							role="tab" aria-controls="v-pills-settings" aria-selected="false">EDUCATION</a>
+					</div>
+				</div>
+				<div class="col-1">
+					<div style="width: 0px; height: 100%; border: 1px #a6a6a6 solid;">
+					</div>
+				</div>
+				<div class="col-sm-7">
+					<div class="tab-content" id="v-pills-tabContent">
+						<div class="tab-pane fade show active" id="aboutme" role="tabpanel"
+							aria-labelledby="v-pills-home-tab">
+							Full Stack Developer (soon)
+						</div>
+						<div class="tab-pane fade" id="goal" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+							Muslim International Company of Information and Technology</div>
+						<div class="tab-pane fade" id="skill" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+							<p>
+								< Backend> | < Frontend> | < Android> | < iOS> | < DB> | < GIT>
+							</p>
+						</div>
+						<div class="tab-pane fade" id="education" role="tabpanel"
+							aria-labelledby="v-pills-settings-tab">
+							<li> Islamic Teacher Training College (ITTC) of Modern Islamic Institution Darusalam GONTOR,
+								Ponorogo, Indonesia </li>
+							<li> Programmer Department In Islamic Institution of Information and Technology, DIY,
+								Indonesia </li>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Akhir About -->
+
+	<!-- Portfolio -->
+	<section id="section-portfolio" class="portfolio bg-light pt-3 pb-5 min-height:750px">
+		<div class="container text-center " id="portofolio">
+			<div class="row">
+				<div class="col">
+					<h2>PORTFOLIO</h2>
+					<hr>
+				</div>
+			</div>
+			<div class="row mb-5">
+				<div class="col-sm-4">
+					<div class="card">
+						<a href="#img-1">
+							<img src="img/portofolio/1.JPG" class="card-img-top img-thumbnail" alt="Garden"> 
+						</a>
+							<div class="overlay" id="img-1">
+								<a href="#img" class="closes"> <h2>X</h2></a>
+
+								<a href="#img-6" class="navig-b"> <h1> < </h1> </a>
+								<img src="img/portofolio/1.JPG" class="img-thumbnail" alt="Garden">
+								<a href="#img-2" class="navig-n"> <h1> > </h1> </a>
+							</div>
+						<div class="card-body">
+							<p class="card-text">Some quick example text to build on the card title and make up the bulk
+								of the card's content.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="card">
+						<a href="#img-2">
+							<img src="img/portofolio/2.JPG" class="card-img-top img-thumbnail" alt="..."> 
+						</a>
+						<div class="overlay" id="img-2">
+							<a href="#img" class="closes"> <h2>X</h2> </a>
+
+							<a href="#img-1" class="navig-b"> <h1> < </h1> </a>
+							<img src="img/portofolio/2.JPG" class="img-thumbnail" alt="">
+							<a href="#img-3" class="navig-n"> <h1> > </h1> </a>	
+						</div>
+						<div class="card-body">
+							<p class="card-text">Some quick example text to build on the card title and make up the bulk
+								of the card's content.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="card">
+						<a href="#img-3">
+							<img src="img/portofolio/3.JPG" class="card-img-top img-thumbnail" alt="..."> 
+						</a>
+						<div class="overlay" id="img-3">
+							<a href="#img" class="closes"> <h2>X</h2> </a>
+
+							<a href="#img-2" class="navig-b"> <h1> < </h1> </a>
+							<img src="img/portofolio/3.JPG" class="img-thumbnail" alt="">
+							<a href="#img-4" class="navig-n"> <h1> > </h1> </a>
+						</div>
+						<div class="card-body">
+							<p class="card-text">Some quick example text to build on the card title and make up the bulk
+								of the card's content.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="card">
+						<a href="#img-4">
+							<img src="img/portofolio/4.JPG" class="card-img-top img-thumbnail" alt="..."> 
+						</a>
+						<div class="overlay" id="img-4">
+							<a href="#img" class="closes"> <h2>X</h2> </a>
+
+							<a href="#img-3" class="navig-b"> <h1> < </h1> </a>
+							<img src="img/portofolio/4.JPG" class="img-thumbnail" alt="">
+							<a href="#img-5" class="navig-n"> <h1> > </h1> </a>
+
+						</div>
+						<div class="card-body">
+							<p class="card-text">Some quick example text to build on the card title and make up the bulk
+								of the card's content.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="card">
+						<a href="#img-5">
+							<img src="img/portofolio/5.JPG" class="card-img-top img-thumbnail" alt="..."> 
+						</a>
+						<div class="overlay" id="img-5">
+							<a href="#img" class="closes"> <h2>X</h2> </a>
+
+							<a href="#img-4" class="navig-b"> <h1> < </h1> </a>	
+							<img src="img/portofolio/5.JPG" class="img-thumbnail" alt="">
+							<a href="#img-6" class="navig-n"> <h1> > </h1> </a>
+						</div>
+						<div class="card-body">
+							<p class="card-text">Some quick example text to build on the card title and make up the bulk
+								of the card's content.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="card">
+						<a href="#img-6">
+							<img src="img/portofolio/6.JPG" class="card-img-top img-thumbnail" alt="..."> 
+						</a>
+						<div class="overlay" id="img-6">
+							<a href="#img" class="closes"> <h2>X</h2> </a>
+
+							<a href="#img-5" class="navig-b"> <h1> < </h1> </a>
+							<img src="img/portofolio/6.JPG" class="img-thumbnail" alt="">
+							<a href="#img-1" class="navig-n"> <h1> > </h1> </a>
+						</div>
+						<div class="card-body">
+							<p class="card-text">Some quick example text to build on the card title and make up the bulk
+								of the card's content.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Akhir Portfolio -->
+
+	<!-- Contact  -->
+	<section id="section-contact">
+		<div class="container ">
+			<div class="row justify-content-center pt-3">
+				<div class="col text-center">
+					<h2>CONTACT ME</h2>
+					<hr>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-md-6">
+					<form method="post" action="contact.php">
+						<div class="form-group ">
+							<label for="name">Nama</label>
+							<input type="name" class="form-control" name="nama" id="name" placeholder="Enter your name"
+								required>
+						</div>
+						<div class="form-group">
+							<label for="email">Email</label>
+							<input type="email" class="form-control" name="email" id="email"
+								aria-describedby="emailHelp" placeholder="Enter your email" required>
+							<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+								else.</small>
+						</div>
+						<div class="form-group ">
+							<label for="pesan">Pesan</label>
+							<textarea name="pesan" id="pesan" class="form-control" placeholder="Write Massage"
+								required></textarea>
+						</div>
+						<div class="form-group form-check">
+							<input type="checkbox" class="form-check-input" id="exampleCheck1">
+							<label class="form-check-label" for="exampleCheck1">Check me out</label>
+						</div>
+						<button type="submit" class="btn btn-primary" name="kirim">Submit</button>
+					</form>
+				</div>
+				<div class="col-md-4 mt-3">
+					<div class="card text-white bg-primary " style="max-width: 50rem;">
+						<div class="card-header">Syofyan Zuhad</div>
+						<div class="card-body pb-4">
+							<h5 class="card-title">Success card title</h5>
+							<p class="card-text">Some quick example text to build on the card title and make up the bulk
+								of the card's content.</p>
+
+						</div>
+						<ul class="list-group text-dark">
+							<li class="list-group-item">My Office</li>
+							<li class="list-group-item">My Email</li>
+							<li class="list-group-item"> Ready to be Hired</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+	</section>
+	<!-- Akhir Contact -->
+
+	<!-- Footer -->
+	<footer class="bg-dark text-white">
+		<div class="container ">
+			<div class="row pt-3">
+				<div class="col-md text-center">
+					<p>&copy copyright 2019 | built by : <a href="https://www.linkedin.com/in/syofyan-zuhad-583385191"
+							class="text-light">Syofyan Zuhad</a></p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- Akhir Footer -->
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		crossorigin="anonymous"></script>
+<<<<<<< HEAD
+		
+=======
+>>>>>>> f67d4b22a977ab852566dfa19098c6a6a98c5af0
+	<script src="js/smoothscroll.js"></script>
+	<script type="text/javascript">
+		$(function () {
+			var scroll = new SmoothScroll('a[href*="#section-"]');
+		});
+	</script>
+<<<<<<< HEAD
+	<script src="js/script.js"></script>
+
+</body>
+
+</html>
+=======
+
+</body>
+
+</html>
+>>>>>>> f67d4b22a977ab852566dfa19098c6a6a98c5af0
