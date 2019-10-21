@@ -15,3 +15,71 @@ a.btn:hover {
     background-color: white;
     text-transform: uppercase;
 }
+
+.text-1 {
+    animation: text1;
+}
+
+.text-2 {
+    animation: text2;
+}
+
+.text-3 {
+    animation: text3;
+}
+
+.text-1, .text-2, .text-3 {
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    position: relative;
+    animation-duration: 20s;
+    animation-timing-function: steps(25, end);
+    animation-iteration-count: infinite;
+}
+
+.text-1::after, .text-2::after, .text-3::after {
+    content: "|";
+    position: absolute;
+    right: 0;
+    animation: caret infinite;
+    animation-duration: 1s;
+    animation-timing-function: steps(1, end);
+}
+
+@keyframes text3 {
+    0%, 50%, 100% {
+        width: 0;
+    }
+    90%, 100% {
+        width: 7em;
+    }
+}
+
+@keyframes text2 {
+    0%, 50%, 100% {
+        width: 0;
+    }
+
+    55%, 75% {
+        width: 7em;
+    }
+}
+
+@keyframes text1 {
+    0%, 50%, 100% {
+        width: 0;
+    }
+    10%, 35% {
+        width: 7em;
+    }
+}
+
+@keyframes caret {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
