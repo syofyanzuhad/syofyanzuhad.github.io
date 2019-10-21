@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Syofyan Zuhad</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="mdb/css/style.css">
+    <link rel="stylesheet" href="css3-animate-it/css/animations.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="mdb/css/mdb.min.css">
+    <link rel="stylesheet" href="mdb/css/bootstrap.min.css">
+
+    <script>
+        $(document).ready(function(){
+            $("#btnaddcls").click(function(){
+                $("#divcls").addClass("addcls");
+            });
+        });
+
+        $(document).ready(function(){
+            $("#btn,#btn1").hover(function(){
+                $(this).toggleClass("text-white") .toggleClass('text-dark');
+            });
+        });
+    </script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar ">
+    
+        <a href="/" class="navbar-brand font-weight-bold animated fadeInLeft">Syofyan Zuhad</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse ml-auto" id="navbarTogglerDemo02">
+        <ul class="navbar-nav ml-auto mt-lg-0 animated fadeInRight">
+            <li class="nav-item ">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+            </li>
+        </ul>
+        </div>
+    </nav>
+
+    <section>
+        <div class="card card-image" style="background-image: url(img/profile.jpg); background-position: center; height: 100vh; background-size: cover;">
+            <div class="mask rgba-black-strong" style="height: 100vh;">
+                <div class="text-white text-center py-5 px-4">
+                    <div class="py-5 animatedParent">
+                    <h2 class="card-title h1-responsive pt-3 mb-5 font-bold animated fadeInUp"><strong><u> Syofyan Zuhad Nasik </u></strong></h2>
+                    <p class="mx-5 mb-5 animated fadeIn">Back-end Developer basic, who start learning to be full stack developer. Never stop learning, cause nobody was born smart.
+                    </p>
+                    <a id="btn" class="btn btn-outline-white btn-md bg-white text-dark font-weight-bold"><i class="fa fa-clone left"></i> View project</a>
+                    <a id="btn1" class="btn btn-outline-white btn-md bg-white text-dark font-weight-bold"><i class="fa fa-clone left"></i> View photography</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- My Costumization Script -->
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="css3-animate-it/js/css3-animate-it.js"></script>
+<!-- MDB SCRIPTS -->
+<!-- JQuery -->
+<script type="text/javascript" src="mdb/js/jquery-3.4.1.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="mdb/js/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="mdb/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="mdb/js/mdb.min.js"></script>
+
+</body>
+</html>
