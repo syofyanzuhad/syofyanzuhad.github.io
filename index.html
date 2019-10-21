@@ -11,7 +11,14 @@
     <link rel="stylesheet" href="font-awesome/css/font-awesome.css">
     <link rel="stylesheet" href="mdb/css/mdb.min.css">
     <link rel="stylesheet" href="mdb/css/bootstrap.min.css">
-
+    <style>
+        .card-image {
+            background-image: url(img/profile.jpg); 
+            background-position: center; 
+            height: 100vh; 
+            background-size: cover;
+        }
+    </style>
     <script>
         $(document).ready(function(){
             $("#btnaddcls").click(function(){
@@ -50,7 +57,7 @@
     </nav>
 
     <section>
-        <div class="card card-image" style="background-image: url(img/profile.jpg); background-position: center; height: 100vh; background-size: cover;">
+        <div class="card card-image">
             <div class="mask rgba-black-strong" style="height: 100vh;">
                 <div class="text-white text-center py-5 px-4">
                     <div class="py-5 animatedParent">
