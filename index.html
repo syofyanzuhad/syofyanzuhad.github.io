@@ -4,19 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" type="image/x-icon" href="img/code2.png"/>
     <title>Syofyan Zuhad</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <link rel="stylesheet" href="mdb/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css3-animate-it/css/animations.css">
     <link rel="stylesheet" href="font-awesome/css/font-awesome.css">
     <link rel="stylesheet" href="mdb/css/mdb.min.css">
     <link rel="stylesheet" href="mdb/css/bootstrap.min.css">
-    <link rel="shortcut icon" type="image/x-icon" href="img/code2.png"/>
     <style>
         body {
-            background-color: black;
-        }
-        .card-image {
             background-image: url(img/profile.jpg); 
             background-position: center; 
             height: 100vh; 
@@ -32,14 +29,15 @@
 
         $(document).ready(function(){
             $("#btn,#btn1").hover(function(){
-                $(this).toggleClass("text-white") .toggleClass('text-dark');
+                $(this).toggleClass(" text-white") .toggleClass(' text-dark');
             });
         });
     </script>
 </head>
 <body>
+    <section id="home">
+
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar ">
-    
         <a href="/" class="navbar-brand font-weight-bold animated fadeInLeft">Syofyan Zuhad</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
             aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -48,38 +46,56 @@
         <div class="collapse navbar-collapse ml-auto" id="navbarTogglerDemo02">
         <ul class="navbar-nav ml-auto mt-lg-0 animated fadeInRight">
             <li class="nav-item ">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="#main">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
+            <a class="nav-link" href="#" onclick="openRightNav()">Contact</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
+            <a class="nav-link" href="#" onclick="openLeftNav()">About</a>
             </li>
         </ul>
         </div>
     </nav>
 
-    <section>
-        <div class="card card-image">
-            <div class="mask rgba-black-strong" style="height: 100vh;">
-                <div class="text-white text-center py-5 px-4">
-                    <div class="py-5 animatedParent">
-                    <h2 class="card-title h1-responsive pt-3 mb-5 font-bold animated fadeInUp"><strong><u> Syofyan Zuhad </u></strong></h2>
-                    <h4>
-                        <span class="text-1"> < ?php ? > </span>
-                        <span class="text-2"> < Javascript > </span>
-                        <!-- <span class="text-3"> < Java > </span> -->
-                    </h4>
-                    <p class="mx-5 mb-5 animated fadeIn">A basic Back-end Developer, who start learning to be full stack developer. Never stop learning, cause nobody was born smart.
-                    </p>
-                    <a id="btn" class="btn btn-outline-white btn-md bg-white text-dark font-weight-bold"><i class="fa fa-clone left"></i> View project</a>
-                    <a id="btn1" class="btn btn-outline-white btn-md bg-white text-dark font-weight-bold"><i class="fa fa-clone left"></i> View photography</a>
-                    </div>
+    <div class="" >
+        <div class="mask rgba-black-strong" style="height: 100vh;">
+            <div class="text-white text-center py-5 px-4">
+                <div class="py-5 animatedParent">
+                <h1 class="card-title h1-responsive pt-3 mb-5 font-bold animated fadeInUp"><strong><u> Syofyan Zuhad </u></strong></h1>
+                <h4>
+                    <span class="text-1"> < ?php ? > </span>
+                    <span class="text-2"> < Javascript > </span>
+                    <!-- <span class="text-3"> < Java > </span> -->
+                </h4>
+                <p class="mx-5 mb-5 animated fadeIn">A basic Back-end Developer, who start learning to be full stack developer. Never stop learning, cause nobody was born smart.
+                </p>
+                <a id="btn" class="btn btn-outline-white btn-md bg-white text-dark font-weight-bold"><i class="fa fa-clone left"></i> View project</a>
+                <a id="btn1" class="btn btn-outline-white btn-md bg-white text-dark font-weight-bold"><i class="fa fa-clone left"></i> View photography</a>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+<div id="contacts" class="sidenavRight">
+    <a href="javascript:void(0)" class="closebtn mt-5" onclick="closeRightNav()">&times;</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a>
+</div>
+
+<div id="about" class="sidenavLeft text-center">
+    <a href="javascript:void(0)" class="closebtn mt-5" onclick="closeLeftNav()">&times;</a>
+    <div class="mask rgba-black-strong">
+        <img src="img/me.jpg" class="img-thumbnail rounded-circle me" alt="">
+    </div> 
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a>
+</div>
 
 <!-- My Costumization Script -->
 <script type="text/javascript" src="js/script.js"></script>
