@@ -19,6 +19,7 @@
             height: 100vh; 
             background-size: cover;
         }
+        
     </style>
     <script>
         $(document).ready(function(){
@@ -58,11 +59,10 @@
         </div>
     </nav>
 
-    <div class="" >
-        <div class="mask rgba-black-strong" style="height: 100vh;">
-            <div class="text-white text-center py-5 px-4">
-                <div class="py-5 animatedParent">
-                <h1 class="card-title h1-responsive pt-3 mb-5 font-bold animated fadeInUp"><strong><u> Syofyan Zuhad </u></strong></h1>
+    <div class="align-middle" >
+        <div class="mask rgba-black-strong" style="height: 100vh; position: fixed; background-size: cover; width: 100%;">
+            <div class="text-white text-center px-4 animatedParent align-middle" style="margin-top: 20vh;">
+                <h1 class="card-title h1-responsive mb-5 font-bold animated fadeInUp" "><strong><u> Syofyan Zuhad </u></strong></h1>
                 <h4>
                     <span class="text-1"> < ?php ? > </span>
                     <span class="text-2"> < Javascript > </span>
@@ -72,7 +72,6 @@
                 </p>
                 <a id="btn" class="btn btn-outline-white btn-md bg-white text-dark font-weight-bold"><i class="fa fa-clone left"></i> View project</a>
                 <a id="btn1" class="btn btn-outline-white btn-md bg-white text-dark font-weight-bold"><i class="fa fa-clone left"></i> View photography</a>
-                </div>
             </div>
         </div>
     </div>
@@ -80,10 +79,121 @@
 
 <div id="contacts" class="sidenavRight">
     <a href="javascript:void(0)" class="closebtn mt-5" onclick="closeRightNav()">&times;</a>
-    <a href="#">About</a>
-    <a href="#">Services</a>
-    <a href="#">Clients</a>
-    <a href="#">Contact</a>
+    <section class="login " id="main-page">
+            <!-- Container -->
+            <div class="container text-center text-light">
+            <!-- ROW -->
+            <div class="row justify-content-center ">
+                <div class="col-md">
+                <!-- Card -->
+                <div class="card bg-transparent">
+                    <!-- Navbar -->
+                <ul class="nav mb-0 d-flex justify-content-center" id="pills-tab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active gmail" id="pills-home-tab" data-toggle="pill" href="#gmail" role="tab"
+                        aria-controls="pills-home" aria-selected="true">Gmail</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#whatsapp" role="tab"
+                        aria-controls="pills-profile" aria-selected="false">WhatsApp</a>
+                    </li>
+                    </ul>
+                    <hr class="mb-0" style="border-bottom: 0.5px solid white;">
+                    <div class="card-body text-left ">
+                        <div class="tab-content" id="pills-tabContent">
+                        <!-- Gmail -->
+                        <div class="tab-pane fade show active" id="gmail" role="tabpanel" aria-labelledby="pills-home-tab">
+                            <form method="post" action="index.php">
+                            <!-- Body -->
+                            <div class="md-form">
+                                <i class="fa fa-user prefix grey-text"></i>
+                                <input type="text" id="form-name" class="form-control">
+                                <label for="form-name">Your name</label>
+                            </div>
+                            <div class="md-form">
+                                <i class="fa fa-envelope prefix grey-text"></i>
+                                <input type="text" id="form-email" class="form-control">
+                                <label for="form-email">Your email</label>
+                            </div>
+                            <div class="md-form">
+                                <i class="fa fa-tag prefix grey-text"></i>
+                                <input type="text" id="form-subject" class="form-control">
+                                <label for="form-Subject">Subject</label>
+                            </div>
+                            <div class="md-form">
+                                <i class="fa fa-pencil prefix grey-text "></i>
+                                <textarea name="pesan_email" id="form-text" class="form-control md-textarea" rows="3"></textarea>
+                                <label for="pesan_email">Send message</label>
+                            </div>
+                            <div class="text-center">
+                            <button class="btn btn-sm btn-outline-blue" name="p_email">Send</button>
+                            </div>
+                            </form>
+                        </div>
+                        <!-- Akhir Gmail -->
+        
+                        <!-- Whatsapp -->
+                        <div class="tab-pane fade" id="whatsapp" role="tabpanel" aria-labelledby="pills-profile-tab">
+                            <form method="post" action="index.php">
+                            <div class="md-form">
+                                <input type="text" id="form-name" class="form-control">
+                                <label for="form-name">Nama</label>
+                            </div>
+                            <div class="md-form">
+                                <input type="text" id="form-email" class="form-control">
+                                <label for="form-email">Email</label>
+                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                                else.</small>
+                            </div>
+                            <div class="md-form">
+                                <input type="text" id="form-phone" class="form-control">
+                                <label for="form-phone">No. Telp</label>
+                                <small id="telpHelp" class="form-text text-muted">Number phone needed for message
+                                end-to-end.</small>
+                            </div>
+                            <div class="md-form">
+                                <textarea name="pesan_wa" id="pesan2" class="form-control md-textarea" ></textarea>
+                                <label for="pesan_wa">Pesan</label>
+                            </div>
+                            <button class="btn btn-sm btn-outline-blue" name="p_wa">Send</button>
+                            </form>
+                        </div>
+                        <!-- Akhir Whatsapp -->
+        
+                        <!-- CONTACT -->
+                        <!-- <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+                            <form method="post" action="index.php">
+                            <div class="form-group ">
+                                <label for="name3">Nama</label>
+                                <input type="name" class="form-control" name="namestr3" id="name3"
+                                placeholder="Enter your name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email3">Email</label>
+                                <input type="email" class="form-control" name="emailstr3" id="email3"
+                                aria-describedby="emailHelp" placeholder="Enter your email">
+                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                                else.</small>
+                            </div>
+                            <div class="form-group ">
+                                <label for="pesan3">Pesan</label>
+                                <textarea name="pesan3" id="pesan3" class="form-control" placeholder="Write Massage"></textarea>
+                            </div>
+                            <button type="submit" name="message3" class="btn btn-primary"><a href="backend.php" class="text-light">SEND</a></button>
+                            </form>
+                        </div> -->
+                        <!-- Akhir CONTACT -->
+                        </div>
+                        <!-- Akhir Navbar -->
+                    </div>
+                </div>
+                <!-- Akhir Card -->
+                </div>
+            </div>
+            <!-- Akhir ROW -->
+            </div>
+            <!-- Akhir Container -->
+        </section>
 </div>
 
 <div id="about" class="sidenavLeft text-center">
