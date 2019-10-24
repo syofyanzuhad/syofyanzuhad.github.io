@@ -79,25 +79,25 @@ function closeNav() {
     // } else {
         /* Set the width of the side navigation to 250px */
         function openRightNav() {
-            document.getElementById("contacts").style.width = "380px";
-            document.getElementById("home").style.marginRight = "380px";
+            document.getElementById("about").style.width = "370px";
+            document.getElementById("home").style.marginRight = "370px";
         }
         
         /* Set the width of the side navigation to 0 */
         function closeRightNav() {
-            document.getElementById("contacts").style.width = "0";
+            document.getElementById("about").style.width = "0";
             document.getElementById("home").style.marginRight = "0";
         }
-        
+
         
         function openLeftNav() {
-            document.getElementById("about").style.width = "380px";
-            document.getElementById("home").style.marginLeft = "380px";
+            document.getElementById("contacts").style.width = "370px";
+            document.getElementById("home").style.marginLeft = "0px";
         }
         
         /* Set the width of the side navigation to 0 */
         function closeLeftNav() {
-            document.getElementById("about").style.width = "0";
+            document.getElementById("contacts").style.width = "0";
             document.getElementById("home").style.marginLeft = "0";
         }
     // }

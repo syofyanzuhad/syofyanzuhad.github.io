@@ -50,10 +50,10 @@
             <a class="nav-link" href="#main">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="#" onclick="openRightNav()">Contact</a>
+            <a class="nav-link" href="#" onclick="openLeftNav()">Contact</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="#" onclick="openLeftNav()">About</a>
+            <a class="nav-link" href="#" onclick="openRightNav()">About</a>
             </li>
         </ul>
         </div>
@@ -77,8 +77,8 @@
     </div>
 </section>
 
-<div id="contacts" class="sidenavRight">
-    <a href="javascript:void(0)" class="closebtn mt-5" onclick="closeRightNav()">&times;</a>
+<div id="contacts" class="sidenavLeft">
+    <a href="javascript:void(0)" class="closebtn mt-5" onclick="closeLeftNav()">&times;</a>
     <section class="login " id="main-page">
             <!-- Container -->
             <div class="container text-center text-light">
@@ -196,100 +196,108 @@
         </section>
 </div>
 
-<div id="about" class="sidenavLeft">
-    <a href="javascript:void(0)" class="closebtn mt-5" onclick="closeLeftNav()">&times;</a>
-        <div class="view zoom text-center rounded-circle">
-            <img src="img/me.jpg" class="img-fluid img-thumbnail rounded-circle" alt="Image of ballons flying over canyons with mask pattern one.">
-            <div class="mask pattern-1 flex-center waves-effect waves-light">
+<div id="about" class="sidenavRight">
+    <a href="javascript:void(0)" class="closebtn mt-5" onclick="closeRightNav()">&times;</a>
+    
+    <!--Accordion wrapper-->
+    <div class="accordion md-accordion" id="accordionEx" role="tablist" aria-multiselectable="true">
+        
+        <div class="col">
+            <div class="view zoom text-center rounded-circle">
+                <img src="img/me.jpg" class="img-fluid img-thumbnail rounded-circle" alt="Image of ballons flying over canyons with mask pattern one.">
+                <div class="mask pattern-5 flex-center waves-effect waves-light">
+                </div>
             </div>
-        </div>
-
-<!--Accordion wrapper-->
-<div class="accordion md-accordion" id="accordionEx" role="tablist" aria-multiselectable="true">
-
-    <div class="col sidenavLeft">
-        <!-- Accordion card -->
-        <div class="about about1">
-    
-        <!-- Card header -->
-        <div class=" habout " role="tab" id="headingOne1">
-            <a data-toggle="collapse" data-parent="#accordionEx" href="#collapseOne1" aria-expanded="true"
-            aria-controls="collapseOne1">
-            <h5 class="mb-0 d-flex justify-content-between">
-                Profile <i class="fa fa-angle-down rotate-icon"></i>
-            </h5>
-            </a>
-        </div>
-        <!-- Card body -->
-        <div id="collapseOne1" class="collapse show" role="tabpanel" aria-labelledby="headingOne1" data-parent="#accordionEx">
-            <div class="bg-none text-white">
-            <p class="paragraph">
-                I am a Programmer of back-end development. 
-            </p> 
-                
-            </div>
-        </div>
-    
-        </div>
-        <!-- Accordion card -->
-    
-        <!-- Accordion card -->
-        <div class="about about2">
-    
-        <!-- Card header -->
-        <div class="habout" role="tab" id="headingTwo2">
-            <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapseTwo2"
-            aria-expanded="false" aria-controls="collapseTwo2">
-            <h5 class="mb-0 d-flex justify-content-between">
-                Skill <i class="fa fa-angle-down rotate-icon"></i>
-            </h5>
-            </a>
-        </div>
-    
-        <!-- Card body -->
-        <div id="collapseTwo2" class="collapse" role="tabpanel" aria-labelledby="headingTwo2" data-parent="#accordionEx">
-            <div class="card-body text-left text-white">
-            <table>
-                <tr>
-                    <td style="font-style: italic;"> <h4>php</h4> </td>
-                    <td>
-                        <div class="p_bar">
-                            <div class="fill-bar"></div>
-                        </div>
-                    </td>
-                </tr>
-            </table> 
-            </div>
-        </div>
-    
-        </div>
-        <!-- Accordion card -->
-    
-        <!-- Accordion card -->
-        <div class="about about3">
-    
-        <!-- Card header -->
-        <div class="habout" role="tab" id="headingThree3">
-            <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapseThree3"
-            aria-expanded="false" aria-controls="collapseThree3">
+            <!-- Accordion card -->
+            <div class="about about1">
+        
+            <!-- Card header -->
+            <div class=" habout " role="tab" id="headingOne1">
+                <a data-toggle="collapse" data-parent="#accordionEx" href="#collapseOne1" aria-expanded="true"
+                aria-controls="collapseOne1">
                 <h5 class="mb-0 d-flex justify-content-between">
-                    Education <i class="fa fa-angle-down rotate-icon"></i>
+                    Profile <i class="fa fa-angle-down rotate-icon"></i>
                 </h5>
-            </a>
-        </div>
-    
-        <!-- Card body -->
-        <div id="collapseThree3" class="collapse" role="tabpanel" aria-labelledby="headingThree3" data-parent="#accordionEx">
-            <div class="card-body text-left text-white">
-            <ul>
-                <li>Islamic Teacher Training College (ITTC) of Modern Islamic Institution Darusalam GONTOR, Ponorogo, Indonesia.</li>
-                <li>Programmer Department In Islamic Institution of Information and Technology, DIY, Indonesia.</li>
-            </ul> 
+                </a>
             </div>
-        </div>
-    
-        </div>
-        <!-- Accordion card -->
+            <!-- Card body -->
+            <div id="collapseOne1" class="collapse show" role="tabpanel" aria-labelledby="headingOne1" data-parent="#accordionEx">
+                <div class="bg-none text-white">
+                <p class="paragraph">
+                    I am a Programmer of back-end development. 
+                </p> 
+                    
+                </div>
+            </div>
+        
+            </div>
+            <!-- Accordion card -->
+        
+            <!-- Accordion card -->
+            <div class="about about2">
+        
+            <!-- Card header -->
+            <div class="habout" role="tab" id="headingTwo2">
+                <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapseTwo2"
+                aria-expanded="false" aria-controls="collapseTwo2">
+                <h5 class="mb-0 d-flex justify-content-between">
+                    Skill <i class="fa fa-angle-down rotate-icon"></i>
+                </h5>
+                </a>
+            </div>
+        
+            <!-- Card body -->
+            <div id="collapseTwo2" class="collapse" role="tabpanel" aria-labelledby="headingTwo2" data-parent="#accordionEx">
+                <div class="card-body text-left text-white">
+                <table>
+                    <tr>
+                        <td style="font-style: italic;"> <h4>php</h4> </td>
+                        <td>
+                            <div class="p_bar">
+                                <div class="fill-bar php"></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-style: italic;"> <h4>Github</h4> </td>
+                        <td>
+                            <div class="p_bar">
+                                <div class="fill-bar php"></div>
+                            </div>
+                        </td>
+                    </tr>
+                </table> 
+                </div>
+            </div>
+        
+            </div>
+            <!-- Accordion card -->
+        
+            <!-- Accordion card -->
+            <div class="about about3">
+        
+            <!-- Card header -->
+            <div class="habout" role="tab" id="headingThree3">
+                <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapseThree3"
+                aria-expanded="false" aria-controls="collapseThree3">
+                    <h5 class="mb-0 d-flex justify-content-between">
+                        Education <i class="fa fa-angle-down rotate-icon"></i>
+                    </h5>
+                </a>
+            </div>
+        
+            <!-- Card body -->
+            <div id="collapseThree3" class="collapse" role="tabpanel" aria-labelledby="headingThree3" data-parent="#accordionEx">
+                <div class="card-body text-left text-white">
+                <ul class="sch">
+                    <li> Islamic Teacher Training College (ITTC) of Modern Islamic Institution Darusalam GONTOR, Ponorogo, Indonesia.</li>
+                    <li> Programmer Department In Islamic Institution of Information and Technology, DIY, Indonesia.</li>
+                </ul> 
+                </div>
+            </div>
+        
+            </div>
+            <!-- Accordion card -->
     </div>
     
 </div>
