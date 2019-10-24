@@ -45,7 +45,7 @@ function closeNav() {
 
 /* Set the width of the side navigation to 250px */
 function openRightNav() {
-    document.getElementById("contacts").style.width = "35%";
+    document.getElementById("contacts").style.width = "380px";
     document.getElementById("home").style.marginRight = "400";
 }
 
@@ -57,7 +57,7 @@ function closeRightNav() {
 
 
 function openLeftNav() {
-    document.getElementById("about").style.width = "35%";
+    document.getElementById("about").style.width = "380px";
     document.getElementById("home").style.marginLeft = "400";
 }
 
