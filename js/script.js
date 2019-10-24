@@ -41,28 +41,68 @@ function closeNav() {
 //     document.body.style.backgroundColor = "white";
 // }
 
-//      Only SideNav
+// var opr = function openRightNav() { }
 
-/* Set the width of the side navigation to 250px */
-function openRightNav() {
-    document.getElementById("contacts").style.width = "380px";
-    document.getElementById("home").style.marginRight = "400";
-}
+// var clr = function closeRightNav() { }
 
-/* Set the width of the side navigation to 0 */
-function closeRightNav() {
-    document.getElementById("contacts").style.width = "0";
-    document.getElementById("home").style.marginRight = "0";
-}
+// var opl = function openLeftNav() { }
 
+// var cll = function closeLeftNav() { }
 
-function openLeftNav() {
-    document.getElementById("about").style.width = "380px";
-    document.getElementById("home").style.marginLeft = "400";
-}
+// //      Only SideNav
 
-/* Set the width of the side navigation to 0 */
-function closeLeftNav() {
-    document.getElementById("about").style.width = "0";
-    document.getElementById("home").style.marginLeft = "0";
-}
+// function myFunction(x) {
+//     if (x.matches) { // If media query matches
+        /* Set the width of the side navigation to 250px */
+        // function openRightNav() {
+        //     document.getElementById("contacts").style.width = "100vw";
+        //     document.getElementById("home").style.marginRight = "0";
+        // }
+        
+        // /* Set the width of the side navigation to 0 */
+        // function closeRightNav() {
+        //     document.getElementById("contacts").style.width = "0";
+        //     document.getElementById("home").style.marginRight = "0";
+        // }
+        
+        
+        // function openLeftNav() {
+        //     document.getElementById("about").style.width = "100vw";
+        //     document.getElementById("home").style.marginLeft = "0";
+        // }
+        
+        // /* Set the width of the side navigation to 0 */
+        // function closeLeftNav() {
+        //     document.getElementById("about").style.width = "0";
+        //     document.getElementById("home").style.marginLeft = "0";
+        // }
+    // } else {
+        /* Set the width of the side navigation to 250px */
+        function openRightNav() {
+            document.getElementById("contacts").style.width = "380px";
+            document.getElementById("home").style.marginRight = "380px";
+        }
+        
+        /* Set the width of the side navigation to 0 */
+        function closeRightNav() {
+            document.getElementById("contacts").style.width = "0";
+            document.getElementById("home").style.marginRight = "0";
+        }
+        
+        
+        function openLeftNav() {
+            document.getElementById("about").style.width = "380px";
+            document.getElementById("home").style.marginLeft = "380px";
+        }
+        
+        /* Set the width of the side navigation to 0 */
+        function closeLeftNav() {
+            document.getElementById("about").style.width = "0";
+            document.getElementById("home").style.marginLeft = "0";
+        }
+    // }
+// }
+
+// var x = window.matchMedia("(max-width: 450px)")
+// myFunction(x) // Call listener function at run time
+// x.addListener(myFunction) // Attach listener function on state changes
