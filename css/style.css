@@ -198,7 +198,7 @@ p.paragraph::first-line {
     display: inline-block;
     content: "";
     height: 1vw;
-    width: 40vh;
+    width: 35vh;
     margin-left: 15%;
     background-color: gray;
     border-radius: 50px;
@@ -211,7 +211,7 @@ p.paragraph::first-line {
     margin-bottom: 25%;
     border-radius: 50px;
     background-color: blue;
-    width: 50%;
+    width: 75%;
     z-index: 9;
 }
 
