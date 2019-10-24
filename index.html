@@ -60,7 +60,7 @@
     </nav>
 
     <div class="align-middle" >
-        <div class="mask rgba-black-strong" style="height: 100vh; position: fixed; background-size: cover; width: 100%;">
+        <div class="mask rgba-black-strong" style="min-height: 100vh; position: fixed; background-size: cover; width: 100%;">
             <div class="text-white text-center px-4 animatedParent align-middle" style="margin-top: 20vh;">
                 <h1 class="card-title h1-responsive mb-5 font-bold animated fadeInUp" "><strong><u> Syofyan Zuhad </u></strong></h1>
                 <h4>
@@ -68,7 +68,7 @@
                     <span class="text-2"> < Javascript > </span>
                     <!-- <span class="text-3"> < Java > </span> -->
                 </h4>
-                <p class="mx-5 mb-5 animated fadeIn">A basic Back-end Developer, who start learning to be full stack developer. Never stop learning, cause nobody was born smart.
+                <p class="mx-5 mb-5 animated fadeIn">I'm A basic Back-end Developer, who start learning to be full stack developer. Never stop learning, cause nobody was born smart.
                 </p>
                 <a id="btn" class="btn btn-outline-white btn-md bg-white text-dark font-weight-bold"><i class="fa fa-clone left"></i> View project</a>
                 <a id="btn1" class="btn btn-outline-white btn-md bg-white text-dark font-weight-bold"><i class="fa fa-clone left"></i> View photography</a>
@@ -196,15 +196,102 @@
         </section>
 </div>
 
-<div id="about" class="sidenavLeft text-center">
+<div id="about" class="sidenavLeft">
     <a href="javascript:void(0)" class="closebtn mt-5" onclick="closeLeftNav()">&times;</a>
-    <div class="mask rgba-black-strong">
-        <img src="img/me.jpg" class="img-thumbnail rounded-circle me" alt="">
-    </div> 
-    <a href="#">About</a>
-    <a href="#">Services</a>
-    <a href="#">Clients</a>
-    <a href="#">Contact</a>
+        <div class="view zoom text-center rounded-circle">
+            <img src="img/me.jpg" class="img-fluid img-thumbnail rounded-circle" alt="Image of ballons flying over canyons with mask pattern one.">
+            <div class="mask pattern-1 flex-center waves-effect waves-light">
+            </div>
+        </div>
+
+<!--Accordion wrapper-->
+<div class="accordion md-accordion" id="accordionEx" role="tablist" aria-multiselectable="true">
+
+    <div class="col sidenavLeft">
+        <!-- Accordion card -->
+        <div class="about about1">
+    
+        <!-- Card header -->
+        <div class=" habout " role="tab" id="headingOne1">
+            <a data-toggle="collapse" data-parent="#accordionEx" href="#collapseOne1" aria-expanded="true"
+            aria-controls="collapseOne1">
+            <h5 class="mb-0 d-flex justify-content-between">
+                Profile <i class="fa fa-angle-down rotate-icon"></i>
+            </h5>
+            </a>
+        </div>
+        <!-- Card body -->
+        <div id="collapseOne1" class="collapse show" role="tabpanel" aria-labelledby="headingOne1" data-parent="#accordionEx">
+            <div class="bg-none text-white">
+            <p class="paragraph">
+                I am a Programmer of back-end developer. 
+            </p> 
+                
+            </div>
+        </div>
+    
+        </div>
+        <!-- Accordion card -->
+    
+        <!-- Accordion card -->
+        <div class="about about2">
+    
+        <!-- Card header -->
+        <div class="habout" role="tab" id="headingTwo2">
+            <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapseTwo2"
+            aria-expanded="false" aria-controls="collapseTwo2">
+            <h5 class="mb-0 d-flex justify-content-between">
+                Skill <i class="fa fa-angle-down rotate-icon"></i>
+            </h5>
+            </a>
+        </div>
+    
+        <!-- Card body -->
+        <div id="collapseTwo2" class="collapse" role="tabpanel" aria-labelledby="headingTwo2" data-parent="#accordionEx">
+            <div class="card-body text-left text-white">
+            <table>
+                <tr>
+                    <td style="font-style: italic;"> <h4>php</h4> </td>
+                    <td>
+                        <div class="p_bar">
+                            <div class="fill-bar"></div>
+                        </div>
+                    </td>
+                </tr>
+            </table> 
+            </div>
+        </div>
+    
+        </div>
+        <!-- Accordion card -->
+    
+        <!-- Accordion card -->
+        <div class="about about3">
+    
+        <!-- Card header -->
+        <div class="habout" role="tab" id="headingThree3">
+            <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapseThree3"
+            aria-expanded="false" aria-controls="collapseThree3">
+                <h5 class="mb-0 d-flex justify-content-between">
+                    Education <i class="fa fa-angle-down rotate-icon"></i>
+                </h5>
+            </a>
+        </div>
+    
+        <!-- Card body -->
+        <div id="collapseThree3" class="collapse" role="tabpanel" aria-labelledby="headingThree3" data-parent="#accordionEx">
+            <div class="card-body text-left text-white">
+            <ul>
+                <li>Islamic Teacher Training College (ITTC) of Modern Islamic Institution Darusalam GONTOR, Ponorogo, Indonesia.</li>
+                <li>Programmer Department In Islamic Institution of Information and Technology, DIY, Indonesia.</li>
+            </ul> 
+            </div>
+        </div>
+    
+        </div>
+        <!-- Accordion card -->
+    </div>
+    
 </div>
 
 <!-- My Costumization Script -->

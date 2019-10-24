@@ -1,5 +1,4 @@
 
-
 .nav-link {
     text-decoration-color: white;
     text-transform: uppercase;
@@ -11,10 +10,7 @@
     border-bottom-width: 20%;
     font-weight: bold;
     text-transform: uppercase;
-}
-
-a.btn:hover {
-    background-color: white;
+    background-color: unset;
     text-transform: uppercase;
 }
 
@@ -98,7 +94,6 @@ a.closebtn {
     position: fixed; /* Stay in place */
     z-index: 1; /* Stay on top */
     top: 0; /* Stay at the top */
-    /* left: 0; */
     background-color: rgba(0, 0, 0, 0.7); /* Black*/
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 60px; /* Place content 60px from the top */
@@ -113,6 +108,7 @@ a.closebtn {
     color: #818181;
     display: block;
     transition: 0.3s;
+    
 }
 
 /* When you mouse over the navigation links, change their color */
@@ -145,10 +141,14 @@ a.closebtn {
     height: auto;
 }
 
-/* a.gmail {
-    border-right: 1px solid white;
-    height: 70%;
-} */
+p.paragraph::first-letter {
+    text-transform: uppercase;
+    font-size: 30px;
+}
+
+p.paragraph::first-line {
+    text-indent: 25px;
+}
 
 .sidenavLeft {
     /* right: 0; */
@@ -167,7 +167,6 @@ a.closebtn {
 /* The navigation menu links */
 .sidenavLeft a {
     padding: 8px 8px 8px 32px;
-    text-decoration: none;
     font-size: 25px;
     color: #818181;
     display: block;
@@ -175,8 +174,9 @@ a.closebtn {
 }
 
 /* When you mouse over the navigation links, change their color */
-.sidenavLeft a:hover {
-    color: #f1f1f1;
+.habout a:hover {
+    color: #e6e6e6;
+    text-decoration: none;
 }
 
 /* Position and style the close button (top right corner) */
@@ -188,6 +188,33 @@ a.closebtn {
     margin-left: 50px;
 }
 
+.closebtn:hover {
+    color: #e6e6e6;
+    text-decoration: unset;
+
+}
+
+.p_bar {
+    display: inline-block;
+    content: "";
+    height: 1vw;
+    width: 40vh;
+    margin-left: 15%;
+    background-color: gray;
+    border-radius: 50px;
+}
+
+.p_bar::before {
+    display: inline-block;
+    content: "";
+    height: 1vw;
+    margin-bottom: 3%;
+    border-radius: 50px;
+    background-color: blue;
+    width: 50%;
+    z-index: 9;
+}
+
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 #main {
     transition: margin-left .5s;
@@ -196,7 +223,10 @@ a.closebtn {
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
+    .sidenav {
+        padding-top: 15px;
+        /* width: 1; */
+    }
     .sidenav a {font-size: 18px;}
 }
 
@@ -204,6 +234,8 @@ a.closebtn {
     border-radius: 50%!important;
 }
 
-img.me {
-    max-width: 45%;
+.view {
+    margin: auto;
+    max-width: 55%;
+    /* padding: 5%; */
 }
