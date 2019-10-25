@@ -94,7 +94,7 @@ a.closebtn {
     position: fixed; /* Stay in place */
     z-index: 1; /* Stay on top */
     top: 0; /* Stay at the top */
-    background-color: rgba(0, 0, 0, 0.8); /* Black*/
+    background-color: rgba(0, 0, 0, 0.9); /* Black*/
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 60px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
@@ -180,7 +180,7 @@ p.paragraph::first-line {
     z-index: 1; /* Stay on top */
     top: 0; /* Stay at the top */
     left: 0;
-    background-color: rgba(0, 0, 0, 0.95); /* Black*/
+    background-color: rgba(0, 0, 0, 0.8); /* Black*/
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 60px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
@@ -226,9 +226,6 @@ p.paragraph::first-line {
     width: 25vw;
     margin: 1vh 10%;
     -ms-transform-origin-x: 30vh;
-    height: 1vw;
-    width: 35vh;
-    margin-left: 15%;
     background-color: gray;
     border-radius: 50px;
 }
@@ -282,6 +279,20 @@ p.paragraph::first-line {
         border-radius: 50px;
     }
 }
+
+/* @media only screen and (min-width: 600px ) 
+{
+    .p_bar {
+        display: inline-block;
+        content: "";
+        height: 1vh;
+        width: 35vw;
+        margin: 1vh 10%;
+        -ms-transform-origin-x: 30vh;
+        background-color: gray;
+        border-radius: 50px;
+    }
+} */
 
 @media only screen and (min-width: 992px) 
 {
