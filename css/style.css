@@ -210,7 +210,7 @@ p.paragraph::first-line {
     top: 0;
     right: 0px;
     font-size: 36px;
-    /* margin-left: 100px; */
+    margin-top: 12%;
 }
 
 .closebtn:hover {
