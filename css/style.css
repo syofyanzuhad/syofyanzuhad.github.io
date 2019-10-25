@@ -208,9 +208,9 @@ p.paragraph::first-line {
 .sidenavLeft .closebtn {
     position: absolute;
     top: 0;
-    right: 0px;
+    right: 1%;
     font-size: 36px;
-    margin-top: 12%;
+    margin-top: 10%;
 }
 
 .closebtn:hover {
