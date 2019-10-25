@@ -222,16 +222,13 @@ p.paragraph::first-line {
 .p_bar {
     display: inline-block;
     content: "";
-<<<<<<< HEAD
     height: 1vh;
-    width: 20vw;
+    width: 25vw;
     margin: 1vh 10%;
     -ms-transform-origin-x: 30vh;
-=======
     height: 1vw;
     width: 35vh;
     margin-left: 15%;
->>>>>>> 8feb1cef3fad97d467403e7b6f5019f59cc370b5
     background-color: gray;
     border-radius: 50px;
 }
