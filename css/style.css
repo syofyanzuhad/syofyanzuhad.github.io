@@ -208,9 +208,9 @@ p.paragraph::first-line {
 .sidenavLeft .closebtn {
     position: absolute;
     top: 0;
-    right: 25px;
+    right: 0px;
     font-size: 36px;
-    margin-left: 50px;
+    /* margin-left: 100px; */
 }
 
 .closebtn:hover {
@@ -234,7 +234,7 @@ p.paragraph::first-line {
     display: inline-block;
     content: "";
     height: 1vh;
-    margin-bottom: 4vh;
+    margin-bottom: 3.5vh;
     border-radius: 50px;
     background-color: blue;
     width: 75%;
