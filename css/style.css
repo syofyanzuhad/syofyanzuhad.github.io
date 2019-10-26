@@ -219,7 +219,7 @@ p.paragraph::first-line {
 
 }
 
-.p_bar {
+/* .p_bar {
     display: inline-block;
     content: "";
     height: 1vh;
@@ -239,12 +239,17 @@ p.paragraph::first-line {
     background-color: blue;
     width: 75%;
     z-index: 9;
-}
+} */
 
-/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-#main {
-    transition: margin-left .5s;
-    padding: 20px;
+.md-progress {
+    position: relative;
+    width: 100%;
+    height: .25rem !important;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    background-color: rgb(126, 126, 126) !important;
+    box-shadow: none;
+    margin: 5%;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
