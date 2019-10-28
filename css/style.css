@@ -10,6 +10,10 @@
     z-index: 9;
 }
 
+.preloader.complete {
+    z-index: -1;
+}
+
 .preloader::before {
     content: '';
     position: absolute;
@@ -47,6 +51,7 @@
 
 .loading.complete {
     opacity: 0;
+    width: 0%;
 }
 
 nav .nav-link {
