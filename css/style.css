@@ -89,7 +89,7 @@ nav .nav-link:hover {
     text-transform: uppercase;
 }
 
-nav, p {
+nav, p, .nav-link, h5 {
     text-transform: uppercase;
     font-family: 'Big Shoulders Text', cursive !important;
     font-size: large;
