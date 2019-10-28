@@ -89,6 +89,22 @@ nav .nav-link:hover {
     text-transform: uppercase;
 }
 
+nav, p {
+    text-transform: uppercase;
+    font-family: 'Big Shoulders Text', cursive !important;
+    font-size: large;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-family: 'Big Shoulders Text', cursive !important;
+    font-size: xx-large;
+}
+
+h4 {
+    font-family: 'Big Shoulders Text', cursive !important;
+}
+
 .animatedParent {
     margin: auto;
 }
@@ -293,28 +309,6 @@ p.paragraph::first-line {
     text-decoration: unset;
 
 }
-
-/* .p_bar {
-    display: inline-block;
-    content: "";
-    height: 1vh;
-    width: 25vw;
-    margin: 1vh 10%;
-    -ms-transform-origin-x: 30vh;
-    background-color: gray;
-    border-radius: 50px;
-}
-
-.fill-bar.php {
-    display: inline-block;
-    content: "";
-    height: 1vh;
-    margin-bottom: 3.5vh;
-    border-radius: 50px;
-    background-color: blue;
-    width: 75%;
-    z-index: 9;
-} */
 
 .md-progress {
     position: relative;
