@@ -33,9 +33,21 @@
                 $(this).toggleClass(" text-white") .toggleClass(' text-dark');
             });
         });
+
+        $(window).on('load', function () {
+            $('.preloader').addClass('complete')
+            $('.loading').addClass('complete')
+        })
     </script>
 </head>
 <body>
+
+    <div class="preloader">
+        <div class="loading text-center">
+            <img src="img/ajax-loader.gif" alt="">
+        </div>
+    </div>
+
     <section id="home">
 
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar ">
