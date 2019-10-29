@@ -101,7 +101,7 @@ h1 {
     font-size: xx-large;
 }
 
-h4 {
+h3 {
     font-family: 'Big Shoulders Text', cursive !important;
 }
 
@@ -325,9 +325,11 @@ p.paragraph::first-line {
 @media screen and (max-height: 450px) {
     .sidenav {
         padding-top: 15px;
-        /* width: 1; */
     }
     .sidenav a {font-size: 18px;}
+    .navbar.navbar-expand-lg {
+        background-color: rgba(195, 195, 195, 0.609);
+    }
 }
 
 .rounded-circle {
@@ -337,7 +339,6 @@ p.paragraph::first-line {
 .view {
     margin: auto;
     max-width: 55%;
-    /* padding: 5%; */
 }
 
 @media only screen and (max-width: 600px) 
@@ -381,3 +382,4 @@ p.paragraph::first-line {
         border-radius: 50px;
     }
 }
+
