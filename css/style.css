@@ -204,7 +204,7 @@ a.closebtn {
 }
 
 /* The navigation menu links */
-.sidenavRight a {
+.sidenavRight a, .sidenavLeft a, .slideUp a, .slideUp2 a {
     /* padding: 8px 8px 8px 32px; */
     text-decoration: none;
     font-size: 25px;
@@ -215,16 +215,16 @@ a.closebtn {
 }
 
 /* When you mouse over the navigation links, change their color */
-.sidenavRight, .sidenavLeft a:hover {
+.sidenavRight a:hover, .sidenavLeft a:hover, .slideUp a:hover, .slideUp2 a:hover {
     color: #f1f1f1;
 }
 
-.sidenavRight, .sidenavLeft a:active {
+.sidenavRight a:active, .sidenavLeft a:active, .slideUp a:active, .slideUp2 a:active {
     color: #f1f1f1;
 }
 
 /* Position and style the close button (top right corner) */
-.sidenavRight .closebtn {
+.sidenavRight .closebtn, .slideUp .closebtn, .slideUp2 .closebtn {
     position: absolute;
     top: 0;
     right: 25px;
@@ -289,15 +289,6 @@ p.paragraph::first-line {
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
 
-/* The navigation menu links */
-.sidenavLeft a {
-    padding: 8px 8px 8px 32px;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-}
-
 /* When you mouse over the navigation links, change their color */
 .habout a:hover, a:active {
     color: #e6e6e6;
@@ -319,7 +310,6 @@ p.paragraph::first-line {
 .closebtn:hover {
     color: #e6e6e6;
     text-decoration: unset;
-
 }
 
 .md-progress {
@@ -331,6 +321,32 @@ p.paragraph::first-line {
     background-color: rgb(126, 126, 126) !important;
     box-shadow: none;
     margin: 5%;
+}
+
+.slideUp {
+    bottom: 0;
+    width: 100%; /* 100% Full-height */
+    height: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    background-color: rgba(0, 0, 0, 0.9); /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    /* padding-top: 60px; Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+.slideUp2 {
+    top: 0;
+    width: 100%; /* 100% Full-height */
+    height: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    background-color: rgba(0, 0, 0, 0.9); /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    /* padding-top: 60px; Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
@@ -366,20 +382,6 @@ p.paragraph::first-line {
         border-radius: 50px;
     }
 }
-
-/* @media only screen and (min-width: 600px ) 
-{
-    .p_bar {
-        display: inline-block;
-        content: "";
-        height: 1vh;
-        width: 35vw;
-        margin: 1vh 10%;
-        -ms-transform-origin-x: 30vh;
-        background-color: gray;
-        border-radius: 50px;
-    }
-} */
 
 @media only screen and (min-width: 992px) 
 {

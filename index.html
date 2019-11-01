@@ -27,7 +27,8 @@
 
         $(document).ready(function(){
             $("#btn,#btn1").hover(function(){
-                $(this).toggleClass(" text-white") .toggleClass(' text-dark');
+                $(this).toggleClass(" text-dark") .toggleClass(' text-white')
+                $(this).toggleClass('bg-none').toggleClass('bg-light')
             });
         });
 
@@ -39,7 +40,7 @@
         var x = window.matchMedia("(max-width: 450px)")
         function myFunction(x) {
             if (x.matches) { // If media query matches
-                $('.navbar').removeClass('bg-none').addClass('bg-light')
+                $('.scrolling-navbar').toggleClass('bg-none').toggleClass('bg-light')
             }
         }
         myFunction(x) // Call listener function at run time
@@ -48,15 +49,10 @@
     </script>
 </head>
 <body>
-    <!-- <div class="mask rgba-mask-strong">
-        <div id="particles-background" class="vertical-centered-box  "></div>
-        <div id="particles-foreground" class="vertical-centered-box  "></div>
-    </div> -->
 
     <div class="preloader">
         <div class="loading text-center">
                 <div class="bt-spinner"></div>
-            <!-- <img src="img/ajax-loader.gif" alt=""> -->
         </div>
     </div>
 
@@ -71,7 +67,7 @@
         <div class="collapse navbar-collapse ml-auto" id="navbarTogglerDemo02">
         <ul class="navbar-nav ml-auto mt-lg-0 animated fadeInRight">
             <li class="nav-item ">
-            <a class="nav-link" href="#" onclick="closeLeftNav(), closeRightNav()">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="#" onclick="closeAll()">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
             <a class="nav-link" href="#" onclick="openLeftNav()">Contact</a>
@@ -96,8 +92,8 @@
                 </h3>
                 <p class="mx-5 mb-5 animated fadeIn">I'm A basic Back-end Developer, who start learning to be full stack developer. Never stop learning, cause nobody was born smart.
                 </p>
-                <a id="btn" class="btn btn-outline-white btn-md bg-white text-dark font-weight-bold"><i class="fa fa-clone left"></i> View project</a>
-                <a id="btn1" class="btn btn-outline-white btn-md bg-white text-dark font-weight-bold"><i class="fa fa-clone left"></i> View photography</a>
+                <a id="btn" href="#portfolio" onclick="openSlideUp(), closeSlideUp2()" class="btn btn-outline-white btn-md bg-none text-white font-weight-bold"><i class="fa fa-clone left"></i> View project</a>
+                <a id="btn1" href="#photography" onclick="openSlideUp2(), closeSlideUp()" class="btn btn-outline-white btn-md bg-none text-white font-weight-bold"><i class="fa fa-clone left"></i> View photography</a>
             </div>
         </div>
     </div>
@@ -123,7 +119,7 @@
                         <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#whatsapp" role="tab"
                         aria-controls="pills-profile" aria-selected="false"><i class="fa fa-whatsapp"></i> WhatsApp</a>
                     </li>
-                    </ul>
+                </ul>
                     <hr class="mb-0" style="border-bottom: 0.5px solid white;">
                     <div class="card-body text-left ">
                         <div class="tab-content" id="pills-tabContent">
@@ -181,7 +177,7 @@
                                 <textarea name="pesan_wa" id="pesan2" class="form-control md-textarea" ></textarea>
                                 <label for="pesan_wa">Pesan</label>
                             </div>
-                            <button class="btn btn-sm btn-outline-blue" name="p_wa"><a href="https://api.whatsapp.com/send?phone=6281326743694&text=Assalamual'aikum %0ANama: '...'%0AEmail: '...'%0APhone: '...'%0APesan: '...'">Send</a></button>
+                            <a class="btn btn-sm btn-outline-blue" href="https://api.whatsapp.com/send?phone=6281326743694&text=Assalamual'aikum %0ANama: '...'%0AEmail: '...'%0APhone: '...'%0APesan: '...'">Send</a>
                             </form>
                         </div>
                         <!-- Akhir Whatsapp -->
@@ -332,6 +328,31 @@
             <!-- Accordion card -->
     </div>
     
+    </div>
+</div>  
+
+<div id="portfolio" class="slideUp">
+    <a href="javascript:void(0)" class="closebtn mt-5" onclick="closeSlideUp()">&times;</a>
+    
+    <!--Accordion wrapper-->
+    <div class="accordion md-accordion" id="accordionEx" role="tablist" aria-multiselectable="true">
+        <div class="row">
+            <div class="col">
+                
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div id="photography" class="slideUp2">
+    <a href="javascript:void(0)" class="closebtn mt-5" onclick="closeSlideUp2()">&times;</a>
+    
+    <!--Accordion wrapper-->
+    <div class="accordion md-accordion" id="accordionEx" role="tablist" aria-multiselectable="true">
+        
+    </div>
+
 </div>
 
 <!-- My Costumization Script -->
