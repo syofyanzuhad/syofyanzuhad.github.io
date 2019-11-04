@@ -121,7 +121,8 @@ function closeNav() {
             document.getElementById("photography").style.height = "0";
             document.getElementById("about").style.width = "0";
             document.getElementById("contacts").style.width = "0";
-            document.getElementById('closebtn').style.position = "absolute";
+            document.getElementById('closebtn1').style.position = "absolute";
+            document.getElementById('closebtn2').style.position = "absolute";
         }
 
     // }
