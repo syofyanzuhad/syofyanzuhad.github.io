@@ -96,7 +96,7 @@ nav .nav-link:hover {
     text-transform: uppercase;
 }
 
-nav, p, .nav-link, h5 {
+nav, .nav-link, h5 {
     text-transform: uppercase;
     font-family: 'Big Shoulders Text', cursive !important;
     font-size: large;
@@ -108,7 +108,7 @@ h1 {
     font-size: xx-large;
 }
 
-h3 {
+h2, h3, p {
     font-family: 'Big Shoulders Text', cursive !important;
 }
 
@@ -224,12 +224,13 @@ a.closebtn {
 }
 
 /* Position and style the close button (top right corner) */
-.sidenavRight .closebtn, .slideUp .closebtn, .slideUp2 .closebtn {
+.sidenavRight .closebtn, .sidenavLeft .closebtn, .slideUp .closebtn, .slideUp2 .closebtn {
     position: absolute;
     top: 0;
     right: 25px;
     font-size: 36px;
     margin-left: 50px;
+    margin-top: 12%;
 }
 
 .sch {
@@ -244,6 +245,31 @@ a.closebtn {
 }
 .sch li:before {
     content: "\f19d"; /* FontAwesome Unicode */
+    font-family: FontAwesome;
+    display: inline-block;
+    margin-left: -1.3em; /* same as padding-left set on li */
+    width: 1.3em; /* same as padding-left set on li */
+}
+
+.id-user {
+    list-style: none;
+    padding: 0;
+}
+
+.id-user {
+    padding-left: 1.3em;
+    margin: 2vh 0vh;
+}
+
+.id-user li a {
+    text-decoration: none;
+    font-size: medium;
+    display: inline;
+    /* cursor: pointer; */
+}
+
+.id-user li::before {
+    content: "\f27e"; /* FontAwesome Unicode */
     font-family: FontAwesome;
     display: inline-block;
     margin-left: -1.3em; /* same as padding-left set on li */
@@ -299,7 +325,15 @@ p.paragraph::first-line {
     margin: 2vh 0;
 }
 /* Position and style the close button (top right corner) */
-.sidenavLeft .closebtn {
+/* .sidenavLeft .closebtn {
+    position: absolute;
+    top: 0;
+    right: 1%;
+    font-size: 36px;
+    margin-top: 10%;
+} */
+
+#photography .closebtn, #portfolio .closebtn {
     position: absolute;
     top: 0;
     right: 1%;
@@ -314,13 +348,13 @@ p.paragraph::first-line {
 
 .md-progress {
     position: relative;
-    width: 100%;
+    width: 90%;
     height: .25rem !important;
-    margin-bottom: 1rem;
+    margin: 1rem;
     overflow: hidden;
     background-color: rgb(126, 126, 126) !important;
     box-shadow: none;
-    margin: 5%;
+    margin-left: 20%;
 }
 
 .slideUp {
@@ -347,6 +381,92 @@ p.paragraph::first-line {
     overflow-x: hidden; /* Disable horizontal scroll */
     /* padding-top: 60px; Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+.overlay {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    position: fixed;
+    top : 0;
+    left: 0;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0);
+    transition: 0.8s;
+    text-align: center;
+}
+
+.overlay:target {
+    width: auto;
+    height: auto;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.overlay img {
+    max-width: 70%;
+    margin: 5% 0;
+}
+
+.card a:hover .card-img-top {
+    animation: fade 1s;
+    opacity: .7;
+}
+
+.overlay:target img {
+    animation: zoomfade 1s;
+}
+
+.overlay .closes {
+    background-size: cover;
+    border-radius: 50%;
+    opacity: 0.5;
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    color: white;
+}
+
+.overlay a:hover {
+    text-decoration: unset;
+}
+
+.overlay .navig-n {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    color: white;
+}
+
+.overlay .navig-b {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    color: white;
+}
+@keyframes fade {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.7;
+    }
+}
+@keyframes zoomfade {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
