@@ -100,13 +100,12 @@ function closeNav() {
         /* Set the width of the side navigation to 0 */
         function closeSlideUp() {
             document.getElementById("portfolio").style.height = "0";
-            document.getElementById('closebtn2').style.position = "absolute";
-
+            document.getElementById('closebtn1').style.position = "absolute";
         }
 
         function closeSlideUp2() {
             document.getElementById("photography").style.height = "0";
-            document.getElementById('closebtn1').style.position = "absolute";
+            document.getElementById('closebtn2').style.position = "absolute";
         }
 
         function closeRightNav() {
