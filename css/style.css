@@ -71,8 +71,8 @@ body {
 
 .loading {
     position: absolute;
-    left: 45vw;
-    top: 45vh;
+    left: 48vw;
+    top: 48vh;
     z-index: 99;
     /* margin: auto; */
 }
@@ -386,6 +386,16 @@ p.paragraph::first-line {
 }
 
 
+
+.rounded-circle {
+    border-radius: 50%!important;
+}
+
+.view {
+    margin: auto;
+    max-width: 55%;
+}
+
 @keyframes fade {
     0% {
         opacity: 1;
@@ -406,134 +416,6 @@ p.paragraph::first-line {
     }
 }
 
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-
-    .loading {
-        position: absolute;
-        left: 43vw;
-        top: 43vh;
-        z-index: 99;
-        /* margin: auto; */
-    }
-
-    .sidenav {
-        padding-top: 15px;
-    }
-    .sidenav a {font-size: 18px;}
-    .navbar.navbar-expand-lg {
-        background-color: rgba(195, 195, 195, 0.609);
-    }
-}
-
-.rounded-circle {
-    border-radius: 50%!important;
-}
-
-.view {
-    margin: auto;
-    max-width: 55%;
-}
-
-@media only screen and (max-width: 600px) 
-{
-    .p_bar {
-        display: inline-block;
-        content: "";
-        height: 1vh;
-        width: 55vw;
-        margin: 1vh 10%;
-        -ms-transform-origin-x: 30vh;
-        background-color: gray;
-        border-radius: 50px;
-    }
-
-    .loading {
-        position: absolute;
-        left: 43vw;
-        top: 43vh;
-        z-index: 99;
-        /* margin: auto; */
-    }
-}
-
-@media only screen and (min-width: 992px) 
-{
-    .p_bar {
-        display: inline-block;
-        content: "";
-        height: 1vh;
-        width: 15vw;
-        margin: 1vh 10%;
-        -ms-transform-origin-x: 30vh;
-        background-color: gray;
-        border-radius: 50px;
-    }
-}
-
-/* NO BORDER SPINNER */
-.nb-spinner {
-    width: 75px;
-    height: 75px;
-    margin: 0;
-    background: transparent;
-    border-top: 4px solid #009688;
-    border-right: 4px solid transparent;
-    border-radius: 50%;
-    -webkit-animation: 1s spin linear infinite;
-    animation: 1s spin linear infinite;
-}
-
-/* BORDER TOP SPINNER */
-.bt-spinner {
-    width: 75px;
-    height: 75px;
-    border-radius: 50%;
-    background-color: transparent;
-    border: 4px solid #222;
-    border-top-color: #009688;
-    -webkit-animation: 1s spin linear infinite;
-    animation: 1s spin linear infinite;
-}
-
-/* DOUBLE BORDER SPINNER */
-.db-spinner {
-    width: 75px;
-    height: 75px;
-    border-radius: 50%;
-    background-color: transparent;
-    border: 4px solid #222;
-    border-top-color: #009688;
-    border-bottom-color: #009688;
-    -webkit-animation: 1s spin linear infinite;
-    animation: 1s spin linear infinite;
-}
-
-/* DOUBLE SPINNER */
-.double-spinner {
-    position: relative;
-}
-
-.dbl-spinner {
-    position: absolute;
-    width: 75px;
-    height: 75px;
-    border-radius: 50%;
-    background-color: transparent;
-    border: 4px solid transparent;
-    border-top: 4px solid #222;
-    border-left: 4px solid #222;
-    -webkit-animation: 2s spin linear infinite;
-    animation: 2s spin linear infinite;
-}
-
-.dbl-spinner--2 {
-    border: 4px solid transparent;
-    border-right: 4px solid #009688;
-    border-bottom: 4px solid #009688;
-    -webkit-animation: 1s spin linear infinite;
-    animation: 1s spin linear infinite;
-}
 
 @keyframes spin {
     from {
@@ -545,3 +427,130 @@ p.paragraph::first-line {
         transform: rotate(360deg);
     }
 }
+
+
+    /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+    @media screen and (max-height: 450px) {
+    
+        .loading {
+            position: absolute;
+            left: 43vw;
+            top: 43vh;
+            z-index: 99;
+            /* margin: auto; */
+        }
+    
+        .sidenav {
+            padding-top: 15px;
+        }
+        .sidenav a {font-size: 18px;}
+    
+        .navbar.navbar-expand-lg {
+            background-color: rgba(195, 195, 195, 0.609);
+        }
+    }
+    
+    @media screen and (max-width: 350px) 
+    {
+        .p_bar {
+            display: inline-block;
+            content: "";
+            height: 1vh;
+            width: 55vw;
+            margin: 1vh 10%;
+            -ms-transform-origin-x: 30vh;
+            background-color: gray;
+            border-radius: 50px;
+        }
+    
+        .loading {
+            position: absolute;
+            left: 43vw;
+            top: 43vh;
+            z-index: 99;
+            /* margin: auto; */
+        }
+    
+        .navbar.navbar-expand-lg {
+            background-color: rgba(195, 195, 195, 0.609) !important;
+        }
+    }
+    
+    @media only screen and (min-width: 992px) 
+    {
+        .p_bar {
+            display: inline-block;
+            content: "";
+            height: 1vh;
+            width: 15vw;
+            margin: 1vh 10%;
+            -ms-transform-origin-x: 30vh;
+            background-color: gray;
+            border-radius: 50px;
+        }
+    }
+    
+    /* NO BORDER SPINNER */
+    .nb-spinner {
+        width: 75px;
+        height: 75px;
+        margin: 0;
+        background: transparent;
+        border-top: 4px solid #009688;
+        border-right: 4px solid transparent;
+        border-radius: 50%;
+        -webkit-animation: 1s spin linear infinite;
+        animation: 1s spin linear infinite;
+    }
+    
+    /* BORDER TOP SPINNER */
+    .bt-spinner {
+        width: 75px;
+        height: 75px;
+        border-radius: 50%;
+        background-color: transparent;
+        border: 4px solid #222;
+        border-top-color: #009688;
+        -webkit-animation: 1s spin linear infinite;
+        animation: 1s spin linear infinite;
+    }
+    
+    /* DOUBLE BORDER SPINNER */
+    .db-spinner {
+        width: 75px;
+        height: 75px;
+        border-radius: 50%;
+        background-color: transparent;
+        border: 4px solid #222;
+        border-top-color: #009688;
+        border-bottom-color: #009688;
+        -webkit-animation: 1s spin linear infinite;
+        animation: 1s spin linear infinite;
+    }
+    
+    /* DOUBLE SPINNER */
+    .double-spinner {
+        position: relative;
+    }
+    
+    .dbl-spinner {
+        position: absolute;
+        width: 75px;
+        height: 75px;
+        border-radius: 50%;
+        background-color: transparent;
+        border: 4px solid transparent;
+        border-top: 4px solid #222;
+        border-left: 4px solid #222;
+        -webkit-animation: 2s spin linear infinite;
+        animation: 2s spin linear infinite;
+    }
+    
+    .dbl-spinner--2 {
+        border: 4px solid transparent;
+        border-right: 4px solid #009688;
+        border-bottom: 4px solid #009688;
+        -webkit-animation: 1s spin linear infinite;
+        animation: 1s spin linear infinite;
+    }
+
