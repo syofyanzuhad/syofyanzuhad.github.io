@@ -117,74 +117,6 @@ h4 {
     font-style: italic;
 }
 
-.animatedParent {
-    margin: auto;
-}
-
-.text-1 {
-    animation: text1;
-}
-
-.text-2 {
-    animation: text2;
-}
-
-.text-1, .text-2 {
-    overflow: hidden;
-    white-space: nowrap;
-    display: inline-block;
-    position: relative;
-    animation-duration: 20s;
-    animation-timing-function: steps(25, end);
-    animation-iteration-count: infinite;
-}
-
-.text-1::after, .text-2::after, .text-3::after {
-    content: " |";
-    position: absolute;
-    right: 0;
-    animation: caret infinite;
-    animation-duration: 1s;
-    animation-timing-function: steps(1, end);
-}
-
-@keyframes text3 {
-    0%, 50%, 100% {
-        width: 0;
-    }
-    90%, 100% {
-        width: 7em;
-    }
-}
-
-@keyframes text2 {
-    0%, 50%, 100% {
-        width: 0;
-    }
-
-    55%, 75% {
-        width: 7em;
-    }
-}
-
-@keyframes text1 {
-    0%, 50%, 100% {
-        width: 0;
-    }
-    10%, 35% {
-        width: 7em;
-    }
-}
-
-@keyframes caret {
-    0%, 100% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-    }
-}
-
 a.closebtn {
     z-index: 999;
 }
@@ -417,7 +349,7 @@ p.paragraph::first-line {
     animation: zoomfade 1s;
 }
 
-.overlay .closes {
+.overlay a.closes {
     background-size: cover;
     border-radius: 50%;
     opacity: 0.5;
@@ -425,28 +357,31 @@ p.paragraph::first-line {
     top: 10%;
     right: 5%;
     color: white;
+    font-size: 40px;
 }
 
 .overlay a:hover {
     text-decoration: unset;
+    color: white !important;
+    font-weight: bold;
 }
 
 .overlay .navig-n {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 30px;
+    font-size: 35px;
     position: absolute;
     top: 50%;
     right: 10%;
-    color: white;
+    color: rgba(195, 195, 195, 0.609);
 }
 
 .overlay .navig-b {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 30px;
+    font-size: 35px;
     position: absolute;
     top: 50%;
     left: 10%;
-    color: white;
+    color: rgba(195, 195, 195, 0.609);
 }
 
 
