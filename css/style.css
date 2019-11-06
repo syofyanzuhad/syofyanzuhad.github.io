@@ -334,11 +334,10 @@ p.paragraph::first-line {
 } */
 
 #photography .closebtn, #portfolio .closebtn {
-    position: absolute;
+    /* position: ; */
     top: 0;
     right: 1%;
     font-size: 36px;
-    margin-top: 10%;
 }
 
 .closebtn:hover {
@@ -449,6 +448,8 @@ p.paragraph::first-line {
     left: 10%;
     color: white;
 }
+
+
 @keyframes fade {
     0% {
         opacity: 1;
