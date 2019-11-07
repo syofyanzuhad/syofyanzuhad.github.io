@@ -138,11 +138,11 @@ function closeNav() {
     // } else {
         /* Set the width of the side navigation to 250px */
         function openRightNav() {
-            document.getElementById("about").style.width = "370px";
+            document.getElementById("about").style.width = "360px";
         }
         
         function openLeftNav() {
-            document.getElementById("contacts").style.width = "370px";
+            document.getElementById("contacts").style.width = "360px";
         }
 
         function openSlideUp2() {

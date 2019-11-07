@@ -71,8 +71,8 @@ body {
 
 .loading {
     position: absolute;
-    left: 48vw;
-    top: 48vh;
+    left: 45vw;
+    top: 45vh;
     z-index: 99;
     /* margin: auto; */
 }
@@ -137,7 +137,7 @@ a.closebtn {
 }
 
 /* The navigation menu links */
-.sidenavRight a, .sidenavLeft a, .slideUp a, .slideUp2 a {
+.sidenavRight a, .sidenavLeft a, .slideUp a, .slideUp2 a, footer a{
     /* padding: 8px 8px 8px 32px; */
     text-decoration: none;
     font-size: 25px;
@@ -148,7 +148,7 @@ a.closebtn {
 }
 
 /* When you mouse over the navigation links, change their color */
-.sidenavRight a:hover, .sidenavLeft a:hover, .slideUp a:hover, .slideUp2 a:hover {
+.sidenavRight a:hover, .sidenavLeft a:hover, .slideUp a:hover, .slideUp2 a:hover, footer a:hover {
     color: #f1f1f1;
 }
 
@@ -394,6 +394,19 @@ p.paragraph::first-line {
 .view {
     margin: auto;
     max-width: 55%;
+}
+
+.footer {
+    bottom: 0;
+    position: absolute;
+    width: 380px;
+    text-align: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-align-content: center;
+    align-content: center;
 }
 
 @keyframes fade {
