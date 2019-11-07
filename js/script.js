@@ -138,11 +138,12 @@ function closeNav() {
     // } else {
         /* Set the width of the side navigation to 250px */
         function openRightNav() {
-            document.getElementById("about").style.width = "360px";
+            document.getElementById("about").style.width = "370px";
+            document.getElementById('footer').style.position = "relative";
         }
         
         function openLeftNav() {
-            document.getElementById("contacts").style.width = "360px";
+            document.getElementById("contacts").style.width = "370px";
         }
 
         function openSlideUp2() {
@@ -169,6 +170,7 @@ function closeNav() {
 
         function closeRightNav() {
             document.getElementById("about").style.width = "0";
+            document.getElementById('footer').style.position = "absolute";
         }
 
         function closeLeftNav() {
@@ -182,6 +184,7 @@ function closeNav() {
             document.getElementById("contacts").style.width = "0";
             document.getElementById('closebtn1').style.position = "absolute";
             document.getElementById('closebtn2').style.position = "absolute";
+            document.getElementById('footer').style.position = "absolute";
         }
 
     // }

@@ -396,17 +396,10 @@ p.paragraph::first-line {
     max-width: 55%;
 }
 
-.footer {
-    bottom: 0;
-    position: absolute;
-    width: 380px;
+#footer {
+    margin-top: 50%;
+    width: 385px;
     text-align: center;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-align-content: center;
-    align-content: center;
 }
 
 @keyframes fade {
