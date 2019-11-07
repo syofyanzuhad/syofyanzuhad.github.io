@@ -397,7 +397,7 @@ p.paragraph::first-line {
 }
 
 #footer {
-    margin-top: 50%;
+    margin-top: 28vh;
     width: 385px;
     text-align: center;
 }
