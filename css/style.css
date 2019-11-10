@@ -1,0 +1,545 @@
+body {
+    background-image: url(../img/profile.jpg) !important; 
+    background-position: center !important; 
+    height: 100vh; 
+    background-size: cover !important;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background: #333; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(43, 57, 255, 0.863); 
+}
+
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 1s;
+    z-index: 9;
+}
+
+.preloader.complete {
+    z-index: -1;
+}
+
+.preloader::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: rgba(0, 0, 0, 1);
+    transition: 1s;
+}
+
+.preloader.complete::before {
+    left: -50%;
+}
+
+.preloader::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: rgb(0, 0, 0, 1);
+    transition: 1s;
+}
+
+.preloader.complete::after {
+    right: -50%;
+}
+
+.loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+}
+
+.loading.complete {
+    opacity: 0;
+    width: 0%;
+}
+
+nav .nav-link {
+    text-decoration-color: white;
+    text-transform: uppercase;
+}
+
+nav .nav-link:hover {
+    text-decoration-color: white;
+    border-bottom: 2px solid white;
+    border-bottom-width: 20%;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: unset;
+    text-transform: uppercase;
+}
+
+nav, .nav-link, h5 {
+    text-transform: uppercase;
+    font-family: 'Big Shoulders Text', cursive !important;
+    font-size: large;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-family: 'Big Shoulders Text', cursive !important;
+    font-size: xx-large;
+}
+
+h2, h3, p {
+    font-family: 'Big Shoulders Text', cursive !important;
+}
+
+h4 {
+    font-weight: bold;
+    font-style: italic;
+}
+
+a.closebtn {
+    z-index: 999;
+}
+
+/* The side navigation menu */
+.sidenavRight {
+    right: 0;
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    background-color: rgba(0, 0, 0, 0.9); /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenavRight a, .sidenavLeft a, .slideUp a, .slideUp2 a, footer a{
+    /* padding: 8px 8px 8px 32px; */
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenavRight a:hover, .sidenavLeft a:hover, .slideUp a:hover, .slideUp2 a:hover, footer a:hover {
+    color: #f1f1f1;
+}
+
+.sidenavRight a:active, .sidenavLeft a:active, .slideUp a:active, .slideUp2 a:active {
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenavRight .closebtn, .sidenavLeft .closebtn, .slideUp .closebtn, .slideUp2 .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    margin-top: 12%;
+}
+
+.sch {
+    list-style: none;
+    padding: 0;
+}
+
+.sch li {
+    padding-left: 1.3em;
+    margin: 2vh 0vh;
+
+}
+.sch li:before {
+    content: "\f19d"; /* FontAwesome Unicode */
+    font-family: FontAwesome;
+    display: inline-block;
+    margin-left: -1.3em; /* same as padding-left set on li */
+    width: 1.3em; /* same as padding-left set on li */
+}
+
+.id-user {
+    list-style: none;
+    padding: 0;
+}
+
+.id-user {
+    padding-left: 1.3em;
+    margin: 2vh 0vh;
+}
+
+.id-user li a {
+    text-decoration: none;
+    font-size: medium;
+    display: inline;
+    /* cursor: pointer; */
+}
+
+.id-user li::before {
+    content: "\f27e"; /* FontAwesome Unicode */
+    font-family: FontAwesome;
+    display: inline-block;
+    margin-left: -1.3em; /* same as padding-left set on li */
+    width: 1.3em; /* same as padding-left set on li */
+}
+
+.btn-floating {
+    box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
+    position: relative;
+    z-index: 1;
+    vertical-align: middle;
+    display: inline-block;
+    overflow: hidden;
+    transition: all .2s ease-in-out;
+    margin: 10px;
+    border-radius: 50%;
+    padding: 3;
+    cursor: pointer;
+    width: fit-content;
+    height: auto;
+}
+
+p.paragraph::first-letter {
+    text-transform: uppercase;
+    font-size: 30px;
+}
+
+p.paragraph::first-line {
+    text-indent: 25px;
+}
+
+.sidenavLeft {
+    /* right: 0; */
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8); /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* When you mouse over the navigation links, change their color */
+.habout a:hover, a:active {
+    color: #e6e6e6;
+    text-decoration: none;
+}
+
+.habout {
+    margin: 2vh 0;
+}
+/* Position and style the close button (top right corner) */
+/* .sidenavLeft .closebtn {
+    position: absolute;
+    top: 0;
+    right: 1%;
+    font-size: 36px;
+    margin-top: 10%;
+} */
+
+#photography .closebtn, #portfolio .closebtn {
+    /* position: ; */
+    top: 0;
+    right: 1%;
+    font-size: 36px;
+}
+
+.closebtn:hover {
+    color: #e6e6e6;
+    text-decoration: unset;
+}
+
+.md-progress {
+    position: relative;
+    width: 90%;
+    height: .25rem !important;
+    margin: 1rem;
+    overflow: hidden;
+    background-color: rgb(126, 126, 126) !important;
+    box-shadow: none;
+    margin-left: 20%;
+}
+
+.slideUp {
+    bottom: 0;
+    width: 100%; /* 100% Full-height */
+    height: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    background-color: rgba(0, 0, 0, 0.9); /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    /* padding-top: 60px; Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+.slideUp2 {
+    top: 0;
+    width: 100%; /* 100% Full-height */
+    height: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    background-color: rgba(0, 0, 0, 0.9); /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    /* padding-top: 60px; Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+.overlay {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    position: fixed;
+    top : 0;
+    left: 0;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0);
+    transition: 0.8s;
+    text-align: center;
+}
+
+.overlay:target {
+    width: auto;
+    height: auto;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.overlay img {
+    max-width: 70%;
+    margin: 5% 0;
+}
+
+.card a:hover .card-img-top {
+    animation: fade 1s;
+    opacity: .7;
+}
+
+.overlay:target img {
+    animation: zoomfade 1s;
+}
+
+.overlay a.closes {
+    background-size: cover;
+    border-radius: 50%;
+    opacity: 0.5;
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    color: white;
+    font-size: 40px;
+}
+
+.overlay a:hover {
+    text-decoration: unset;
+    color: white !important;
+    font-weight: bold;
+}
+
+.overlay .navig-n {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 35px;
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    color: rgba(195, 195, 195, 0.609);
+}
+
+.overlay .navig-b {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 35px;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    color: rgba(195, 195, 195, 0.609);
+}
+
+
+
+.rounded-circle {
+    border-radius: 50%!important;
+}
+
+.view {
+    margin: auto;
+    max-width: 55%;
+}
+
+#footer {
+    margin-top: 28vh;
+    width: 385px;
+    text-align: center;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.7;
+    }
+}
+@keyframes zoomfade {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+@keyframes spin {
+    from {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+
+    /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+    @media screen and (max-height: 450px) {
+    
+        .sidenav {
+            padding-top: 15px;
+        }
+        .sidenav a {font-size: 18px;}
+    
+        .navbar.navbar-expand-lg {
+            background-color: rgba(195, 195, 195, 0.609);
+        }
+    }
+    
+    @media screen and (max-width: 350px) 
+    {
+        .p_bar {
+            display: inline-block;
+            content: "";
+            height: 1vh;
+            width: 55vw;
+            margin: 1vh 10%;
+            -ms-transform-origin-x: 30vh;
+            background-color: gray;
+            border-radius: 50px;
+        }
+    
+        .navbar.navbar-expand-lg {
+            background-color: rgba(195, 195, 195, 0.609) !important;
+        }
+    }
+    
+    @media only screen and (min-width: 992px) 
+    {
+        .p_bar {
+            display: inline-block;
+            content: "";
+            height: 1vh;
+            width: 15vw;
+            margin: 1vh 10%;
+            -ms-transform-origin-x: 30vh;
+            background-color: gray;
+            border-radius: 50px;
+        }
+    }
+    
+    /* NO BORDER SPINNER */
+    .nb-spinner {
+        width: 75px;
+        height: 75px;
+        margin: 0;
+        background: transparent;
+        border-top: 4px solid #009688;
+        border-right: 4px solid transparent;
+        border-radius: 50%;
+        -webkit-animation: 1s spin linear infinite;
+        animation: 1s spin linear infinite;
+    }
+    
+    /* BORDER TOP SPINNER */
+    .bt-spinner {
+        width: 75px;
+        height: 75px;
+        border-radius: 50%;
+        background-color: transparent;
+        border: 4px solid #222;
+        border-top-color: #009688;
+        -webkit-animation: 1s spin linear infinite;
+        animation: 1s spin linear infinite;
+    }
+    
+    /* DOUBLE BORDER SPINNER */
+    .db-spinner {
+        width: 75px;
+        height: 75px;
+        border-radius: 50%;
+        background-color: transparent;
+        border: 4px solid #222;
+        border-top-color: #009688;
+        border-bottom-color: #009688;
+        -webkit-animation: 1s spin linear infinite;
+        animation: 1s spin linear infinite;
+    }
+    
+    /* DOUBLE SPINNER */
+    .double-spinner {
+        position: relative;
+    }
+    
+    .dbl-spinner {
+        position: absolute;
+        width: 75px;
+        height: 75px;
+        border-radius: 50%;
+        background-color: transparent;
+        border: 4px solid transparent;
+        border-top: 4px solid #222;
+        border-left: 4px solid #222;
+        -webkit-animation: 2s spin linear infinite;
+        animation: 2s spin linear infinite;
+    }
+    
+    .dbl-spinner--2 {
+        border: 4px solid transparent;
+        border-right: 4px solid #009688;
+        border-bottom: 4px solid #009688;
+        -webkit-animation: 1s spin linear infinite;
+        animation: 1s spin linear infinite;
+    }
+
