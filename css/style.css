@@ -71,10 +71,10 @@ body {
 
 .loading {
     position: absolute;
-    left: 45vw;
-    top: 45vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     z-index: 99;
-    /* margin: auto; */
 }
 
 .loading.complete {
@@ -438,14 +438,6 @@ p.paragraph::first-line {
     /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
     @media screen and (max-height: 450px) {
     
-        .loading {
-            position: absolute;
-            left: 43vw;
-            top: 43vh;
-            z-index: 99;
-            /* margin: auto; */
-        }
-    
         .sidenav {
             padding-top: 15px;
         }
@@ -467,14 +459,6 @@ p.paragraph::first-line {
             -ms-transform-origin-x: 30vh;
             background-color: gray;
             border-radius: 50px;
-        }
-    
-        .loading {
-            position: absolute;
-            left: 43vw;
-            top: 43vh;
-            z-index: 99;
-            /* margin: auto; */
         }
     
         .navbar.navbar-expand-lg {
