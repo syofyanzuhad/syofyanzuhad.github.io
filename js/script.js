@@ -195,12 +195,12 @@ function closeNav() {
 // x.addListener(myFunction) // Attach listener function on state changes
 
 //////////// click event to hide overlay ////////////
-var $overlay = document.getElementsByClassName('overlay');
+// var $overlay = document.getElementsByClassName('overlay');
 
-$overlay.click(function(){ //annonymous function to hide overlay
-    console.log('overlay clicked');
-    $overlay.hide();
-});
+// $overlay.click(function(){ //annonymous function to hide overlay
+//     console.log('overlay clicked');
+//     $overlay.hide();
+// });
 
 //////////// add overlay to html ////////////
 // var $overlay = $('<div id="overlay"></div>'); //string to create div (overlay) as jQuery variable
