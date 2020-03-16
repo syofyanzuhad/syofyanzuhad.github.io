@@ -138,17 +138,17 @@
                             <!-- Body -->
                             <div class="md-form">
                                 <i class="fa fa-user prefix grey-text"></i>
-                                <input type="text" name="nama" id="form-name" class="form-control">
+                                <input type="text" name="nama" id="form-name" class="form-control" required>
                                 <label for="form-name">Your name</label>
                             </div>
                             <div class="md-form">
                                 <i class="fa fa-envelope prefix grey-text"></i>
-                                <input type="text" name="email" id="form-email" class="form-control">
+                                <input type="text" name="email" id="form-email" class="form-control" required>
                                 <label for="form-email">Your email</label>
                             </div>
                             <div class="md-form">
                                 <i class="fa fa-tag prefix grey-text"></i>
-                                <input type="text" id="form-subject" class="form-control">
+                                <input type="text" id="form-subject" class="form-control" required>
                                 <label for="form-Subject">Subject</label>
                             </div>
                             <div class="md-form">
@@ -715,6 +715,7 @@ background.addEventListener("load", function () {
             contentType: false, // auto-detection
             processData: false // no need to parse formData to string
         }).done(function () {
+            $('#contacts').css('width:0px');
             alert('Email terkirim!');
         }).fail(function (error) {
             alert('Oops... ' + JSON.stringify(error));
