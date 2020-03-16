@@ -701,6 +701,25 @@ const background = document.getElementById("body");
 background.addEventListener("load", function () {
     alert("Image loaded !");
 });
+    $('#contact-form').on('submit', function (event) {
+        event.preventDefault(); // prevent reload
+
+        var formData = new FormData(this);
+        formData.append('service_id', 'gmail');
+        formData.append('template_id', 'template_WC3xZyZS');
+        formData.append('user_id', 'user_owkx5v1e5Nr4pRrDlnZ5P');
+
+        $.ajax('https://api.emailjs.com/api/v1.0/email/send-form', {
+            type: 'POST',
+            data: formData,
+            contentType: false, // auto-detection
+            processData: false // no need to parse formData to string
+        }).done(function () {
+            alert('Email terkirim!');
+        }).fail(function (error) {
+            alert('Oops... ' + JSON.stringify(error));
+        });
+    });
 </script>
 
 <!--Start of Tawk.to Script-->
