@@ -143,7 +143,7 @@
                             </div>
                             <div class="md-form">
                                 <i class="fa fa-envelope prefix grey-text"></i>
-                                <input type="text" name="email" id="form-email-e" class="form-control" required>
+                                <input type="email" name="email" id="form-email-e" class="form-control" required>
                                 <label for="form-email">Your email</label>
                             </div>
                             <div class="md-form">
@@ -705,16 +705,15 @@ background.addEventListener("load", function () {
     $('#contact-form').on('submit', function (event) {
         event.preventDefault(); // prevent reload
         var contact = $('#contacts');
-        var from_name = $('#form-name-e').val();
-        var from_email = $('#form-email-e').val();
-        var from_subject = $('#form-subject-e').val();
-        var from_text = $('#form-text-e').val();
+        var form_name = $('#form-name-e').val();
+        var form_email = $('#form-email-e').val();
+        var form_subject = $('#form-subject-e').val();
+        var form_text = $('#form-text-e').val();
 
         var formData = new FormData(this);
-        // ({ "reply_to": "syofyan", "from_name": "noname", "to_name": "admin", "message_html": "contoh pesan" })
-        formData.append('reply_to', form_name);
-        formData.append('from_name', form_email);
-        formData.append('to_name', form_subject);
+        formData.append('reply_to', form_email);
+        formData.append('from_name', form_name);
+        formData.append('to_name', 'Syofyan Zuhad');
         formData.append('message_html', form_text);
         formData.append('service_id', 'gmail');
         formData.append('template_id', 'template_WC3xZyZS');
