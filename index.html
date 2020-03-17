@@ -138,22 +138,22 @@
                             <!-- Body -->
                             <div class="md-form">
                                 <i class="fa fa-user prefix grey-text"></i>
-                                <input type="text" name="nama" id="form-name" class="form-control" required>
+                                <input type="text" name="nama" id="form-name-e" class="form-control" required>
                                 <label for="form-name">Your name</label>
                             </div>
                             <div class="md-form">
                                 <i class="fa fa-envelope prefix grey-text"></i>
-                                <input type="text" name="email" id="form-email" class="form-control" required>
+                                <input type="text" name="email" id="form-email-e" class="form-control" required>
                                 <label for="form-email">Your email</label>
                             </div>
                             <div class="md-form">
                                 <i class="fa fa-tag prefix grey-text"></i>
-                                <input type="text" id="form-subject" class="form-control" required>
+                                <input type="text" id="form-subject-e" class="form-control" required>
                                 <label for="form-Subject">Subject</label>
                             </div>
                             <div class="md-form">
                                 <i class="fa fa-pencil prefix grey-text "></i>
-                                <textarea name="pesan_email" id="form-text" class="form-control md-textarea" rows="3"></textarea>
+                                <textarea name="pesan_email" id="form-text-e" class="form-control md-textarea" rows="3"></textarea>
                                 <label for="pesan_email">Send message</label>
                             </div>
                             <div class="text-center">
@@ -167,17 +167,17 @@
                         <div class="tab-pane fade" id="whatsapp" role="tabpanel" aria-labelledby="pills-profile-tab">
                             <form method="post" action="index.php">
                             <div class="md-form">
-                                <input type="text" id="form-name" class="form-control">
+                                <input type="text" id="form-name-wa" class="form-control">
                                 <label for="form-name">Nama</label>
                             </div>
                             <div class="md-form">
-                                <input type="text" id="form-email" class="form-control">
+                                <input type="text" id="form-email-wa" class="form-control">
                                 <label for="form-email">Email</label>
                                 <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
                                 else.</small>
                             </div>
                             <div class="md-form">
-                                <input type="text" id="form-phone" class="form-control">
+                                <input type="text" id="form-phone-wa" class="form-control">
                                 <label for="form-phone">No. Telp</label>
                                 <small id="telpHelp" class="form-text text-muted">Number phone needed for message
                                 end-to-end.</small>
@@ -701,10 +701,21 @@ const background = document.getElementById("body");
 background.addEventListener("load", function () {
     alert("Image loaded !");
 });
+
     $('#contact-form').on('submit', function (event) {
         event.preventDefault(); // prevent reload
+        var contact = $('#contacts');
+        var from_name = $('#form-name-e').val();
+        var from_email = $('#form-email-e').val();
+        var from_subject = $('#form-subject-e').val();
+        var from_text = $('#form-text-e').val();
 
         var formData = new FormData(this);
+        ({ "reply_to": "syofyan", "from_name": "noname", "to_name": "admin", "message_html": "contoh pesan" })
+        formData.append('reply_to', form_name);
+        formData.append('from_name', form_email);
+        formData.append('to_name', form_subject);
+        formData.append('message_html', form_text);
         formData.append('service_id', 'gmail');
         formData.append('template_id', 'template_WC3xZyZS');
         formData.append('user_id', 'user_owkx5v1e5Nr4pRrDlnZ5P');
@@ -715,7 +726,8 @@ background.addEventListener("load", function () {
             contentType: false, // auto-detection
             processData: false // no need to parse formData to string
         }).done(function () {
-            $('#contacts').css('width:0px');
+            console.log(contact);
+            contact.css({'width': '0px'});
             alert('Email terkirim!');
         }).fail(function (error) {
             alert('Oops... ' + JSON.stringify(error));
