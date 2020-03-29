@@ -317,7 +317,6 @@ p.paragraph::first-line {
 .overlay {
     width: 0;
     height: 0;
-    overflow: hidden;
     position: fixed;
     top : 0;
     left: 0;
@@ -325,10 +324,11 @@ p.paragraph::first-line {
     background-color: rgba(0, 0, 0, 0);
     transition: 0.8s;
     text-align: center;
-    overflow: auto;
+    opacity: 0;
 }
 
 .overlay:target {
+    opacity: 1;
     width: auto;
     height: auto;
     bottom: 0;
@@ -338,7 +338,11 @@ p.paragraph::first-line {
 
 .overlay img {
     max-width: 70%;
+}
+.image {
+    max-height: 87vh;
     margin: 5% 0;
+    overflow: auto;
 }
 
 .card a:hover .card-img-top {
