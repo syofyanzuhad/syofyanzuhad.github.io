@@ -146,23 +146,56 @@ function closeNav() {
             document.getElementById("contacts").style.width = "370px";
         }
 
-        function openSlideUp2() {
-            document.getElementById("photography").style.height = "100vh";
-            document.getElementById('closebtn2').style.position = "fixed";
-        }
-
         function openSlideUp() {
             document.getElementById("portfolio").style.height = "100vh";
             document.getElementById('closebtn1').style.position = "fixed";
         }
         
+        function showImg(id) {
+            document.getElementsByClassName('closes')[id].style.position = "fixed";
+            document.getElementsByClassName('navig-b')[id].style.position = "fixed";
+            document.getElementsByClassName('navig-n')[id].style.position = "fixed";
+        }
 
+        function closeImg(id) {
+            document.getElementsByClassName('closes')[id].style.position = "absolute";
+            document.getElementsByClassName('navig-b')[id].style.position = "absolute";
+            document.getElementsByClassName('navig-n')[id].style.position = "absolute";
+        }
+        
+        // function navig_b(id) {
+        //     document.getElementsByClassName('closes')[id].style.position = "fixed";
+        //     document.getElementsByClassName('navig-b')[id].style.position = "fixed";
+        //     document.getElementsByClassName('navig-n')[id].style.position = "fixed";
+        //     document.getElementsByClassName('closes')[id-1].style.position = "absolute";
+        //     document.getElementsByClassName('navig-b')[id-1].style.position = "absolute";
+        //     document.getElementsByClassName('navig-n')[id-1].style.position = "absolute";
+        // }
+
+        // function navig_n(id) {
+        //     document.getElementsByClassName('closes')[id].style.position = "fixed";
+        //     document.getElementsByClassName('navig-b')[id].style.position = "fixed";
+        //     document.getElementsByClassName('navig-n')[id].style.position = "fixed";
+        //     document.getElementsByClassName('closes')[id+1].style.position = "absolute";
+        //     document.getElementsByClassName('navig-b')[id+1].style.position = "absolute";
+        //     document.getElementsByClassName('navig-n')[id+1].style.position = "absolute";
+        // }
+        
+        function openSlideUp2() {
+            document.getElementById("photography").style.height = "100vh";
+            document.getElementById('closebtn2').style.position = "fixed";
+        }
+        
+        
         /* Set the width of the side navigation to 0 */
         function closeSlideUp() {
             document.getElementById("portfolio").style.height = "0";
             document.getElementById('closebtn1').style.position = "absolute";
+            document.getElementsByClassName('.closes').style.position = "absolute";
+            document.getElementsByClassName('.navig-b').style.position = "absolute";
+            document.getElementsByClassName('.navig-n').style.position = "absolute";
         }
-
+        
         function closeSlideUp2() {
             document.getElementById("photography").style.height = "0";
             document.getElementById('closebtn2').style.position = "absolute";
