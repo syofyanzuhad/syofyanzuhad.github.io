@@ -5,20 +5,20 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="shortcut icon" type="image/x-icon" href="img/code2.png"/>
+	<!-- Google Web Console -->
 	<meta name="google-site-verification" content="fZLqDAflWxb3O3WEefmzzQ2xVJiWqK_WatR7H-E4sPs" />
 	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-43019198-2"></script>
+	<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-43019198-2"></script>
 	<script>
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
 
-	gtag('config', 'UA-43019198-2');
-	</script>
+		gtag('config', 'UA-43019198-2');
+	</script> -->
 
 	<title>Syofyan Zuhad</title>
-	<!-- <link href="https://fonts.googleapis.com/css?family=Big+Shoulders+Text&display=swap" rel="stylesheet"> -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<!-- EmailJS Script -->
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
 	<script type="text/javascript">
 		(function () {
@@ -35,92 +35,88 @@
 				});
 		}
 	</script>
+	<!-- Pre-loader script -->
 	<script>
-
-		$(window).on("load", function () {
-				$('.preloader').addClass('complete');
-				$('.loading').addClass('complete');
-
-				$(document).ready(function(){
-					$("#btn,#btn1").hover(function(){
-						$(this).toggleClass(" text-dark") .toggleClass(' text-white')
-						$(this).toggleClass('bg-none').toggleClass('bg-light')
-					});
-				});
-
-				var x = window.matchMedia("(max-width: 350px)")
-
-				function myFunction(x) {
-					if (x.matches) { // If media query matches
-						$('.navbar').toggleClass('bg-none').toggleClass('bg-light')
-					}
-				}
-				myFunction(x) // Call listener function at run time
-				// x.addListener(myFunction) // Attach listener function on state changes
-
+		window.addEventListener('load', function () {
+				var preloader = document.getElementById("preloader");
+				var loading = document.getElementById("loading");
+				preloader.classList.add("complete");
+				loading.classList.add("complete");
 		});
 	</script>
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="font-awesome/css/font-awesome.css">
 	<link rel="stylesheet" href="mdb/css/mdb.min.css">
 	<link rel="stylesheet" href="mdb/css/bootstrap.min.css">
-	<script src="/js/offscreen-images.js"></script>
 
 </head>
 <body id="body">
 
-	<div class="preloader">
-		<div class="loading text-center">
-					<div class="bt-spinner"></div>
+	<div id="preloader" class="preloader">
+		<div id="loading" class="loading text-center">
+			<div class="bt-spinner"></div>
 		</div>
 	</div>
 
 	<section id="home">
-
-	<nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar ">
-		<a href="/" class="navbar-brand font-weight-bold animated fadeInLeft">Syofyan Zuhad</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
-				aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+		<nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar ">
+			<a href="/" class="navbar-brand font-weight-bold animated fadeInLeft">Syofyan Zuhad</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+					aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse ml-auto" id="navbarTogglerDemo02">
-		<ul class="navbar-nav ml-auto mt-lg-0 animated fadeInRight">
+			</button>
+			<div class="collapse navbar-collapse ml-auto" id="navbarTogglerDemo02">
+			<ul class="navbar-nav ml-auto mt-lg-0 animated fadeInRight">
 				<li class="nav-item ">
-				<a class="nav-link" href="#" onclick="closeAll()">Home <span class="sr-only">(current)</span></a>
+					<a class="nav-link" href="#" onclick="closeAll()">Home <span class="sr-only">(current)</span></a>
 				</li>
 				<li class="nav-item">
-				<a class="nav-link" href="#" onclick="openLeftNav()">Contact</a>
+					<a class="nav-link" href="#" onclick="openNav()">Blog</a>
 				</li>
 				<li class="nav-item">
-				<a class="nav-link" href="#" onclick="openRightNav()">About</a>
+					<a class="nav-link" href="#" onclick="openLeftNav()">Contact</a>
 				</li>
-		</ul>
-		</div>
-	</nav>
+				<li class="nav-item">
+					<a class="nav-link" href="#" onclick="openRightNav()">About</a>
+				</li>
+			</ul>
+			</div>
+		</nav>
 
-	<div class="align-middle" >
-		<div id="particles-background" class="mask rgba-black-strong" style="min-height: 100vh; position: fixed; background-size: cover; width: 100%;">
-				<div class="text-white text-center px-4 animatedParent align-middle" style="margin-top: 20vh;">
-						<!-- <div id="particles-background" class="vertical-centered-box  "></div>
-						<div id="particles-foreground" class="vertical-centered-box  "></div>             -->
-					<h1 class="card-title h1-responsive mb-5 font-bold animated fadeInUp"><strong><u> Syofyan Zuhad </u></strong> </h1>
-					<h3>
-						<p href="" class="typewrite" data-period="2000" data-type='[ "Back-end Dev", "< ?php ? >" ]'>
-								<span class="wrap"></span>
+		<div id="main" class="align-middle" >
+			<div id="particles-background" class="mask rgba-black-strong" style="min-height: 100vh; position: fixed; background-size: cover; width: 100%;">
+					<div class="text-white text-center px-4 animatedParent align-middle" style="margin-top: 20vh;">
+						<h1 class="card-title h1-responsive mb-5 font-bold animated fadeInUp"><strong style="font-family:inherit"> Syofyan Zuhad </strong> </h1>
+						<h3>
+							<p href="" class="typewrite" data-period="2000" data-type='[ "Back-end Dev", "< ?php ? >" ]'>
+									<span class="wrap"></span>
+							</p>
+						</h3>
+						<p class="mx-5 mb-5 animated fadeIn">I'm A basic Back-end Developer, who start learning to be full stack developer. Never stop learning, cause nobody was born smart.
 						</p>
-					</h3>
-					<p class="mx-5 mb-5 animated fadeIn">I'm A basic Back-end Developer, who start learning to be full stack developer. Never stop learning, cause nobody was born smart.
-					</p>
-					<a id="btn" href="#portfolio" onclick="openSlideUp(), closeSlideUp2()" class="btn btn-outline-white btn-md bg-none text-white font-weight-bold"><i class="fa fa-clone left"></i> View project</a>
-					<!-- <a id="btn1" href="#photography" onclick="openSlideUp2(), closeSlideUp()" class="btn btn-outline-white btn-md bg-none text-white font-weight-bold"><i class="fa fa-clone left"></i> View photography</a> -->
-				</div>
+						<a id="btn" href="#portfolio" onclick="openSlideUp(), closeSlideUp2()" class="btn btn-outline-white btn-md bg-none text-white font-weight-bold"><i class="fa fa-clone left"></i> View project</a>
+						<!-- <a id="btn1" href="#photography" onclick="openSlideUp2(), closeSlideUp()" class="btn btn-outline-white btn-md bg-none text-white font-weight-bold"><i class="fa fa-clone left"></i> View photography</a> -->
+					</div>
+			</div>
 		</div>
-	</div>
-</section>
+		<div id="mySideBlog" class="d-flex justify-content-center">
+			<div id="medium-widget"></div>
+			<script src="https://medium-widget.pixelpoint.io/widget.js"></script>
+			<!-- <ul class="blog__slider">
+				Posts go here
+			</ul>
+			<ul class="blog__counter">
+				<li class="blog__counterItem blog__counterItem-active"></li>
+				<li class="blog__counterItem"></li>
+				<li class="blog__counterItem"></li>
+			</ul> -->
+		</div>
+	</section>
 
-<div id="contacts" class="sidenavLeft">
-	<a href="javascript:void(0)" class="closebtn" onclick="closeLeftNav()">&times;</a>
-	<section class="login " id="main-page">
+
+	<div id="contacts" class="sidenavLeft">
+		<a id="closebtn" href="javascript:void(0)" class="closebtn" onclick="closeLeftNav()">&times;</a>
+		<section class="login " id="main-page">
 				<!-- Container -->
 				<div class="container text-center text-light">
 				<!-- ROW -->
@@ -235,501 +231,391 @@
 				</div>
 				<!-- Akhir Container -->
 		</section>
-</div>
+	</div>
 
-<div id="about" class="sidenavRight">
-	<a href="javascript:void(0)" class="closebtn mt-5" onclick="closeRightNav()">&times;</a>
-	
-	<!--Accordion wrapper-->
-	<div class="accordion md-accordion" id="accordionEx" role="tablist" aria-multiselectable="true">
-					<div class="row about">
-						<div class="col">
-				
-								<div class="view zoom text-center rounded-circle">
-									<img src="img/me.jpg" class="img-fluid img-thumbnail rounded-circle" alt="Image of ballons flying over canyons with mask pattern one.">
-									<div class="mask pattern-5 flex-center waves-effect waves-light">
-									</div>
-								</div>
-								<div class="container">
-									<!-- Accordion card -->
-									<div class="about about1">
-								
-									<!-- Card header -->
-									<div class=" habout " role="tab" id="headingOne1">
-										<a data-toggle="collapse" data-parent="#accordionEx" href="#collapseOne1" aria-expanded="true"
-										aria-controls="collapseOne1">
-										<h5 class="mb-0 d-flex justify-content-between">
-												Profile <i class="fa fa-angle-down rotate-icon"></i>
-										</h5>
-										</a>
-									</div>
-									<!-- Card body -->
-									<div id="collapseOne1" class="collapse show" role="tabpanel" aria-labelledby="headingOne1" data-parent="#accordionEx">
-										<div class="bg-none text-white">
-										<p class="paragraph">
-												I am a Programmer of back-end development. 
-										</p> 
-												
-									</div>
-									</div>
-								
-									</div>
-									<!-- Accordion card -->
-								
-									<!-- Accordion card -->
-									<div class="about about2">
-								
-									<!-- Card header -->
-									<div class="habout" role="tab" id="headingTwo2">
-										<a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapseTwo2" aria-expanded="false" aria-controls="collapseTwo2">
-										<h5 class="mb-0 d-flex justify-content-between">
-												Skill <i class="fa fa-angle-down rotate-icon"></i>
-										</h5>
-										</a>
-									</div>
-								
-									<!-- Card body -->
-									<div id="collapseTwo2" class="collapse" role="tabpanel" aria-labelledby="headingTwo2" data-parent="#accordionEx">
-										<div class="card-body text-left text-white">
-												<div class="row">
-													<div class="col-3"> <h4>php</h4> </div>
-													<div class="col-8">
-														<div class="progress md-progress">
-																<div class="progress-bar bg-primary" role="progressbar" style="width: 80%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-														</div>
-													</div>
+	<div id="about" class="sidenavRight">
+		<a href="javascript:void(0)" class="closebtn mt-5" onclick="closeRightNav()">&times;</a>
+		
+		<!--Accordion wrapper-->
+		<div class="accordion md-accordion" id="accordionEx" role="tablist" aria-multiselectable="true">
+			<div class="row about">
+				<div class="col">
+		
+						<div class="view zoom text-center rounded-circle">
+							<img src="img/me.jpg" class="img-fluid img-thumbnail rounded-circle" alt="Image of ballons flying over canyons with mask pattern one.">
+							<div class="mask pattern-5 flex-center waves-effect waves-light">
+							</div>
+						</div>
+						<div class="container">
+							<!-- Accordion card -->
+							<div class="about about1">
+						
+							<!-- Card header -->
+							<div class=" habout " role="tab" id="headingOne1">
+								<a data-toggle="collapse" data-parent="#accordionEx" href="#collapseOne1" aria-expanded="true"
+								aria-controls="collapseOne1">
+								<h5 class="mb-0 d-flex justify-content-between">
+										Profile <i class="fa fa-angle-down rotate-icon"></i>
+								</h5>
+								</a>
+							</div>
+							<!-- Card body -->
+							<div id="collapseOne1" class="collapse show" role="tabpanel" aria-labelledby="headingOne1" data-parent="#accordionEx">
+								<div class="bg-none text-white">
+								<p class="paragraph">
+										I am a Programmer of back-end development. 
+								</p> 
+										
+							</div>
+							</div>
+						
+							</div>
+							<!-- Accordion card -->
+						
+							<!-- Accordion card -->
+							<div class="about about2">
+						
+							<!-- Card header -->
+							<div class="habout" role="tab" id="headingTwo2">
+								<a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapseTwo2" aria-expanded="false" aria-controls="collapseTwo2">
+								<h5 class="mb-0 d-flex justify-content-between">
+										Skill <i class="fa fa-angle-down rotate-icon"></i>
+								</h5>
+								</a>
+							</div>
+						
+							<!-- Card body -->
+							<div id="collapseTwo2" class="collapse" role="tabpanel" aria-labelledby="headingTwo2" data-parent="#accordionEx">
+								<div class="card-body text-left text-white">
+										<div class="row">
+											<div class="col-3"> <h4>php</h4> </div>
+											<div class="col-8">
+												<div class="progress md-progress">
+														<div class="progress-bar bg-primary" role="progressbar" style="width: 80%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
 												</div>
-												<div class="row">
-													<div class="col-3"> <h4>MySQL</h4> </div>
-													<div class="col-8">
-														<div class="progress md-progress">
-																<div class="progress-bar bg-primary" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-														</div>
-													</div>
-												</div>
-												<div class="row">
-													<div class="col-3"> <h4>Git</h4> </div>
-													<div class="col-8">
-														<div class="progress md-progress">
-																<div class="progress-bar bg-primary" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-														</div>
-													</div>
-												</div>
-												<div class="row">
-													<div class="col-3"> <h4>jQuery</h4> </div>
-													<div class="col-8">
-														<div class="progress md-progress">
-																<div class="progress-bar bg-primary" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-														</div>
-													</div>
-												</div>
-												<div class="row">
-													<div class="col-3"> <h4>Bootstrap</h4> </div>
-													<div class="col-8">
-														<div class="progress md-progress">
-																<div class="progress-bar bg-primary" role="progressbar" style="width: 75%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-														</div>
-													</div>
-												</div>
-												<div class="row">
-													<div class="col-3"> <h4>Datatable</h4> </div>
-													<div class="col-8">
-														<div class="progress md-progress">
-																<div class="progress-bar bg-primary" role="progressbar" style="width: 75%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-														</div>
-													</div>
-												</div>
-												<div class="row">
-													<div class="col-3"> <h4>Laravel</h4> </div>
-													<div class="col-8">
-														<div class="progress md-progress">
-																<div class="progress-bar bg-primary" role="progressbar" style="width: 70%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-														</div>
-													</div>
-												</div>
+											</div>
 										</div>
-									</div>
-								
-									</div>
-									<!-- Accordion card -->
-								
-									<!-- Accordion card -->
-									<div class="about about3">
-								
-									<!-- Card header -->
-									<div class="habout" role="tab" id="headingThree3">
-										<a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapseThree3" aria-expanded="false" aria-controls="collapseThree3">
-												<h5 class="mb-0 d-flex justify-content-between">
-													Education <i class="fa fa-angle-down rotate-icon"></i>
-												</h5>
+										<div class="row">
+											<div class="col-3"> <h4>MySQL</h4> </div>
+											<div class="col-8">
+												<div class="progress md-progress">
+														<div class="progress-bar bg-primary" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-3"> <h4>Git</h4> </div>
+											<div class="col-8">
+												<div class="progress md-progress">
+														<div class="progress-bar bg-primary" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-3"> <h4>jQuery</h4> </div>
+											<div class="col-8">
+												<div class="progress md-progress">
+														<div class="progress-bar bg-primary" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-3"> <h4>Bootstrap</h4> </div>
+											<div class="col-8">
+												<div class="progress md-progress">
+														<div class="progress-bar bg-primary" role="progressbar" style="width: 75%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-3"> <h4>Datatable</h4> </div>
+											<div class="col-8">
+												<div class="progress md-progress">
+														<div class="progress-bar bg-primary" role="progressbar" style="width: 75%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-3"> <h4>Laravel</h4> </div>
+											<div class="col-8">
+												<div class="progress md-progress">
+														<div class="progress-bar bg-primary" role="progressbar" style="width: 70%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+												</div>
+											</div>
+										</div>
+								</div>
+							</div>
+						
+							</div>
+							<!-- Accordion card -->
+						
+							<!-- Accordion card -->
+							<div class="about about3">
+						
+							<!-- Card header -->
+							<div class="habout" role="tab" id="headingThree3">
+								<a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapseThree3" aria-expanded="false" aria-controls="collapseThree3">
+										<h5 class="mb-0 d-flex justify-content-between">
+											Education <i class="fa fa-angle-down rotate-icon"></i>
+										</h5>
+								</a>
+							</div>
+						
+							<!-- Card body -->
+							<div id="collapseThree3" class="collapse" role="tabpanel" aria-labelledby="headingThree3" data-parent="#accordionEx">
+								<div class="card-body text-left text-white">
+								<ul class="sch">
+										<li> Islamic Teacher Training College (ITTC) of Modern Islamic Institution Darusalam GONTOR, Ponorogo, Indonesia.</li>
+										<li> Islamic Institution of Informatic and Technology, DIY, Indonesia.</li>
+								</ul> 
+								</div>
+							</div>
+						
+							</div>
+							<!-- Accordion card -->
+			
+							<!-- Accordion card -->
+							<div class="about about4">
+						
+								<!-- Card header -->
+								<div class="habout" role="tab" id="headingThree3">
+										<a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapseFour4" aria-expanded="false" aria-controls="collapseFour4">
+											<h5 class="mb-0 d-flex justify-content-between">
+												Curriculum Vitae <i class="fa fa-angle-down rotate-icon"></i>
+											</h5>
 										</a>
-									</div>
-								
-									<!-- Card body -->
-									<div id="collapseThree3" class="collapse" role="tabpanel" aria-labelledby="headingThree3" data-parent="#accordionEx">
+								</div>
+							
+								<!-- Card body -->
+								<div id="collapseFour4" class="collapse" role="tabpanel" aria-labelledby="headingFour4" data-parent="#accordionEx">
 										<div class="card-body text-left text-white">
-										<ul class="sch">
-												<li> Islamic Teacher Training College (ITTC) of Modern Islamic Institution Darusalam GONTOR, Ponorogo, Indonesia.</li>
-												<li> Islamic Institution of Informatic and Technology, DIY, Indonesia.</li>
+										<ul class="id-user">
+											<li> <a href="https://www.linkedin.com/in/syofyan-zuhad-583385191/" target="_blank">Linked In</a></li>
+											<li> <a href="https://drive.google.com/file/d/0B3piwIpAWAEENUZuUUdJaDF3NzRwU2lwcTJfWkduWWtWRUQ4/view?usp=sharing" target="_blank">Curriculum Vitae.pdf </a> </li>
 										</ul> 
 										</div>
-									</div>
-								
-									</div>
-									<!-- Accordion card -->
-					
-									<!-- Accordion card -->
-									<div class="about about4">
-								
-										<!-- Card header -->
-										<div class="habout" role="tab" id="headingThree3">
-												<a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapseFour4" aria-expanded="false" aria-controls="collapseFour4">
-													<h5 class="mb-0 d-flex justify-content-between">
-														Curriculum Vitae <i class="fa fa-angle-down rotate-icon"></i>
-													</h5>
-												</a>
-										</div>
-									
-										<!-- Card body -->
-										<div id="collapseFour4" class="collapse" role="tabpanel" aria-labelledby="headingFour4" data-parent="#accordionEx">
-												<div class="card-body text-left text-white">
-												<ul class="id-user">
-													<li> <a href="https://www.linkedin.com/in/syofyan-zuhad-583385191/" target="_blank">Linked In</a></li>
-													<li> <a href="https://drive.google.com/file/d/0B3piwIpAWAEENUZuUUdJaDF3NzRwU2lwcTJfWkduWWtWRUQ4/view?usp=sharing" target="_blank">Curriculum Vitae.pdf </a> </li>
-												</ul> 
-												</div>
-										</div>
-									
-									</div>
-									<!-- Accordion card -->
 								</div>
-				
+							
+							</div>
+							<!-- Accordion card -->
 						</div>
-					</div>
-					<div id="footer" class="row bg-dark">
-						<div class="col">
-								<a href="http://facebook.com/syofyan.zuhad" target="_blank"> <i class="fa fa-facebook"></i> </a>
-						</div>
-						<div class="col">
-								<a href="http://instagram.com/syofyan_zuhad" target="_blank"> <i class="fa fa-instagram"></i> </a>
-						</div>
-						<div class="col">
-								<a href="https://github.com/syofyanzuhad" target="_blank"> <i class="fa fa-github"></i> </a>
-						</div>
-					</div>
-				<!-- </div> -->
-	</div>
-</div>  
-
-<div id="portfolio" class="slideUp">
-	<a id="closebtn1" href="javascript:void(0)" class="closebtn mt-5" onclick="closeSlideUp()">&times;</a>
-	
-	<!--Accordion wrapper-->
-	<div class="accordion md-accordion" id="accordionEx" role="tablist" aria-multiselectable="true">
-		<div class="container text-center text-white mt-5 mb-3" id="portofolio">
-			<div class="row mt-5">
-				<div class="col mt-5">
-					<h2>PORTFOLIO</h2>
-					<hr>
+		
 				</div>
 			</div>
-			<div class="row ">
-				<div class="col-sm-6 col-md-6 mb-2">
-					<div class="card bg-none">
-						<a href="#port-1">
-							<img src="img/portofolio/library.jpg" class="card-img-top " alt="Library Management"> 
-						</a>
-							<div class="overlay" id="port-1">
-								<a href="#img" class="closes"> &times;</a>
-
-								<a href="#port-8" class="navig-b"> <h1> < </h1> </a>
-								<div class="image">
-									<img src="img/portofolio/library.jpg" class="img-thumbnail" alt="Library Management">
-								</div>
-								<a href="#port-2" class="navig-n"> <h1> > </h1> </a>
-							</div>
-						<div class="card-body">
-							<p class="card-text">Example Library Management.</p>
-						</div>
-					</div>
+			<div id="footerAbout" class="row bg-dark d-flex justify-content-between">
+				<div class="col">
+						<a href="http://facebook.com/syofyan.zuhad" target="_blank"> <i class="fa fa-facebook"></i> </a>
 				</div>
-				<div class="col-sm-6 col-md-6 mb-2">
-					<div class="card">
-						<a href="#port-2">
-							<img src="img/portofolio/sistem_sekolah.jpg" class="card-img-top" alt="School Management System"> 
-						</a>
-						<div class="overlay" id="port-2">
-							<a href="#img" class="closes"> &times; </a>
-
-							<a href="#port-1" class="navig-b"> <h1> < </h1> </a>
-							<div class="image">
-								<img src="img/portofolio/sistem_sekolah.jpg" class="img-thumbnail" alt="School Management System">
-							</div>
-							<a href="#port-3" class="navig-n"> <h1> > </h1> </a>	
-						</div>
-						<div class="card-body">
-							<p class="card-text">School Management System.</p>
-						</div>
-					</div>
+				<div class="col">
+						<a href="http://instagram.com/syofyan_zuhad" target="_blank"> <i class="fa fa-instagram"></i> </a>
 				</div>
-				<div class="col-sm-6 col-md-6 mb-2">
-					<div class="card">
-						<a href="#port-3">
-							<img src="img/portofolio/contact_me.jpg" class="card-img-top" alt="Contact Form to Email and Whatsapp"> 
-						</a>
-						<div class="overlay" id="port-3">
-							<a href="#img" class="closes"> &times; </a>
-
-							<a href="#port-2" class="navig-b"> <h1> < </h1> </a>
-							<div class="image">
-								<img src="img/portofolio/contact_me.jpg" class="img-thumbnail" alt="Contact Form Message to Email and Whatsapp">
-							</div>
-							<a href="#port-4" class="navig-n"> <h1> > </h1> </a>
-						</div>
-						<div class="card-body">
-							<p class="card-text">Contact Form Message to Email and Whatsapp.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-sm-6 col-md-6 mb-2">
-					<div class="card">
-						<a href="#port-4">
-							<img src="img/portofolio/login_page.jpg" class="card-img-top" alt="Example Login Page"> 
-						</a>
-						<div class="overlay" id="port-4">
-							<a href="#img" class="closes"> &times; </a>
-
-							<a href="#port-3" class="navig-b"> <h1> < </h1> </a>
-							<div class="image">
-								<img src="img/portofolio/login_page.jpg" class="img-thumbnail" alt="Example Login Page">
-							</div>
-							<a href="#port-7" class="navig-n"> <h1> > </h1> </a>
-
-						</div>
-						<div class="card-body">
-							<p class="card-text">Example Login Page.</p>
-						</div>
-					</div>
-				</div>
-				<!-- <div class="col-sm-6 col-md-6 mb-2">
-					<div class="card">
-						<a href="#port-5">
-							<img src="img/portofolio/php Blog.jpg" class="card-img-top" alt="..."> 
-						</a>
-						<div class="overlay" id="port-5">
-							<a href="#img" class="closes"> &times; </a>
-
-							<a href="#port-4" class="navig-b"> <h1> < </h1> </a>	
-							<div class="image">
-								<img src="img/portofolio/php Blog.jpg" class="img-thumbnail" alt="">
-							</div>
-							<a href="#port-6" class="navig-n"> <h1> > </h1> </a>
-						</div>
-						<div class="card-body">
-							<p class="card-text">Some quick example text to build on the card title and make up the bulk
-								of the card's content.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-sm-6 col-md-6 mb-2">
-					<div class="card">
-						<a href="#port-6">
-							<img src="img/portofolio/mvc Blog.jpg" class="card-img-top" alt="..."> 
-						</a>
-						<div class="overlay" id="port-6">
-							<a href="#img" class="closes"> &times; </a>
-
-							<a href="#port-5" class="navig-b"> <h1> < </h1> </a>
-							<div class="image">
-								<img src="img/portofolio/mvc Blog.jpg" class="img-thumbnail" alt="">
-							</div>
-							<a href="#port-7" class="navig-n"> <h1> > </h1> </a>
-						</div>
-						<div class="card-body">
-							<p class="card-text">Some quick example text to build on the card title and make up the bulk
-								of the card's content.</p>
-						</div>
-					</div>
-					</div> -->
-					<div class="col-sm-6 col-md-6 mb-2">
-					<div class="card">
-						<a href="#port-7">
-							<img src="img/portofolio/bimago.jpg" class="card-img-top" alt="Web Profile of Bimago Course"> 
-						</a>
-						<div class="overlay" id="port-7">
-							<a href="#img" class="closes"> &times; </a>
-
-							<a href="#port-4" class="navig-b"> <h1> < </h1> </a>
-								<div class="image">
-									<img src="img/portofolio/bimago.jpg" class="img-thumbnail" alt="Web Profile of Bimago Course">
-								</div>
-							<a href="#port-8" class="navig-n"> <h1> > </h1> </a>
-						</div>
-						<div class="card-body">
-							<p class="card-text">Web Profile of Bimago Course.</p>
-						</div>
-					</div>
-					</div>
-					<div class="col-sm-6 col-md-6 mb-2">
-					<div class="card">
-						<a href="#port-8">
-							<img src="img/portofolio/bimago2.jpg" class="card-img-top" alt="Web Profile of Bimago Course"> 
-						</a>
-						<div class="overlay" id="port-8">
-							<a href="#img" class="closes"> &times; </a>
-
-							<a href="#port-7" class="navig-b"> <h1> < </h1> </a>
-							<div class="image">
-								<img src="img/portofolio/bimago2.jpg" class="img-thumbnail" alt="Web Profile of Bimago Course">
-							</div>
-							<a href="#port-1" class="navig-n"> <h1> > </h1> </a>
-						</div>
-						<div class="card-body">
-							<p class="card-text">Web Profile of Bimago Course.</p>
-						</div>
-					</div>
+				<div class="col">
+						<a href="https://github.com/syofyanzuhad" target="_blank"> <i class="fa fa-github"></i> </a>
 				</div>
 			</div>
 		</div>
+	</div>  
 
-	</div>
+	<div id="portfolio" class="slideUp">
+		<a id="closebtn1" href="javascript:void(0)" class="closebtn mt-5" onclick="closeSlideUp()">&times;</a>
+		
+		<!--Accordion wrapper-->
+		<div class="accordion md-accordion" id="accordionEx" role="tablist" aria-multiselectable="true">
+			<div class="container text-center text-white mt-5 mb-3" id="portofolio">
+				<div class="row mt-5">
+					<div class="col mt-5">
+						<h2>PORTFOLIO</h2>
+						<hr>
+					</div>
+				</div>
+				<div class="row ">
+					<div class="col-sm-6 col-md-6 mb-2">
+						<div class="card bg-none">
+							<a href="#port-1">
+								<img src="img/portofolio/library.jpg" class="card-img-top " alt="Library Management"> 
+							</a>
+								<div class="overlay" id="port-1">
+									<a href="#img" class="closes"> &times;</a>
 
-</div>
-
-<!-- <div id="photography" class="slideUp2">
-	<a id="closebtn2" href="javascript:void(0)" class="closebtn mt-5" onclick="closeSlideUp2()">&times;</a> -->
-	
-	<!--Accordion wrapper-->
-	<!-- <div class="accordion md-accordion" id="accordionEx" role="tablist" aria-multiselectable="true">
-		<div class="container text-center text-white mt-5 mb-3" id="portofolio">
-			<div class="row ">
-				<div class="col-sm-6 col-md-6 mb-2">
-					<div class="card bg-none">
-						<a href="#img-1">
-							<img src="img/photography/1.jpg" class="card-img-top " alt="Garden"> 
-						</a>
-							<div class="overlay" id="img-1">
-								<a href="#img" class="closes"> &times;</a>
-
-								<a href="#img-6" class="navig-b">  <  </a>
-								<img src="img/photography/1.jpg" class="img-thumbnail" alt="Garden">
-								<a href="#img-2" class="navig-n">  >  </a>
+									<a href="#port-8" class="navig-b"> <h1> < </h1> </a>
+									<div class="image">
+										<img src="img/portofolio/library.jpg" class="img-thumbnail" alt="Library Management">
+									</div>
+									<a href="#port-2" class="navig-n"> <h1> > </h1> </a>
+								</div>
+							<div class="card-body">
+								<p class="card-text">Example Library Management.</p>
 							</div>
-						<div class="card-body">
-							<p class="card-text">The garden pond.</p>
 						</div>
 					</div>
-				</div>
-				<div class="col-sm-6 col-md-6 mb-2">
-					<div class="card">
-						<a href="#img-2">
-							<img src="img/photography/2.jpg" class="card-img-top" alt="..."> 
-						</a>
-						<div class="overlay" id="img-2">
-							<a href="#img" class="closes"> &times; </a>
+					<div class="col-sm-6 col-md-6 mb-2">
+						<div class="card">
+							<a href="#port-2">
+								<img src="img/portofolio/sistem_sekolah.jpg" class="card-img-top" alt="School Management System"> 
+							</a>
+							<div class="overlay" id="port-2">
+								<a href="#img" class="closes"> &times; </a>
 
-							<a href="#img-1" class="navig-b">  <  </a>
-							<img src="img/photography/2.jpg" class="img-thumbnail" alt="">
-							<a href="#img-3" class="navig-n">  >  </a>	
-						</div>
-						<div class="card-body">
-							<p class="card-text">A ray of sunlight.</p>
+								<a href="#port-1" class="navig-b"> <h1> < </h1> </a>
+								<div class="image">
+									<img src="img/portofolio/sistem_sekolah.jpg" class="img-thumbnail" alt="School Management System">
+								</div>
+								<a href="#port-3" class="navig-n"> <h1> > </h1> </a>	
+							</div>
+							<div class="card-body">
+								<p class="card-text">School Management System.</p>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col-sm-6 col-md-6 mb-2">
-					<div class="card">
-						<a href="#img-3">
-							<img src="img/photography/3.jpg" class="card-img-top" alt="..."> 
-						</a>
-						<div class="overlay" id="img-3">
-							<a href="#img" class="closes"> &times; </a>
+					<div class="col-sm-6 col-md-6 mb-2">
+						<div class="card">
+							<a href="#port-3">
+								<img src="img/portofolio/contact_me.jpg" class="card-img-top" alt="Contact Form to Email and Whatsapp"> 
+							</a>
+							<div class="overlay" id="port-3">
+								<a href="#img" class="closes"> &times; </a>
 
-							<a href="#img-2" class="navig-b">  <  </a>
-							<img src="img/photography/3.jpg" class="img-thumbnail" alt="">
-							<a href="#img-4" class="navig-n">  >  </a>
-						</div>
-						<div class="card-body">
-							<p class="card-text">Desert of Ash.</p>
+								<a href="#port-2" class="navig-b"> <h1> < </h1> </a>
+								<div class="image">
+									<img src="img/portofolio/contact_me.jpg" class="img-thumbnail" alt="Contact Form Message to Email and Whatsapp">
+								</div>
+								<a href="#port-4" class="navig-n"> <h1> > </h1> </a>
+							</div>
+							<div class="card-body">
+								<p class="card-text">Contact Form Message to Email and Whatsapp.</p>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col-sm-6 col-md-6 mb-2">
-					<div class="card">
-						<a href="#img-4">
-							<img src="img/photography/4.jpg" class="card-img-top" alt="..."> 
-						</a>
-						<div class="overlay" id="img-4">
-							<a href="#img" class="closes"> &times; </a>
+					<div class="col-sm-6 col-md-6 mb-2">
+						<div class="card">
+							<a href="#port-4">
+								<img src="img/portofolio/login_page.jpg" class="card-img-top" alt="Example Login Page"> 
+							</a>
+							<div class="overlay" id="port-4">
+								<a href="#img" class="closes"> &times; </a>
 
-							<a href="#img-3" class="navig-b">  <  </a>
-							<img src="img/photography/4.jpg" class="img-thumbnail" alt="">
-							<a href="#img-5" class="navig-n">  >  </a>
+								<a href="#port-3" class="navig-b"> <h1> < </h1> </a>
+								<div class="image">
+									<img src="img/portofolio/login_page.jpg" class="img-thumbnail" alt="Example Login Page">
+								</div>
+								<a href="#port-7" class="navig-n"> <h1> > </h1> </a>
 
-						</div>
-						<div class="card-body">
-							<p class="card-text">Sprinkle on leaves.</p>
+							</div>
+							<div class="card-body">
+								<p class="card-text">Example Login Page.</p>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col-sm-6 col-md-6 mb-2">
-					<div class="card">
-						<a href="#img-5">
-							<img src="img/photography/5.jpg" class="card-img-top" alt="..."> 
-						</a>
-						<div class="overlay" id="img-5">
-							<a href="#img" class="closes"> &times; </a>
+					<!-- <div class="col-sm-6 col-md-6 mb-2">
+						<div class="card">
+							<a href="#port-5">
+								<img src="img/portofolio/php Blog.jpg" class="card-img-top" alt="..."> 
+							</a>
+							<div class="overlay" id="port-5">
+								<a href="#img" class="closes"> &times; </a>
 
-							<a href="#img-4" class="navig-b">  <  </a>	
-							<img src="img/photography/5.jpg" class="img-thumbnail" alt="">
-							<a href="#img-6" class="navig-n">  >  </a>
-						</div>
-						<div class="card-body">
-							<p class="card-text">Branched fire coals.</p>
+								<a href="#port-4" class="navig-b"> <h1> < </h1> </a>	
+								<div class="image">
+									<img src="img/portofolio/php Blog.jpg" class="img-thumbnail" alt="">
+								</div>
+								<a href="#port-6" class="navig-n"> <h1> > </h1> </a>
+							</div>
+							<div class="card-body">
+								<p class="card-text">Some quick example text to build on the card title and make up the bulk
+									of the card's content.</p>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col-sm-6 col-md-6 mb-2">
-					<div class="card">
-						<a href="#img-6">
-							<img src="img/photography/6.jpg" class="card-img-top" alt="..."> 
-						</a>
-						<div class="overlay" id="img-6">
-							<a href="#img" class="closes"> &times; </a>
+					<div class="col-sm-6 col-md-6 mb-2">
+						<div class="card">
+							<a href="#port-6">
+								<img src="img/portofolio/mvc Blog.jpg" class="card-img-top" alt="..."> 
+							</a>
+							<div class="overlay" id="port-6">
+								<a href="#img" class="closes"> &times; </a>
 
-							<a href="#img-5" class="navig-b"> <h1> <  </a>
-							<img src="img/photography/6.jpg" class="img-thumbnail" alt="">
-							<a href="#img-1" class="navig-n"> <h1> >  </a>
+								<a href="#port-5" class="navig-b"> <h1> < </h1> </a>
+								<div class="image">
+									<img src="img/portofolio/mvc Blog.jpg" class="img-thumbnail" alt="">
+								</div>
+								<a href="#port-7" class="navig-n"> <h1> > </h1> </a>
+							</div>
+							<div class="card-body">
+								<p class="card-text">Some quick example text to build on the card title and make up the bulk
+									of the card's content.</p>
+							</div>
 						</div>
-						<div class="card-body">
-							<p class="card-text">Sunrise of The Day.</p>
+						</div> -->
+						<div class="col-sm-6 col-md-6 mb-2">
+						<div class="card">
+							<a href="#port-7">
+								<img src="img/portofolio/bimago.jpg" class="card-img-top" alt="Web Profile of Bimago Course"> 
+							</a>
+							<div class="overlay" id="port-7">
+								<a href="#img" class="closes"> &times; </a>
+
+								<a href="#port-4" class="navig-b"> <h1> < </h1> </a>
+									<div class="image">
+										<img src="img/portofolio/bimago.jpg" class="img-thumbnail" alt="Web Profile of Bimago Course">
+									</div>
+								<a href="#port-8" class="navig-n"> <h1> > </h1> </a>
+							</div>
+							<div class="card-body">
+								<p class="card-text">Web Profile of Bimago Course.</p>
+							</div>
+						</div>
+						</div>
+						<div class="col-sm-6 col-md-6 mb-2">
+						<div class="card">
+							<a href="#port-8">
+								<img src="img/portofolio/bimago2.jpg" class="card-img-top" alt="Web Profile of Bimago Course"> 
+							</a>
+							<div class="overlay" id="port-8">
+								<a href="#img" class="closes"> &times; </a>
+
+								<a href="#port-7" class="navig-b"> <h1> < </h1> </a>
+								<div class="image">
+									<img src="img/portofolio/bimago2.jpg" class="img-thumbnail" alt="Web Profile of Bimago Course">
+								</div>
+								<a href="#port-1" class="navig-n"> <h1> > </h1> </a>
+							</div>
+							<div class="card-body">
+								<p class="card-text">Web Profile of Bimago Course.</p>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	</div> -->
 
-</div>
+		</div>
+	</div>
+
+	<footer class="text-white d-flex justify-content-center">
+		<p class="flux">
+			Made by Syofyan Zuhad | &copy 2020
+		</p>
+	</footer>	
 
 <!-- My Costumization Script -->
 <script type="text/javascript" src="js/script.js"></script>
+
 <!-- MDB SCRIPTS -->
 <!-- JQuery -->
-<!-- <script type="text/javascript" src="mdb/js/jquery-3.4.1.min.js"></script> -->
+<script type="text/javascript" src="mdb/js/jquery-3.4.1.min.js"></script>
 <!-- Bootstrap tooltips -->
-<!-- <script type="text/javascript" src="mdb/js/popper.min.js"></script> -->
+<script type="text/javascript" src="mdb/js/popper.min.js"></script>
 <!-- Bootstrap core JavaScript -->
 <script type="text/javascript" src="mdb/js/bootstrap.min.js"></script>
 <!-- MDB core JavaScript -->
 <script type="text/javascript" src="mdb/js/mdb.min.js"></script>
 
 <script>
-const background = document.getElementById("body");
-
-background.addEventListener("load", function () {
-	alert("Image loaded !");
-});
+	$(document).ready(function () {
+		$("#btn,#btn1").hover(function () {
+			$(this).toggleClass(" text-dark").toggleClass(' text-white')
+			$(this).toggleClass('bg-none').toggleClass('bg-light')
+		});
+	});
 
 	$('#contact-form').on('submit', function (event) {
 		event.preventDefault(); // prevent reload

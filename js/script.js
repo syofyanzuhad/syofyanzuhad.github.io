@@ -72,15 +72,82 @@ function closeNav() {
 // //      SideNav Only Push Content
 
 // /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
-// function openNav() {
-//     document.getElementById("mySidenav").style.width = "500px";
-//     document.getElementById("main").style.marginLeft = "500px";
-// }
+function openNav() {
+    console.log('open sideNav');
+    document.getElementById("mySideBlog").style.width    = "100%";
+    document.getElementById("mySideBlog").style.height = "100vh";
+    
+    document.getElementById("main").style.marginLeft = "100%";
+    
+    //========Script to fetching Medium API automatically ===========//
+    MediumWidget.Init({
+        renderTo: '#medium-widget',
+        params: {
+            "resource": "https://medium.com/@syofyanzuhad/",
+            "postsPerLine": 2,
+            "limit": 4,
+            "picture": "big",
+            "fields": [
+                "description",
+                "author",
+                "claps",
+                "likes",
+                "publishAt"
+            ],
+            "ratio": "original"
+        }
+    })
+    //========Script to fetching Medium API manually ===========//
+
+    // fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@syofyanzuhad/')
+    //     .then((res) => res.json())
+    //     .then((data) => {
+    //         // Filter for acctual posts. Comments don't have categories, therefore can filter for items with categories bigger than 0
+    //         const res = data.items //This is an array with the content. No feed, no info about author etc..
+    //         const posts = res.filter(item => item.categories.length > 0) // That's the main trick* !
+
+    //         // Functions to create a short text out of whole blog's content
+    //         function toText(node) {
+    //             let tag = document.createElement('div')
+    //             tag.innerHTML = node
+    //             node = tag.innerText
+    //             return node
+    //         }
+    //         function shortenText(text, startingPoint, maxLength) {
+    //             return text.length > maxLength ?
+    //                 text.slice(startingPoint, maxLength) :
+    //                 text
+    //         }
+
+    //         // Put things in right spots of markup
+    //         let output = '';
+    //         posts.forEach((item) => {
+    //             output += `
+    //                 <li class="blog__post">
+    //                     <a id= href="${item.link}" class="blog-link">
+    //                     <img src="${item.thumbnail}" class="blog__topImg"></img>
+    //                     <div class="blog__content">
+    //                         <div class="blog_preview">
+    //                             <h2 class="blog__title">${shortenText(item.title, 0, 30) + '...'}</h2>
+    //                             <p class="blog__intro">${'...' + shortenText(toText(item.content), 50, 300) + '...'}</p>
+    //                         </div>
+    //                         <hr>
+    //                         <div class="blog__info">
+    //                             <span class="blog__author">${item.author}</span>
+    //                             <span class="blog__date">${shortenText(item.pubDate, 0, 10)}</span>
+    //                         </div>
+    //                     </div>
+    //                     <a/>
+    //                 </li>`
+    //         })
+    //         document.querySelector('.blog__slider').innerHTML = output
+    //     })
+}
 
 // /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
 // function closeNav() {
-//     document.getElementById("mySidenav").style.width = "0";
-//     document.getElementById("main").style.marginLeft = "0";
+    // document.getElementById("mySidenav").style.width = "0";
+    // document.getElementById("main").style.marginLeft = "0";
 // }
 
 
@@ -137,6 +204,18 @@ function closeNav() {
         // }
     // } else {
         /* Set the width of the side navigation to 250px */
+        
+        // function showImg(id) {
+        //     document.getElementsByClassName('closes')[id].style.position = "fixed";
+        //     document.getElementsByClassName('navig-b')[id].style.position = "fixed";
+        //     document.getElementsByClassName('navig-n')[id].style.position = "fixed";
+        // }
+
+        // function closeImg(id) {
+        //     document.getElementsByClassName('closes')[id].style.position = "absolute";
+        //     document.getElementsByClassName('navig-b')[id].style.position = "absolute";
+        //     document.getElementsByClassName('navig-n')[id].style.position = "absolute";
+        // }
         function openRightNav() {
             document.getElementById("about").style.width = "370px";
             document.getElementById('footer').style.position = "relative";
@@ -150,18 +229,6 @@ function closeNav() {
             document.getElementById("portfolio").style.height = "100vh";
             document.getElementById('closebtn1').style.position = "fixed";
         }
-        
-        // function showImg(id) {
-        //     document.getElementsByClassName('closes')[id].style.position = "fixed";
-        //     document.getElementsByClassName('navig-b')[id].style.position = "fixed";
-        //     document.getElementsByClassName('navig-n')[id].style.position = "fixed";
-        // }
-
-        // function closeImg(id) {
-        //     document.getElementsByClassName('closes')[id].style.position = "absolute";
-        //     document.getElementsByClassName('navig-b')[id].style.position = "absolute";
-        //     document.getElementsByClassName('navig-n')[id].style.position = "absolute";
-        // }
         
         function openSlideUp2() {
             document.getElementById("photography").style.height = "100vh";
@@ -197,9 +264,11 @@ function closeNav() {
             // document.getElementById("photography").style.height = "0";
             document.getElementById("about").style.width = "0";
             document.getElementById("contacts").style.width = "0";
+            document.getElementById('closebtn').style.position = "absolute";
             document.getElementById('closebtn1').style.position = "absolute";
-            document.getElementById('closebtn2').style.position = "absolute";
-            document.getElementById('footer').style.position = "absolute";
+            document.getElementById("mySideBlog").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+            console.log('closed');
         }
 
     // }

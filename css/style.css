@@ -5,6 +5,10 @@ body {
     background-size: cover !important;
 }
 
+p {
+    font-size: larger;
+}
+
 /* width */
 ::-webkit-scrollbar {
     width: 7px;
@@ -389,10 +393,39 @@ p.paragraph::first-line {
     color: rgba(195, 195, 195, 0.609);
 }
 
-
-
 .rounded-circle {
     border-radius: 50%!important;
+}
+
+#main {
+    transition: 0.5s;
+}
+
+#mySideBlog {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8); /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+.medium-widget {
+    min-width: 70vw;
+    max-width: 85vw;
+    margin: 3% auto 5% auto;
+}
+.medium-widget-article__column {
+    background-color: rgba(221, 221, 221, 0.473) !important;
+    border-radius: 5px !important;
+    padding: 3%;
+}
+.medium-widget-article__content * {
+    color: rgb(221, 221, 221) !important;
 }
 
 .view {
@@ -400,10 +433,38 @@ p.paragraph::first-line {
     max-width: 55%;
 }
 
-#footer {
+#footerAbout {
     margin-top: 28vh;
-    width: 385px;
+    bottom: 0;
+    width: auto;
     text-align: center;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+.flux {
+    animation: flux 2s linear infinite;
+    -moz-animation: flux 2s linear infinite;
+    -webkit-animation: flux 2s linear infinite;
+    -o-animation: flux 2s linear infinite;
+}
+
+@keyframes flux {
+    0%,
+    100% {
+        text-shadow: 0 0 1vw #1041FF, 0 0 3vw #1041FF, 0 0 10vw #1041FF, 0 0 10vw #1041FF, 0 0 .4vw #8BFDFE, .5vw .5vw .1vw #147280;
+        color: #28D7FE;
+    }
+    50% {
+        text-shadow: 0 0 .5vw #082180, 0 0 1.5vw #082180, 0 0 5vw #082180, 0 0 5vw #082180, 0 0 .2vw #082180, .5vw .5vw .1vw #0A3940;
+        color: #146C80;
+    }
 }
 
 @keyframes fade {
