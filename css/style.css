@@ -513,7 +513,7 @@ footer {
         }
     }
     
-    @media screen and (max-width: 350px) 
+    @media screen and (max-width: 450px) 
     {
         .p_bar {
             display: inline-block;

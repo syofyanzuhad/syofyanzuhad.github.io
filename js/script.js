@@ -80,23 +80,49 @@ function openNav() {
     document.getElementById("main").style.marginLeft = "100%";
     
     //========Script to fetching Medium API automatically ===========//
-    MediumWidget.Init({
-        renderTo: '#medium-widget',
-        params: {
-            "resource": "https://medium.com/@syofyanzuhad/",
-            "postsPerLine": 2,
-            "limit": 4,
-            "picture": "big",
-            "fields": [
-                "description",
-                "author",
-                "claps",
-                "likes",
-                "publishAt"
-            ],
-            "ratio": "original"
+    function myFunction(x) {
+        if (x.matches) { // If media query matches
+            MediumWidget.Init({
+                renderTo: '#medium-widget',
+                params: {
+                    "resource": "https://medium.com/@syofyanzuhad/",
+                    "postsPerLine": 1,
+                    "limit": 4,
+                    "picture": "big",
+                    "fields": [
+                        "description",
+                        "author",
+                        "claps",
+                        "likes",
+                        "publishAt"
+                    ],
+                    "ratio": "original"
+                }
+            });
+        } else {
+            MediumWidget.Init({
+                renderTo: '#medium-widget',
+                params: {
+                    "resource": "https://medium.com/@syofyanzuhad/",
+                    "postsPerLine": 2,
+                    "limit": 4,
+                    "picture": "big",
+                    "fields": [
+                        "description",
+                        "author",
+                        "claps",
+                        "likes",
+                        "publishAt"
+                    ],
+                    "ratio": "original"
+                }
+            });
         }
-    })
+    }
+    var x = window.matchMedia("(max-width: 450px)")
+    myFunction(x) // Call listener function at run time
+    x.addListener(myFunction) // Attach listener function on state changes
+
     //========Script to fetching Medium API manually ===========//
 
     // fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@syofyanzuhad/')
