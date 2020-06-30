@@ -467,8 +467,8 @@ function openNav() {
             // document.getElementById("photography").style.height = "0";
             document.getElementById("about").style.width = "0";
             document.getElementById("contacts").style.width = "0";
-            document.getElementById('closebtn').style.position = "absolute";
-            document.getElementById('closebtn1').style.position = "absolute";
+            // document.getElementById('closebtn').style.position = "absolute";
+            // document.getElementById('closebtn1').style.position = "absolute";
             document.getElementById("mySideBlog").style.width = "0";
             document.getElementById("main").style.marginLeft = "0";
             // console.log('closed');
