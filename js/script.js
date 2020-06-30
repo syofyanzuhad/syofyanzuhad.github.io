@@ -253,6 +253,181 @@ function openNav() {
 
         function openSlideUp() {
             document.getElementById("portfolio").style.height = "100vh";
+            var content = `
+                <a id="closebtn1" href="javascript:void(0)" class="closebtn mt-5" onclick="closeSlideUp()">&times;</a>
+                
+                <!--Accordion wrapper-->
+                <div class="accordion md-accordion" id="accordionEx" role="tablist" aria-multiselectable="true">
+                    <div class="container text-center text-white mt-5 mb-3" id="portofolio">
+                        <div class="row mt-5">
+                            <div class="col mt-5">
+                                <h2>PORTFOLIO</h2>
+                                <hr>
+                            </div>
+                        </div>
+                        <div class="row ">
+                            <div class="col-sm-6 col-md-6 mb-2">
+                                <div class="card bg-none">
+                                    <a href="#port-1">
+                                        <img src="img/portofolio/library.jpg" class="card-img-top " alt="Library Management"> 
+                                    </a>
+                                        <div class="overlay" id="port-1">
+                                            <a href="#img" class="closes"> &times;</a>
+
+                                            <a href="#port-8" class="navig-b"> <h1> < </h1> </a>
+                                            <div class="image">
+                                                <img src="img/portofolio/library.jpg" class="img-thumbnail" alt="Library Management">
+                                            </div>
+                                            <a href="#port-2" class="navig-n"> <h1> > </h1> </a>
+                                        </div>
+                                    <div class="card-body">
+                                        <p class="card-text">Example Library Management.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-6 mb-2">
+                                <div class="card">
+                                    <a href="#port-2">
+                                        <img src="img/portofolio/sistem_sekolah.jpg" class="card-img-top" alt="School Management System"> 
+                                    </a>
+                                    <div class="overlay" id="port-2">
+                                        <a href="#img" class="closes"> &times; </a>
+
+                                        <a href="#port-1" class="navig-b"> <h1> < </h1> </a>
+                                        <div class="image">
+                                            <img src="img/portofolio/sistem_sekolah.jpg" class="img-thumbnail" alt="School Management System">
+                                        </div>
+                                        <a href="#port-3" class="navig-n"> <h1> > </h1> </a>	
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text">School Management System.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-6 mb-2">
+                                <div class="card">
+                                    <a href="#port-3">
+                                        <img src="img/portofolio/contact_me.jpg" class="card-img-top" alt="Contact Form to Email and Whatsapp"> 
+                                    </a>
+                                    <div class="overlay" id="port-3">
+                                        <a href="#img" class="closes"> &times; </a>
+
+                                        <a href="#port-2" class="navig-b"> <h1> < </h1> </a>
+                                        <div class="image">
+                                            <img src="img/portofolio/contact_me.jpg" class="img-thumbnail" alt="Contact Form Message to Email and Whatsapp">
+                                        </div>
+                                        <a href="#port-4" class="navig-n"> <h1> > </h1> </a>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text">Contact Form Message to Email and Whatsapp.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-6 mb-2">
+                                <div class="card">
+                                    <a href="#port-4">
+                                        <img src="img/portofolio/login_page.jpg" class="card-img-top" alt="Example Login Page"> 
+                                    </a>
+                                    <div class="overlay" id="port-4">
+                                        <a href="#img" class="closes"> &times; </a>
+
+                                        <a href="#port-3" class="navig-b"> <h1> < </h1> </a>
+                                        <div class="image">
+                                            <img src="img/portofolio/login_page.jpg" class="img-thumbnail" alt="Example Login Page">
+                                        </div>
+                                        <a href="#port-7" class="navig-n"> <h1> > </h1> </a>
+
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text">Example Login Page.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="col-sm-6 col-md-6 mb-2">
+                                <div class="card">
+                                    <a href="#port-5">
+                                        <img src="img/portofolio/php Blog.jpg" class="card-img-top" alt="..."> 
+                                    </a>
+                                    <div class="overlay" id="port-5">
+                                        <a href="#img" class="closes"> &times; </a>
+
+                                        <a href="#port-4" class="navig-b"> <h1> < </h1> </a>	
+                                        <div class="image">
+                                            <img src="img/portofolio/php Blog.jpg" class="img-thumbnail" alt="">
+                                        </div>
+                                        <a href="#port-6" class="navig-n"> <h1> > </h1> </a>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                            of the card's content.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-6 mb-2">
+                                <div class="card">
+                                    <a href="#port-6">
+                                        <img src="img/portofolio/mvc Blog.jpg" class="card-img-top" alt="..."> 
+                                    </a>
+                                    <div class="overlay" id="port-6">
+                                        <a href="#img" class="closes"> &times; </a>
+
+                                        <a href="#port-5" class="navig-b"> <h1> < </h1> </a>
+                                        <div class="image">
+                                            <img src="img/portofolio/mvc Blog.jpg" class="img-thumbnail" alt="">
+                                        </div>
+                                        <a href="#port-7" class="navig-n"> <h1> > </h1> </a>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                            of the card's content.</p>
+                                    </div>
+                                </div>
+                                </div> -->
+                                <div class="col-sm-6 col-md-6 mb-2">
+                                <div class="card">
+                                    <a href="#port-7">
+                                        <img src="img/portofolio/bimago.jpg" class="card-img-top" alt="Web Profile of Bimago Course"> 
+                                    </a>
+                                    <div class="overlay" id="port-7">
+                                        <a href="#img" class="closes"> &times; </a>
+
+                                        <a href="#port-4" class="navig-b"> <h1> < </h1> </a>
+                                            <div class="image">
+                                                <img src="img/portofolio/bimago.jpg" class="img-thumbnail" alt="Web Profile of Bimago Course">
+                                            </div>
+                                        <a href="#port-8" class="navig-n"> <h1> > </h1> </a>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text">Web Profile of Bimago Course.</p>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="col-sm-6 col-md-6 mb-2">
+                                <div class="card">
+                                    <a href="#port-8">
+                                        <img src="img/portofolio/bimago2.jpg" class="card-img-top" alt="Web Profile of Bimago Course"> 
+                                    </a>
+                                    <div class="overlay" id="port-8">
+                                        <a href="#img" class="closes"> &times; </a>
+
+                                        <a href="#port-7" class="navig-b"> <h1> < </h1> </a>
+                                        <div class="image">
+                                            <img src="img/portofolio/bimago2.jpg" class="img-thumbnail" alt="Web Profile of Bimago Course">
+                                        </div>
+                                        <a href="#port-1" class="navig-n"> <h1> > </h1> </a>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text">Web Profile of Bimago Course.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>`
+            ;
+            // console.log(content);
+            $("#portfolio").append(content);
             document.getElementById('closebtn1').style.position = "fixed";
         }
         
@@ -265,6 +440,7 @@ function openNav() {
         /* Set the width of the side navigation to 0 */
         function closeSlideUp() {
             document.getElementById("portfolio").style.height = "0";
+            $("#portfolio").empty();
             document.getElementById('closebtn1').style.position = "absolute";
             // document.getElementsByClassName('.closes').style.position = "absolute";
             // document.getElementsByClassName('.navig-b').style.position = "absolute";
@@ -287,6 +463,7 @@ function openNav() {
 
         function closeAll() {
             document.getElementById("portfolio").style.height = "0";
+            $("#portfolio").empty();
             // document.getElementById("photography").style.height = "0";
             document.getElementById("about").style.width = "0";
             document.getElementById("contacts").style.width = "0";
@@ -294,7 +471,7 @@ function openNav() {
             document.getElementById('closebtn1').style.position = "absolute";
             document.getElementById("mySideBlog").style.width = "0";
             document.getElementById("main").style.marginLeft = "0";
-            console.log('closed');
+            // console.log('closed');
         }
 
     // }
