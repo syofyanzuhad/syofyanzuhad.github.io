@@ -460,7 +460,7 @@ function openNav() {
         function closeLeftNav() {
             document.getElementById("contacts").style.width = "0";
         }
-
+        
         function closeAll() {
             document.getElementById("portfolio").style.height = "0";
             $("#portfolio").empty();
@@ -474,6 +474,36 @@ function openNav() {
             // console.log('closed');
         }
 
+        function chatWA() {
+            let WA = [];
+            
+            if (document.getElementById("form-name-wa").value === '') {
+                alert("Silahkan isi Nama !");
+                return false;
+            }
+            WA["name"] = document.getElementById("form-name-wa").value;
+
+            if (document.getElementById("form-email-wa").value === '') {
+                alert("Silahkan isi Email !");
+                return false;
+            }
+            WA["email"] = document.getElementById("form-email-wa").value;
+
+            if (document.getElementById("form-phone-wa").value === '') {
+                alert("Silahkan isi Nomor !");
+                return false;
+            }
+            WA["phone"] = document.getElementById("form-phone-wa").value;
+
+            if (document.getElementById("pesan2").value === '') {
+                alert("Silahkan isi Pesan !");
+                return false;
+            }
+            WA["pesan"] = document.getElementById("pesan2").value;
+
+            console.log(WA);
+            window.open(`https://api.whatsapp.com/send?phone=6281326743694&text=Assalamual'aikum %0ANama: ${WA['name']}%0AEmail: ${WA['email']}%0APhone: ${WA['phone']}%0APesan: ${WA['pesan']}`, "_blank");
+        }
     // }
 // }
 

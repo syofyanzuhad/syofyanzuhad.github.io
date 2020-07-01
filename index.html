@@ -177,28 +177,28 @@
 		
 								<!-- Whatsapp -->
 								<div class="tab-pane fade" id="whatsapp" role="tabpanel" aria-labelledby="pills-profile-tab">
-									<form method="post" action="index.php">
+									<form method="post" action="">
 									<div class="md-form">
-										<input type="text" id="form-name-wa" class="form-control">
+										<input type="text" id="form-name-wa" class="form-control" required>
 										<label for="form-name">Nama</label>
 									</div>
 									<div class="md-form">
-										<input type="text" id="form-email-wa" class="form-control">
+										<input type="text" id="form-email-wa" class="form-control" required>
 										<label for="form-email">Email</label>
 										<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
 										else.</small>
 									</div>
 									<div class="md-form">
-										<input type="text" id="form-phone-wa" class="form-control">
+										<input type="text" id="form-phone-wa" class="form-control" required>
 										<label for="form-phone">No. Telp</label>
 										<small id="telpHelp" class="form-text text-muted">Number phone needed for message
 										end-to-end.</small>
 									</div>
 									<div class="md-form">
-										<textarea name="pesan_wa" id="pesan2" class="form-control md-textarea" ></textarea>
+										<textarea name="pesan_wa" id="pesan2" class="form-control md-textarea" required></textarea>
 										<label for="pesan_wa">Pesan</label>
 									</div>
-									<a class="btn btn-sm btn-outline-blue" href="https://api.whatsapp.com/send?phone=6281326743694&text=Assalamual'aikum %0ANama: '...'%0AEmail: '...'%0APhone: '...'%0APesan: '...'" target="_blank">Send</a>
+									<button class="btn btn-sm btn-outline-blue" href="#!" onclick="chatWA()">Send</button>
 									</form>
 								</div>
 								<!-- Akhir Whatsapp -->
