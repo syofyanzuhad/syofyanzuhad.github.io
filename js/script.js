@@ -501,7 +501,7 @@ function openNav() {
             }
             WA["pesan"] = document.getElementById("pesan2").value;
 
-            console.log(WA);
+            // console.log(WA);
             window.open(`https://api.whatsapp.com/send?phone=6281326743694&text=Assalamual'aikum %0ANama: ${WA['name']}%0AEmail: ${WA['email']}%0APhone: ${WA['phone']}%0APesan: ${WA['pesan']}`, "_blank");
         }
     // }
