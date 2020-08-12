@@ -212,6 +212,31 @@ a.closebtn {
     width: 1.3em; /* same as padding-left set on li */
 }
 
+.id-drive {
+    list-style: none;
+    padding: 0;
+}
+
+.id-drive {
+    padding-left: 1.3em;
+    margin: 2vh 0vh;
+}
+
+.id-drive li a {
+    text-decoration: none;
+    font-size: medium;
+    display: inline;
+    /* cursor: pointer; */
+}
+
+.id-drive li::before {
+    content: "\f115"; /* FontAwesome Unicode */
+    font-family: FontAwesome;
+    display: inline-block;
+    margin-left: -1.3em; /* same as padding-left set on li */
+    width: 1.3em; /* same as padding-left set on li */
+}
+
 .btn-floating {
     box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
     position: relative;
