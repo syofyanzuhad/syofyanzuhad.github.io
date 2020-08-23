@@ -1,0 +1,22 @@
+{
+   "name": "Dzikir Pagi & Petang",
+   "short_name": "Dzikir",
+   "start_url": "dzikir.html",
+   "display": "standalone",
+   "background_color": "#5900b3",
+   "theme_color": "black",
+   "scope": ".",
+   "description": "This is a PWA tutorial.",
+   "icons": [
+      {
+         "src": "img/code2.png",
+         "sizes": "192x192",
+         "type": "image/png"
+      },
+      {
+         "src": "img/code2.png",
+         "sizes": "512x512",
+         "type": "image/png"
+      }
+   ]
+}
