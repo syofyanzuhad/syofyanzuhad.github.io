@@ -29,18 +29,190 @@
 
    <!-- Manifest File link -->
    <link rel="manifest" href="manifest.json">
+
+   <link href="css/dark.css" rel="stylesheet" />
+   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" rel="stylesheet" />
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+   <style>
+      .card-header {
+         position: relative;
+      }
+      .carousel-item {
+         overflow-x: scroll;
+      }
+      .carousel-item.active {
+         height: 90vh;
+         width: 85vw;
+         display: grid;
+         align-items: center;
+      }
+      @import url(https://fonts.googleapis.com/css?family=Lato:400,400italic,700|Sansita+One);
+      @import url(https://fonts.googleapis.com/css?family=Amiri:400,400i,700,700i&subset=arabic);
+      :root {
+         --primary-color: #302ae6;
+         --secondary-color: #536390;
+         --font-color: #347e6a;
+         --bg-color: #fff;
+         --heading-color: #03bba6;
+      }
+      [data-theme="dark"] {
+         --primary-color: #9a97f3;
+         --secondary-color: #818cab;
+         --font-color: #cbcbe7;
+         --bg-color: #161625;
+         --heading-color: #818cab;
+      }
+      body {
+         font-family: "Lato", sans-serif;
+         background-color: var(--bg-color);
+         color: var(--font-color);
+         max-width: 100%;
+         font-size: calc(1rem + 0.25vh);
+      }
+      h1 {
+         color: var(--heading-color);
+         font-family: "Amiri", serif;
+         font-size: 2rem;
+         line-height: 10vh;
+      }
+      h2 {
+         color: var(--heading-color);
+         font-family: "Sansita One", serif;
+         font-size: 2rem;
+         margin-bottom: 1vh;
+      }
+      p {
+         color: var(--font-color);
+         font-size: 1.1rem;
+         line-height: 1.6rem;
+      }
+      a {
+         color: var(--primary-color);
+         text-decoration: none;
+         border-bottom: 3px solid transparent;
+         font-weight: bold;
+      }
+      a:hover, a:focus {
+         border-bottom: 3px solid currentColor;
+      }
+      section {
+         max-width: 68%;
+         margin: 0 auto;
+      }
+      .post-meta {
+         font-size: 1rem;
+         font-style: italic;
+         display: block;
+         margin-bottom: 4vh;
+         color: var(--secondary-color);
+      }
+      nav {
+         display: flex;
+         justify-content: flex-end;
+         padding: 20px 0;
+      }
+      /*slider switch css */
+      .theme-switch-wrapper {
+         display: flex;
+         align-items: center;
+      }
+      .theme-switch-wrapper em {
+         margin-left: 10px;
+         font-size: 1rem;
+      }
+      .theme-switch {
+         display: inline-block;
+         height: 34px;
+         position: relative;
+         width: 60px;
+      }
+      .theme-switch input {
+         display: none;
+      }
+      .slider {
+         background-color: #ccc;
+         bottom: 0;
+         cursor: pointer;
+         left: 0;
+         position: absolute;
+         right: 0;
+         top: 0;
+         transition: 0.4s;
+      }
+      .slider:before {
+         background-color: #fff;
+         bottom: 4px;
+         content: "";
+         height: 26px;
+         left: 4px;
+         position: absolute;
+         transition: 0.4s;
+         width: 26px;
+      }
+      input:checked + .slider {
+         background-color: #66bb6a;
+      }
+      input:checked + .slider:before {
+         transform: translateX(26px);
+      }
+      .slider.round {
+         border-radius: 34px;
+      }
+      .slider.round:before {
+         border-radius: 50%;
+      }
+
+   </style>
+   
 </head>
 
-<body>
-   <h1 style="color: green;">
-      Dzikir Pagi & Sore</h1>
-
-   <p>
-      This is a simple tutorial for
-      creating a PWA application.
-   </p>
+<body>  
+   
+   <div class="card-header d-flex justify-content-between">
+      <h2>
+         Dzikir Pagi & Sore
+      </h2>
+      <div class="theme-switch-wrapper">
+         <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <div class="slider round">
+               <div class="d-flex align-content-center justify-content-between p-1">
+                  <img width="27" height="27" src="https://image.flaticon.com/icons/png/512/3073/3073665.png" title="day"></img>
+                  <img width="27" height="27" src="https://www.flaticon.com/premium-icon/icons/svg/3031/3031173.svg" title="moon"></img>
+               </div>
+            </div>
+         </label>
+         <em class="dzikir">Pagi</em>
+      </div>
+      <!-- <button id="DarkModeButton" class="btn btn-secondary" onclick="setActiveStyleSheet('dark')">DARK MODE</button> -->
+   </div>
+   <div id="demo" class="carousel slide " data-ride="carousel" data-interval="false">
+   
+      <!-- The slideshow -->
+      <div class="carousel-inner d-flex justify-content-center">
+         <div class="carousel-item active">
+            <h1 class="text-center pb-5">أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ</h1>
+            <p class="text-center pt-5"> “Aku berlindung kepada Allah dari godaan syaithon yang terkutuk.” </p>
+         </div>
+         <div class="carousel-item">
+            <h1 class="text-center">Inventore omnis odio, dolore culpa atque?</h1>
+         </div>
+      </div>
+   
+      <!-- Left and right controls -->
+      <a class="carousel-control-prev" href="#demo" data-slide="prev">
+         <span class="carousel-control-prev-icon p-3 rounded bg-info"></span>
+      </a>
+      <a class="carousel-control-next" href="#demo" data-slide="next">
+         <span class="carousel-control-next-icon p-3 rounded bg-info"></span>
+      </a>
+   
+   </div>
 
    <script>
+      // ===== REGISTER SERVICEWORKER =====
       window.addEventListener('load', () => {
          registerSW();
       });
@@ -59,6 +231,114 @@
             }
          }
       } 
+
+      // ===== DARK MODE =====
+      const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+      const waktu = document.querySelector('em.dzikir');
+      const currentTheme = localStorage.getItem('theme');
+      let dzikir = document.querySelector('.carousel-inner');
+      let teks = '';
+
+      if (currentTheme) {
+         document.documentElement.setAttribute('data-theme', currentTheme);
+
+         if (currentTheme === 'dark') {
+            toggleSwitch.checked = true;
+         }
+      }
+
+      function switchTheme(e) {
+         if (e.target.checked) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            waktu.innerHTML = 'Petang';
+            dzikir.innerHTML = '';
+            // ===== FETCH DATA =====
+            fetch('asset/dzikirpetang.json')
+               .then(response => response.json())
+               .then(
+                  data => {
+                           teks = `<div class="carousel-item active">
+                                       <h1 class="text-center">${data[0].arab}</h1>
+                                       <p class="text-center"> “${data[0].artinya}” </p>
+                                    </div>`;
+                           for (i = 1; i < data.length; i++) {
+                              teks += `<div class="carousel-item">
+                                          <h1 class="text-center">${data[i].arab}</h1>
+                                          <p class="text-center"> “${data[i].artinya}” </p>
+                                       </div>`;
+                           }
+                           dzikir.innerHTML = teks;
+                        }
+               );
+            localStorage.setItem('theme', 'dark');
+         }
+         else {
+            document.documentElement.setAttribute('data-theme', 'light');
+            waktu.innerHTML = 'Pagi';
+            dzikir.innerHTML = '';
+            // ===== FETCH DATA =====
+            fetch('asset/dzikirpagi.json')
+               .then(response => response.json())
+               .then(
+                  data => {
+                     teks = `<div class="carousel-item active">
+                                       <h1 class="text-center">${data[0].arab}</h1>
+                                       <p class="text-center"> “${data[0].artinya}” </p>
+                                    </div>`;
+                     for (i = 1; i < data.length; i++) {
+                        teks += `<div class="carousel-item">
+                                          <h1 class="text-center">${data[i].arab}</h1>
+                                          <p class="text-center"> “${data[i].artinya}” </p>
+                                       </div>`;
+                     }
+                     dzikir.innerHTML = teks;
+                  }
+               );
+            localStorage.setItem('theme', 'light');
+         }
+      }
+
+      toggleSwitch.addEventListener('change', switchTheme, false);
+
+      
+      // ===== CAROUSEL =====
+      function debounce(func, wait, immediate) {
+            var timeout;
+            return function () {
+               var context = this,
+                  args = arguments;
+               var later = function () {
+                  timeout = null;
+                  if (!immediate) func.apply(context, args);
+               };
+               var callNow = immediate && !timeout;
+               clearTimeout(timeout);
+               timeout = setTimeout(later, wait);
+               if (callNow) func.apply(context, args);
+            };
+         }
+
+         var slider = document.getElementById("demo");
+         var onScroll = debounce(function (direction) {
+            //console.log(direction);
+            if (direction == false) {
+               $('.carousel-control-next').click();
+            } else {
+               $('.carousel-control-prev').click();
+            }
+         }, 100, true);
+
+         slider.addEventListener("wheel", function (e) {
+            e.preventDefault();
+            var delta;
+            if (event.wheelDelta) {
+               delta = event.wheelDelta;
+            } else {
+               delta = -1 * event.deltaY;
+            }
+
+            onScroll(delta >= 0);
+         });
    </script>
 
 </body>

@@ -1,0 +1,27 @@
+body {
+   background: #ffffff !important;
+}
+
+.carousel-item {
+   height: 100vh !important;
+   background: #ffffff !important;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+   width: 8% !important;
+}
+
+.carousel-item.active,
+.carousel-item-left,
+.carousel-item-right {
+   display: flex !important;
+   justify-content: center;
+   align-items: center;
+}
+
+.carousel-item h1 {
+   color: #212121;
+   font-size: 72px;
+   padding: 0 10%;
+}
