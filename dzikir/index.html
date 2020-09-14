@@ -27,7 +27,7 @@
    <meta property="og:site_name" content="Syofyan Zuhad" />
    <meta property="og:description" content="Aplikasi Dzikir Pagi & Petang" />
    <meta property="og:url" content="https://syofyanzuhad.netlify.app/dzikir" />
-   <meta property="og:image" content="img/code2.png" />
+   <meta property="og:image" content="../img/code2.png" />
 
    <!-- Meta Tags requred for 
 	Progressive Web App -->
@@ -36,11 +36,11 @@
    <meta name="apple-mobile-web-app-capable" content="yes">
    <meta name="apple-mobile-web-app-status-bar-style" content="black">
    <meta name="apple-mobile-web-app-title" content="Dzikir Pagi & Petang">
-   <meta name="msapplication-TileImage" content="img/code2.png">
+   <meta name="msapplication-TileImage" content="../img/code2.png">
    <meta name="msapplication-TileColor" content="#FFFFFF">
 
    <!-- Manifest File link -->
-   <link rel="manifest" href="manifest.json">
+   <link rel="manifest" href="dzikir/manifest.json">
 
    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" rel="stylesheet" />
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -190,7 +190,7 @@
 </head>
 
 <body>  
-   
+
    <div class="card-header d-flex justify-content-between">
       <h2>
          Dzikir Pagi & Sore
@@ -244,7 +244,7 @@
             try {
                await navigator
                   .serviceWorker
-                  .register('serviceworker.js');
+                  .register('dzikir/serviceworker.js');
             }
             catch (e) {
                console.log('Service Worker registration failed');
@@ -264,7 +264,7 @@
          document.documentElement.setAttribute('data-theme', currentTheme);
          
          // ===== FETCH DATA =====
-         fetch('asset/dzikirpagi.json')
+         fetch('dzikir/asset/dzikirpagi.json')
             .then(response => response.json())
             .then(
                data => {
@@ -284,7 +284,7 @@
          if (currentTheme === 'dark') {
             toggleSwitch.checked = true;
             // ===== FETCH DATA =====
-            fetch('asset/dzikirpetang.json')
+            fetch('dzikir/asset/dzikirpetang.json')
                .then(response => response.json())
                .then(
                   data => {
@@ -310,7 +310,7 @@
             waktu.innerHTML = 'Petang';
             dzikir.innerHTML = '';
             // ===== FETCH DATA =====
-            fetch('asset/dzikirpetang.json')
+            fetch('dzikir/asset/dzikirpetang.json')
                .then(response => response.json())
                .then(
                   data => {
@@ -328,13 +328,12 @@
                         }
                );
             localStorage.setItem('theme', 'dark');
-         }
-         else {
+         } else {
             document.documentElement.setAttribute('data-theme', 'light');
             waktu.innerHTML = 'Pagi';
             dzikir.innerHTML = '';
             // ===== FETCH DATA =====
-            fetch('asset/dzikirpagi.json')
+            fetch('dzikir/asset/dzikirpagi.json')
                .then(response => response.json())
                .then(
                   data => {
@@ -360,11 +359,13 @@
 		var time = d.getHours();
 
       if (time > 4) {
+         toggleSwitch.checked = false;
          document.documentElement.setAttribute('data-theme', 'light');
          waktu.innerHTML = 'Pagi';
          localStorage.setItem('theme', 'light');
       }
       if (time > 17) {
+         toggleSwitch.checked = true;
          document.documentElement.setAttribute('data-theme', 'dark');
          waktu.innerHTML = 'Petang';
          localStorage.setItem('theme', 'dark');
