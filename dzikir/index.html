@@ -64,6 +64,10 @@
          overflow-x: scroll;
          align-items: center;
       }
+      a.text-decoration-none:hover {
+         text-decoration: none !important;
+         border-bottom: none;
+      }
       :root {
          --primary-color: #302ae6;
          --secondary-color: #536390;
@@ -181,7 +185,7 @@
          h2 {
             color: var(--heading-color);
             font-family: "Sansita One", serif;
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             margin-bottom: 1vh;
          }
       }
@@ -193,8 +197,7 @@
 <body>  
 
    <div class="card-header d-flex justify-content-between">
-      <h2>
-         Dzikir Pagi & Sore
+      <a href="/" class="text-decoration-none" data="toggle" title="Syofyan Zuhad"> <h2>Dzikir Pagi & Sore</h2> </a>
       </h2>
       <div class="theme-switch-wrapper">
          <label class="theme-switch" for="checkbox">
