@@ -8,8 +8,8 @@ var filesToCache = [
    "https://fonts.googleapis.com/css?family=Lato:400,400italic,700|Sansita+One",
    "https://image.flaticon.com/icons/png/512/3073/3073665.png",
    "https://www.flaticon.com/premium-icon/icons/svg/3031/3031173.svg",
-   "./asset/dzikirpagi.json",
-   "./asset/dzikirpetang.json",
+   "asset/dzikirpagi.json",
+   "asset/dzikirpetang.json",
    "index.html"
 ];
 
