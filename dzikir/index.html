@@ -53,7 +53,9 @@
          position: relative;
       }
       .carousel-item {
-         overflow-x: scroll;
+         height: 90vh;
+         width: 85vw;
+         align-items: center;
       }
       .carousel-item.active {
          height: 90vh;
@@ -358,42 +360,42 @@
       
       // ===== CAROUSEL =====
       function debounce(func, wait, immediate) {
-            var timeout;
-            return function () {
-               var context = this,
-                  args = arguments;
-               var later = function () {
-                  timeout = null;
-                  if (!immediate) func.apply(context, args);
-               };
-               var callNow = immediate && !timeout;
-               clearTimeout(timeout);
-               timeout = setTimeout(later, wait);
-               if (callNow) func.apply(context, args);
+         var timeout;
+         return function () {
+            var context = this,
+               args = arguments;
+            var later = function () {
+               timeout = null;
+               if (!immediate) func.apply(context, args);
             };
+            var callNow = immediate && !timeout;
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+            if (callNow) func.apply(context, args);
+         };
+      }
+
+      var slider = docum88-ent.getElementById("demo");
+      var onScroll = debounce(function (direction) {
+         //console.log(direction);
+         if (direction == false) {
+            $('.carousel-control-next').click();
+         } else {
+            $('.carousel-control-prev').click();
+         }
+      }, 100, true);
+
+      slider.addEventListener("wheel", function (e) {
+         e.preventDefault();
+         var delta;
+         if (event.wheelDelta) {
+            delta = event.wheelDelta;
+         } else {
+            delta = -1 * event.deltaY;
          }
 
-         var slider = document.getElementById("demo");
-         var onScroll = debounce(function (direction) {
-            //console.log(direction);
-            if (direction == false) {
-               $('.carousel-control-next').click();
-            } else {
-               $('.carousel-control-prev').click();
-            }
-         }, 100, true);
-
-         slider.addEventListener("wheel", function (e) {
-            e.preventDefault();
-            var delta;
-            if (event.wheelDelta) {
-               delta = event.wheelDelta;
-            } else {
-               delta = -1 * event.deltaY;
-            }
-
-            onScroll(delta >= 0);
-         });
+         onScroll(delta >= 0);
+      });
    </script>
 
 </body>
