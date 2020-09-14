@@ -268,7 +268,7 @@
          document.documentElement.setAttribute('data-theme', currentTheme);
          
          // ===== FETCH DATA =====
-         fetch('./asset/dzikirpagi.json')
+         fetch(window.location.pathname+'/asset/dzikirpagi.json')
             .then(response => response.json())
             .then(
                data => {
@@ -290,7 +290,7 @@
          if (currentTheme === 'dark') {
             toggleSwitch.checked = true;
             // ===== FETCH DATA =====
-            fetch('./asset/dzikirpetang.json')
+            fetch(window.location.pathname+'/asset/dzikirpetang.json')
                .then(response => response.json())
                .then(
                   data => {
@@ -318,7 +318,7 @@
             waktu.innerHTML = 'Petang';
             dzikir.innerHTML = '';
             // ===== FETCH DATA =====
-            fetch('./asset/dzikirpetang.json')
+            fetch(window.location.pathname+'/asset/dzikirpetang.json')
                .then(response => response.json())
                .then(
                   data => {
@@ -343,7 +343,7 @@
             waktu.innerHTML = 'Pagi';
             dzikir.innerHTML = '';
             // ===== FETCH DATA =====
-            fetch('./asset/dzikirpagi.json')
+            fetch(window.location.pathname+'/asset/dzikirpagi.json')
                .then(response => response.json())
                .then(
                   data => {
