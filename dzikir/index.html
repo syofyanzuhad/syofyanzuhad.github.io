@@ -268,19 +268,21 @@
          document.documentElement.setAttribute('data-theme', currentTheme);
          
          // ===== FETCH DATA =====
-         fetch('./asset/dzikirpagi.json')
+         fetch('dzikir/asset/dzikirpagi.json')
             .then(response => response.json())
             .then(
                data => {
                   teks = `<div class="carousel-item active">
-                                       <h1 class="text-center">${data[0].arab}</h1>
-                                       <p class="text-center"> “${data[0].artinya}” </p>
-                                    </div>`;
+                              <h2>${data[0].id}</h2>
+                              <h1 class="text-center">${data[0].arab}</h1>
+                              <p class="text-center"> “${data[0].artinya}” </p>
+                           </div>`;
                   for (i = 1; i < data.length; i++) {
                      teks += `<div class="carousel-item">
-                                          <h1 class="text-center">${data[i].arab}</h1>
-                                          <p class="text-center"> “${data[i].artinya}” </p>
-                                       </div>`;
+                                 <h2>${data[i].id}</h2>
+                                 <h1 class="text-center">${data[i].arab}</h1>
+                                 <p class="text-center"> “${data[i].artinya}” </p>
+                              </div>`;
                   }
                   dzikir.innerHTML = teks;
                }
@@ -288,19 +290,22 @@
          if (currentTheme === 'dark') {
             toggleSwitch.checked = true;
             // ===== FETCH DATA =====
-            fetch('./asset/dzikirpetang.json')
+            fetch('dzikir/asset/dzikirpetang.json')
                .then(response => response.json())
+               .then(data => {console.log(data)})
                .then(
                   data => {
                      teks = `<div class="carousel-item active">
-                                       <h1 class="text-center">${data[0].arab}</h1>
-                                       <p class="text-center"> “${data[0].artinya}” </p>
-                                    </div>`;
+                                 <h2>${data[0].id}</h2>
+                                 <h1 class="text-center">${data[0].arab}</h1>
+                                 <p class="text-center"> “${data[0].artinya}” </p>
+                              </div>`;
                      for (i = 1; i < data.length; i++) {
                         teks += `<div class="carousel-item">
-                                          <h1 class="text-center">${data[i].arab}</h1>
-                                          <p class="text-center"> “${data[i].artinya}” </p>
-                                       </div>`;
+                                 <h2>${data[i].id}</h2>
+                                 <h1 class="text-center">${data[i].arab}</h1>
+                                 <p class="text-center"> “${data[i].artinya}” </p>
+                              </div>`;
                      }
                      dzikir.innerHTML = teks;
                   }
@@ -314,16 +319,19 @@
             waktu.innerHTML = 'Petang';
             dzikir.innerHTML = '';
             // ===== FETCH DATA =====
-            fetch('./asset/dzikirpetang.json')
+            fetch('dzikir/asset/dzikirpetang.json')
                .then(response => response.json())
+               .then(data => {console.log(data)})
                .then(
                   data => {
                            teks = `<div class="carousel-item active">
+                                       <h2>${data[0].id}</h2>
                                        <h1 class="text-center">${data[0].arab}</h1>
                                        <p class="text-center"> “${data[0].artinya}” </p>
                                     </div>`;
                            for (i = 1; i < data.length; i++) {
                               teks += `<div class="carousel-item">
+                                          <h2>${data[i].id}</h2>
                                           <h1 class="text-center">${data[i].arab}</h1>
                                           <p class="text-center"> “${data[i].artinya}” </p>
                                        </div>`;
@@ -337,19 +345,22 @@
             waktu.innerHTML = 'Pagi';
             dzikir.innerHTML = '';
             // ===== FETCH DATA =====
-            fetch('./asset/dzikirpagi.json')
+            fetch('dzikir/asset/dzikirpagi.json')
                .then(response => response.json())
+               .then(data => {console.log(data)})
                .then(
                   data => {
                      teks = `<div class="carousel-item active">
-                                       <h1 class="text-center">${data[0].arab}</h1>
-                                       <p class="text-center"> “${data[0].artinya}” </p>
-                                    </div>`;
+                                 <h2>${data[0].id}</h2>
+                                 <h1 class="text-center">${data[0].arab}</h1>
+                                 <p class="text-center"> “${data[0].artinya}” </p>
+                              </div>`;
                      for (i = 1; i < data.length; i++) {
                         teks += `<div class="carousel-item">
-                                          <h1 class="text-center">${data[i].arab}</h1>
-                                          <p class="text-center"> “${data[i].artinya}” </p>
-                                       </div>`;
+                                    <h2>${data[i].id}</h2>
+                                    <h1 class="text-center">${data[i].arab}</h1>
+                                    <p class="text-center"> “${data[i].artinya}” </p>
+                                 </div>`;
                      }
                      dzikir.innerHTML = teks;
                   }
