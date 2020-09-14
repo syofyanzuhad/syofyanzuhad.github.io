@@ -248,7 +248,7 @@
             try {
                await navigator
                   .serviceWorker
-                  .register('/dzikir/serviceworker.js');
+                  .register('/./serviceworker.js');
             }
             catch (e) {
                console.log('Service Worker registration failed');
@@ -268,7 +268,7 @@
          document.documentElement.setAttribute('data-theme', currentTheme);
          
          // ===== FETCH DATA =====
-         fetch('dzikir/asset/dzikirpagi.json')
+         fetch('./asset/dzikirpagi.json')
             .then(response => response.json())
             .then(
                data => {
@@ -290,9 +290,8 @@
          if (currentTheme === 'dark') {
             toggleSwitch.checked = true;
             // ===== FETCH DATA =====
-            fetch('dzikir/asset/dzikirpetang.json')
+            fetch('./asset/dzikirpetang.json')
                .then(response => response.json())
-               .then(data => {console.log(data)})
                .then(
                   data => {
                      teks = `<div class="carousel-item active">
@@ -319,9 +318,8 @@
             waktu.innerHTML = 'Petang';
             dzikir.innerHTML = '';
             // ===== FETCH DATA =====
-            fetch('dzikir/asset/dzikirpetang.json')
+            fetch('./asset/dzikirpetang.json')
                .then(response => response.json())
-               .then(data => {console.log(data)})
                .then(
                   data => {
                            teks = `<div class="carousel-item active">
@@ -345,9 +343,8 @@
             waktu.innerHTML = 'Pagi';
             dzikir.innerHTML = '';
             // ===== FETCH DATA =====
-            fetch('dzikir/asset/dzikirpagi.json')
+            fetch('./asset/dzikirpagi.json')
                .then(response => response.json())
-               .then(data => {console.log(data)})
                .then(
                   data => {
                      teks = `<div class="carousel-item active">
