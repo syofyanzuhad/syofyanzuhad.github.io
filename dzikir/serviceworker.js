@@ -10,7 +10,7 @@ var filesToCache = [
    "https://www.flaticon.com/premium-icon/icons/svg/3031/3031173.svg",
    "./asset/dzikirpagi.json",
    "./asset/dzikirpetang.json",
-   "./index.html"
+   "index.html"
 ];
 
 self.addEventListener('install', function (event) {
