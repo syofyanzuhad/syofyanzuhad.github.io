@@ -292,8 +292,10 @@
                   dzikir.innerHTML = teks;
                }
             );
+         
          if (currentTheme === 'dark') {
             toggleSwitch.checked = true;
+            waktu.innerHTML = 'Petang';
             // ===== FETCH DATA =====
             fetch(window.location.pathname+'/asset/dzikirpetang.json')
                .then(response => response.json())
@@ -376,15 +378,15 @@
 		var time = d.getHours();
 
       if (time > 4) {
+         waktu.innerHTML = 'Pagi';
          toggleSwitch.checked = false;
          document.documentElement.setAttribute('data-theme', 'light');
-         waktu.innerHTML = 'Pagi';
          localStorage.setItem('theme', 'light');
       }
       if (time > 16) {
+         waktu.innerHTML = 'Petang';
          toggleSwitch.checked = true;
          document.documentElement.setAttribute('data-theme', 'dark');
-         waktu.innerHTML = 'Petang';
          localStorage.setItem('theme', 'dark');
       }
 
