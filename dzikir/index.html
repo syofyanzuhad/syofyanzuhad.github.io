@@ -68,6 +68,11 @@
          text-decoration: none !important;
          border-bottom: none;
       }
+      h2.index {
+         z-index: -1;
+         opacity: .5;
+         font-size: xx-large;
+      }
       :root {
          --primary-color: #302ae6;
          --secondary-color: #536390;
@@ -273,13 +278,13 @@
             .then(
                data => {
                   teks = `<div class="carousel-item active">
-                              <h2>${data[0].id}</h2>
+                              <h2 class="index">${data[0].id}</h2>
                               <h1 class="text-center">${data[0].arab}</h1>
                               <p class="text-center"> “${data[0].artinya}” </p>
                            </div>`;
                   for (i = 1; i < data.length; i++) {
                      teks += `<div class="carousel-item">
-                                 <h2>${data[i].id}</h2>
+                                 <h2 class="index">${data[i].id}</h2>
                                  <h1 class="text-center">${data[i].arab}</h1>
                                  <p class="text-center"> “${data[i].artinya}” </p>
                               </div>`;
@@ -295,13 +300,13 @@
                .then(
                   data => {
                      teks = `<div class="carousel-item active">
-                                 <h2>${data[0].id}</h2>
+                                 <h2 class="index">${data[0].id}</h2>
                                  <h1 class="text-center">${data[0].arab}</h1>
                                  <p class="text-center"> “${data[0].artinya}” </p>
                               </div>`;
                      for (i = 1; i < data.length; i++) {
                         teks += `<div class="carousel-item">
-                                 <h2>${data[i].id}</h2>
+                                 <h2 class="index">${data[i].id}</h2>
                                  <h1 class="text-center">${data[i].arab}</h1>
                                  <p class="text-center"> “${data[i].artinya}” </p>
                               </div>`;
@@ -323,13 +328,13 @@
                .then(
                   data => {
                            teks = `<div class="carousel-item active">
-                                       <h2>${data[0].id}</h2>
+                                       <h2 class="index">${data[0].id}</h2>
                                        <h1 class="text-center">${data[0].arab}</h1>
                                        <p class="text-center"> “${data[0].artinya}” </p>
                                     </div>`;
                            for (i = 1; i < data.length; i++) {
                               teks += `<div class="carousel-item">
-                                          <h2>${data[i].id}</h2>
+                                          <h2 class="index">${data[i].id}</h2>
                                           <h1 class="text-center">${data[i].arab}</h1>
                                           <p class="text-center"> “${data[i].artinya}” </p>
                                        </div>`;
@@ -348,13 +353,13 @@
                .then(
                   data => {
                      teks = `<div class="carousel-item active">
-                                 <h2>${data[0].id}</h2>
+                                 <h2 class="index">${data[0].id}</h2>
                                  <h1 class="text-center">${data[0].arab}</h1>
                                  <p class="text-center"> “${data[0].artinya}” </p>
                               </div>`;
                      for (i = 1; i < data.length; i++) {
                         teks += `<div class="carousel-item">
-                                    <h2>${data[i].id}</h2>
+                                    <h2 class="index">${data[i].id}</h2>
                                     <h1 class="text-center">${data[i].arab}</h1>
                                     <p class="text-center"> “${data[i].artinya}” </p>
                                  </div>`;
