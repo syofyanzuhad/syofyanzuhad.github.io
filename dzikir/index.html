@@ -355,6 +355,21 @@
          }
       }
 
+      // ===== DZIKIR GREET =====
+		var d = new Date();
+		var time = d.getHours();
+
+      if (time > 4) {
+         document.documentElement.setAttribute('data-theme', 'light');
+         waktu.innerHTML = 'Pagi';
+         localStorage.setItem('theme', 'light');
+      }
+      if (time > 17) {
+         document.documentElement.setAttribute('data-theme', 'dark');
+         waktu.innerHTML = 'Petang';
+         localStorage.setItem('theme', 'dark');
+      }
+
       toggleSwitch.addEventListener('change', switchTheme, false);
 
       

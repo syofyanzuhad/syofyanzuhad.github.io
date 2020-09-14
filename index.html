@@ -101,6 +101,7 @@
 						<p class="mx-5 mb-5 animated fadeIn">I'm A basic Back-end Developer, who start learning to be full stack developer. Never stop learning, cause nobody was born smart.
 						</p>
 						<a id="btn" href="#portfolio" onclick="openSlideUp(), closeSlideUp2()" class="btn btn-outline-white btn-md bg-none text-white font-weight-bold"><i class="fa fa-clone left"></i> View project</a>
+						<a id="btn" href="dzikir" class="btn btn-outline-white btn-md bg-none text-white font-weight-bold"><i class="fa fa-sun-o left"></i> Dzikir</a>
 						<!-- <a id="btn1" href="#photography" onclick="openSlideUp2(), closeSlideUp()" class="btn btn-outline-white btn-md bg-none text-white font-weight-bold"><i class="fa fa-clone left"></i> View photography</a> -->
 					</div>
 			</div>
@@ -470,6 +471,30 @@
 	<script type="text/javascript" src="js/script.min.js"></script>
 
 	<script>
+
+		// ===== DZIKIR GREET =====
+		var d = new Date();
+		var time = d.getHours();
+		var amal = '';
+
+		if (time < 6 && time > 5) {
+			amal = confirm("Sudah dzikir pagi ?");
+			if (!amal) {
+				window.location = 'dzikir';
+			} else {
+				e.preventDefault();
+			}
+		}
+		if (time > 17 && time < 18) {
+			amal = confirm("Sudah dzikir petang ?");
+			if (!amal) {
+				window.location = 'dzikir';
+			} else {
+				e.preventDefault();
+			}
+		}
+
+		// ===== SWITCH DARK MODE =====
 		$(document).ready(function () {
 			$("#btn,#btn1").hover(function () {
 				$(this).toggleClass(" text-dark").toggleClass(' text-white')
@@ -477,6 +502,8 @@
 			});
 		});
 
+
+		// ===== SEND EMAIL =====
 		$('#contact-form').on('submit', function (event) {
 			event.preventDefault(); // prevent reload
 			var contact = $('#contacts');
