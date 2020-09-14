@@ -477,7 +477,7 @@
 		var time = d.getHours();
 		var amal = '';
 
-		if (time < 6 && time > 5) {
+		if (time < 6 && time > 4) {
 			amal = confirm("Sudah dzikir pagi ?");
 			if (!amal) {
 				window.location = 'dzikir';
@@ -485,7 +485,7 @@
 				e.preventDefault();
 			}
 		}
-		if (time > 17 && time < 18) {
+		if (time > 16 && time < 18) {
 			amal = confirm("Sudah dzikir petang ?");
 			if (!amal) {
 				window.location = 'dzikir';
