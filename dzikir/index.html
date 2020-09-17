@@ -224,11 +224,8 @@
       <!-- The slideshow -->
       <div class="carousel-inner d-flex justify-content-center">
          <div class="carousel-item active">
-            <h1 class="text-center pb-5">أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ</h1>
-            <p class="text-center pt-5"> “Aku berlindung kepada Allah dari godaan syaithon yang terkutuk.” </p>
-         </div>
-         <div class="carousel-item">
-            <h1 class="text-center">Inventore omnis odio, dolore culpa atque?</h1>
+            <h1 class="text-right pb-5">أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ</h1>
+            <p class="text-left pt-5"> “Aku berlindung kepada Allah dari godaan syaithon yang terkutuk.” </p>
          </div>
       </div>
    
@@ -280,14 +277,14 @@
                data => {
                   teks = `<div class="carousel-item active">
                               <h2 class="index">${data[0].id}</h2>
-                              <h1 class="text-center">${data[0].arab}</h1>
-                              <p class="text-center"> “${data[0].artinya}” </p>
+                              <h1 class="text-right">${data[0].arab}</h1>
+                              <p class="text-left"> “${data[0].artinya}” </p>
                            </div>`;
                   for (i = 1; i < data.length; i++) {
                      teks += `<div class="carousel-item">
                                  <h2 class="index">${data[i].id}</h2>
-                                 <h1 class="text-center">${data[i].arab}</h1>
-                                 <p class="text-center"> “${data[i].artinya}” </p>
+                                 <h1 class="text-right">${data[i].arab}</h1>
+                                 <p class="text-left"> “${data[i].artinya}” </p>
                               </div>`;
                   }
                   dzikir.innerHTML = teks;
@@ -304,14 +301,14 @@
                   data => {
                      teks = `<div class="carousel-item active">
                                  <h2 class="index">${data[0].id}</h2>
-                                 <h1 class="text-center">${data[0].arab}</h1>
-                                 <p class="text-center"> “${data[0].artinya}” </p>
+                                 <h1 class="text-right">${data[0].arab}</h1>
+                                 <p class="text-left"> “${data[0].artinya}” </p>
                               </div>`;
                      for (i = 1; i < data.length; i++) {
                         teks += `<div class="carousel-item">
                                  <h2 class="index">${data[i].id}</h2>
-                                 <h1 class="text-center">${data[i].arab}</h1>
-                                 <p class="text-center"> “${data[i].artinya}” </p>
+                                 <h1 class="text-right">${data[i].arab}</h1>
+                                 <p class="text-left"> “${data[i].artinya}” </p>
                               </div>`;
                      }
                      dzikir.innerHTML = teks;
@@ -332,14 +329,14 @@
                   data => {
                            teks = `<div class="carousel-item active">
                                        <h2 class="index">${data[0].id}</h2>
-                                       <h1 class="text-center">${data[0].arab}</h1>
-                                       <p class="text-center"> “${data[0].artinya}” </p>
+                                       <h1 class="text-right">${data[0].arab}</h1>
+                                       <p class="text-left"> “${data[0].artinya}” </p>
                                     </div>`;
                            for (i = 1; i < data.length; i++) {
                               teks += `<div class="carousel-item">
                                           <h2 class="index">${data[i].id}</h2>
-                                          <h1 class="text-center">${data[i].arab}</h1>
-                                          <p class="text-center"> “${data[i].artinya}” </p>
+                                          <h1 class="text-right">${data[i].arab}</h1>
+                                          <p class="text-left"> “${data[i].artinya}” </p>
                                        </div>`;
                            }
                            dzikir.innerHTML = teks;
@@ -357,14 +354,14 @@
                   data => {
                      teks = `<div class="carousel-item active">
                                  <h2 class="index">${data[0].id}</h2>
-                                 <h1 class="text-center">${data[0].arab}</h1>
-                                 <p class="text-center"> “${data[0].artinya}” </p>
+                                 <h1 class="text-right">${data[0].arab}</h1>
+                                 <p class="text-left"> “${data[0].artinya}” </p>
                               </div>`;
                      for (i = 1; i < data.length; i++) {
                         teks += `<div class="carousel-item">
                                     <h2 class="index">${data[i].id}</h2>
-                                    <h1 class="text-center">${data[i].arab}</h1>
-                                    <p class="text-center"> “${data[i].artinya}” </p>
+                                    <h1 class="text-right">${data[i].arab}</h1>
+                                    <p class="text-left"> “${data[i].artinya}” </p>
                                  </div>`;
                      }
                      dzikir.innerHTML = teks;
