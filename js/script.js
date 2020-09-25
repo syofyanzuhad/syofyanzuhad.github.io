@@ -1,5 +1,3 @@
-
-//made by vipul mirajkar thevipulm.appspot.com
 var TxtType = function(el, toRotate, period) {
     this.toRotate = toRotate;
     this.el = el;
@@ -275,6 +273,7 @@ function openNav() {
             document.getElementById("contacts").style.width = "370px";
         }
 
+        // ===== OPEN PORTFOLIO SIDE =====
         function openSlideUp() {
             document.getElementById("portfolio").style.height = "100vh";
             var content = `
@@ -331,39 +330,39 @@ function openNav() {
                             <div class="col-sm-6 col-md-6 mb-2">
                                 <div class="card">
                                     <a href="#port-3">
-                                        <img src="img/portofolio/contact_me.jpg" class="card-img-top" alt="Contact Form to Email and Whatsapp"> 
+                                        <img src="img/portofolio/sikaryawan.png" class="card-img-top" alt="Management system for karyawan"> 
                                     </a>
                                     <div class="overlay" id="port-3">
                                         <a href="#img" class="closes"> &times; </a>
 
                                         <a href="#port-2" class="navig-b"> <h1> < </h1> </a>
                                         <div class="image">
-                                            <img src="img/portofolio/contact_me.jpg" class="img-thumbnail" alt="Contact Form Message to Email and Whatsapp">
+                                            <img src="img/portofolio/sikaryawan.png" class="img-thumbnail" alt="Management system for karyawan">
                                         </div>
                                         <a href="#port-4" class="navig-n"> <h1> > </h1> </a>
                                     </div>
                                     <div class="card-body">
-                                        <p class="card-text">Contact Form Message to Email and Whatsapp.</p>
+                                        <p class="card-text">Management system for karyawan.</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-6 col-md-6 mb-2">
                                 <div class="card">
                                     <a href="#port-4">
-                                        <img src="img/portofolio/login_page.jpg" class="card-img-top" alt="Example Login Page"> 
+                                        <img src="img/portofolio/laravel-pusher.png" class="card-img-top" alt="Laravel-Pusher Real-time chat app"> 
                                     </a>
                                     <div class="overlay" id="port-4">
                                         <a href="#img" class="closes"> &times; </a>
 
                                         <a href="#port-3" class="navig-b"> <h1> < </h1> </a>
                                         <div class="image">
-                                            <img src="img/portofolio/login_page.jpg" class="img-thumbnail" alt="Example Login Page">
+                                            <img src="img/portofolio/laravel-pusher.png" class="img-thumbnail" alt="Laravel-Pusher Real-time chat app">
                                         </div>
                                         <a href="#port-7" class="navig-n"> <h1> > </h1> </a>
 
                                     </div>
                                     <div class="card-body">
-                                        <p class="card-text">Example Login Page.</p>
+                                        <p class="card-text">Laravel-Pusher Real-time chat app.</p>
                                     </div>
                                 </div>
                             </div>
