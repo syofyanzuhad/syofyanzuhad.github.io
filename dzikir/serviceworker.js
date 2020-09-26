@@ -1,5 +1,5 @@
 var staticCacheName = "pwa";
-const cacheVersion = 'v1-pwa-dasar';
+const cacheVersion = 'v1-pwa';
 var filesToCache = [
    "https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css",
    "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js",
@@ -10,7 +10,7 @@ var filesToCache = [
    "https://www.flaticon.com/premium-icon/icons/svg/3031/3031173.svg",
    "./asset/dzikirpagi.json",
    "./asset/dzikirpetang.json",
-   "index.html"
+   "./index.html"
 ];
 
 self.addEventListener('install', function (event) {
