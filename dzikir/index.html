@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<DOCTYPE html>
 <html>
 
 <head>
@@ -55,7 +55,7 @@
    <meta name="msapplication-TileColor" content="#FFFFFF">
 
    <!-- Manifest File link -->
-   <link rel="manifest" href="./manifest.json">
+   <link rel="manifest" href="manifest.json">
 
    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" rel="stylesheet" />
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -218,7 +218,7 @@
 
    <div class="card-header d-flex justify-content-between">
       <a href="/" class="text-decoration-none" data="toggle" title="Syofyan Zuhad"> <h2>Dzikir Pagi & Sore</h2> </a>
-      </h2>
+      <button class="add-button fa fa-plus-circle"></button>
       <div class="theme-switch-wrapper">
          <label class="theme-switch" for="checkbox">
             <input type="checkbox" id="checkbox" />
@@ -254,6 +254,105 @@
    </div>
 
    <script>
+      let deferredPrompt;
+      const addBtn = document.querySelector('.add-button');
+      addBtn.style.display = 'none';
+
+      window.addEventListener('beforeinstallprompt', (e) => {
+         // Prevent Chrome 67 and earlier from automatically showing the prompt
+         e.preventDefault();
+         // Stash the event so it can be triggered later.
+         deferredPrompt = e;
+         // Update UI to notify the user they can add to home screen
+         addBtn.style.display = 'block';
+
+         addBtn.addEventListener('click', (e) => {
+            // hide our user interface that shows our A2HS button
+            addBtn.style.display = 'none';
+            // Show the prompt
+            deferredPrompt.prompt();
+            // Wait for the user to respond to the prompt
+            deferredPrompt.userChoice.then((choiceResult) => {
+               if (choiceResult.outcome === 'accepted') {
+                  console.log('User accepted the A2HS prompt');
+               } else {
+                  console.log('User dismissed the A2HS prompt');
+               }
+               deferredPrompt = null;
+               });
+         });
+      });
+
+
+      // ===== DETECT PWA INSTALLATION =====
+      // let deferredPrompt;
+
+      window.addEventListener('beforeinstallprompt', (e) => {
+         // Prevent the mini-infobar from appearing on mobile
+         e.preventDefault();
+         // Stash the event so it can be triggered later.
+         deferredPrompt = e;
+         // Update UI notify the user they can install the PWA
+         showInstallPromotion();
+      });
+
+      window.addEventListener('appinstalled', (evt) => {
+         // Log install to analytics
+         console.log('INSTALL: Success');
+      });
+
+      window.addEventListener('DOMContentLoaded', () => {
+         let displayMode = 'browser tab';
+         if (navigator.standalone) {
+            displayMode = 'standalone-ios';
+         }
+         if (window.matchMedia('(display-mode: standalone)').matches) {
+            displayMode = 'standalone';
+         }
+         // Log launch display mode to analytics
+         console.log('DISPLAY_MODE_LAUNCH:', displayMode);
+      });
+      window.addEventListener('DOMContentLoaded', () => {
+         window.matchMedia('(display-mode: standalone)').addListener((evt) => {
+            let displayMode = 'browser tab';
+            if (evt.matches) {
+               displayMode = 'standalone';
+            }
+            // Log display mode change to analytics
+            console.log('DISPLAY_MODE_CHANGED', displayMode);
+         });
+      });
+
+      // ===== GREET NOTIFICATION =====
+      localStorage.setItem('loop', true);
+      document.addEventListener("DOMContentLoaded", function() {
+         // Let's check if the browser supports notifications
+         if (!("Notification" in window)) {
+            alert("This browser does not support desktop notification");
+         }
+
+         // Let's check whether notification permissions have already been granted
+         else if (Notification.permission === "granted") {
+            // If it's okay let's create a notification
+            while (localStorage.getItem('loop') == true) {
+               var notification = new Notification("Assalamu'alaikumm ");
+               localStorage.setItem('loop', false);
+            }
+         }
+
+         // Otherwise, we need to ask the user for permission
+         else if (Notification.permission !== "denied") {
+            Notification.requestPermission().then(function (permission) {
+               // If the user accepts, let's create a notification
+               if (permission === "granted") {
+               var notification = new Notification("Assalamu'alaikum ");
+               }
+            });
+         }
+      // At last, if the user has denied notifications, and you 
+      // want to be respectful there is no need to bother them any more.
+      });
+
       // ===== REGISTER SERVICEWORKER =====
       window.addEventListener('load', () => {
          registerSW();
@@ -266,6 +365,7 @@
                await navigator
                   .serviceWorker
                   .register('/dzikir/serviceworker.js');
+                  console.log('Service Worker registration success !');
             }
             catch (e) {
                console.log('Service Worker registration failed');
