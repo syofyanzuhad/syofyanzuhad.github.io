@@ -291,7 +291,7 @@ function openNav() {
                         <div class="row ">
                             <div class="col-sm-6 col-md-6 mb-2">
                                 <div class="card bg-none">
-                                    <a href="#port-1">
+                                    <a href="#port-1" class="img-top">
                                         <img src="img/portofolio/library.jpg" class="card-img-top " alt="Library Management"> 
                                     </a>
                                         <div class="overlay" id="port-1">
@@ -310,7 +310,7 @@ function openNav() {
                             </div>
                             <div class="col-sm-6 col-md-6 mb-2">
                                 <div class="card">
-                                    <a href="#port-2">
+                                    <a href="#port-2" class="img-top">
                                         <img src="img/portofolio/sistem_sekolah.jpg" class="card-img-top" alt="School Management System"> 
                                     </a>
                                     <div class="overlay" id="port-2">
@@ -329,7 +329,7 @@ function openNav() {
                             </div>
                             <div class="col-sm-6 col-md-6 mb-2">
                                 <div class="card">
-                                    <a href="#port-3">
+                                    <a href="#port-3" class="img-top">
                                         <img src="img/portofolio/sikaryawan.png" class="card-img-top" alt="Management system for karyawan"> 
                                     </a>
                                     <div class="overlay" id="port-3">
@@ -348,7 +348,7 @@ function openNav() {
                             </div>
                             <div class="col-sm-6 col-md-6 mb-2">
                                 <div class="card">
-                                    <a href="#port-4">
+                                    <a href="#port-4" class="img-top">
                                         <img src="img/portofolio/laravel-pusher.png" class="card-img-top" alt="Laravel-Pusher Real-time chat app"> 
                                     </a>
                                     <div class="overlay" id="port-4">
@@ -366,68 +366,66 @@ function openNav() {
                                     </div>
                                 </div>
                             </div>
-                            <!-- <div class="col-sm-6 col-md-6 mb-2">
+                            <div class="col-sm-6 col-md-6 mb-2">
                                 <div class="card">
-                                    <a href="#port-5">
-                                        <img src="img/portofolio/php Blog.jpg" class="card-img-top" alt="..."> 
+                                    <a href="#port-5" class="img-top">
+                                        <img src="img/portofolio/php_blog.jpg" class="card-img-top" alt="..."> 
                                     </a>
                                     <div class="overlay" id="port-5">
                                         <a href="#img" class="closes"> &times; </a>
 
                                         <a href="#port-4" class="navig-b"> <h1> < </h1> </a>	
                                         <div class="image">
-                                            <img src="img/portofolio/php Blog.jpg" class="img-thumbnail" alt="">
+                                            <img src="img/portofolio/php_blog.jpg" class="img-thumbnail" alt="">
                                         </div>
                                         <a href="#port-6" class="navig-n"> <h1> > </h1> </a>
                                     </div>
                                     <div class="card-body">
-                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                            of the card's content.</p>
+                                        <p class="card-text">Blog menggunakan php native.</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-6 col-md-6 mb-2">
                                 <div class="card">
-                                    <a href="#port-6">
-                                        <img src="img/portofolio/mvc Blog.jpg" class="card-img-top" alt="..."> 
+                                    <a href="#port-6" class="img-top">
+                                        <img src="img/portofolio/laravel-here.png" class="card-img-top" alt="..."> 
                                     </a>
                                     <div class="overlay" id="port-6">
                                         <a href="#img" class="closes"> &times; </a>
 
                                         <a href="#port-5" class="navig-b"> <h1> < </h1> </a>
                                         <div class="image">
-                                            <img src="img/portofolio/mvc Blog.jpg" class="img-thumbnail" alt="">
+                                            <img src="img/portofolio/laravel-here.png" class="img-thumbnail" alt="">
                                         </div>
                                         <a href="#port-7" class="navig-n"> <h1> > </h1> </a>
                                     </div>
                                     <div class="card-body">
-                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                            of the card's content.</p>
+                                        <p class="card-text">Aplikasi penyimpanan (pin) tempat pada peta, menggunakan Here Map.</p>
                                     </div>
                                 </div>
-                                </div> -->
-                                <div class="col-sm-6 col-md-6 mb-2">
+                            </div>
+                            <div class="col-sm-6 col-md-6 mb-2">
                                 <div class="card">
-                                    <a href="#port-7">
-                                        <img src="img/portofolio/bimago.jpg" class="card-img-top" alt="Web Profile of Bimago Course"> 
+                                    <a href="#port-7" class="img-top">
+                                        <img src="img/portofolio/dashboard-pondokprogrammer.png" class="card-img-top" alt="Web Aplikasi Manajemen Pembelajaran Pondok"> 
                                     </a>
                                     <div class="overlay" id="port-7">
                                         <a href="#img" class="closes"> &times; </a>
 
                                         <a href="#port-4" class="navig-b"> <h1> < </h1> </a>
                                             <div class="image">
-                                                <img src="img/portofolio/bimago.jpg" class="img-thumbnail" alt="Web Profile of Bimago Course">
+                                                <img src="img/portofolio/dashboard-pondokprogrammer.png" class="img-thumbnail" alt="Web Aplikasi Manajemen Pembelajaran Pondok">
                                             </div>
                                         <a href="#port-8" class="navig-n"> <h1> > </h1> </a>
                                     </div>
                                     <div class="card-body">
-                                        <p class="card-text">Web Profile of Bimago Course.</p>
+                                        <p class="card-text">Web Aplikasi Manajemen Pembelajaran Pondok.</p>
                                     </div>
                                 </div>
-                                </div>
-                                <div class="col-sm-6 col-md-6 mb-2">
+                            </div>
+                            <div class="col-sm-6 col-md-6 mb-2">
                                 <div class="card">
-                                    <a href="#port-8">
+                                    <a href="#port-8" class="img-top">
                                         <img src="img/portofolio/bimago2.jpg" class="card-img-top" alt="Web Profile of Bimago Course"> 
                                     </a>
                                     <div class="overlay" id="port-8">

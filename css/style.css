@@ -374,6 +374,11 @@ p.paragraph::first-line {
     overflow: auto;
 }
 
+a.img-top {
+    max-height: 10em;
+    overflow: hidden;
+}
+
 .card a:hover .card-img-top {
     animation: fade 1s;
     opacity: .7;
