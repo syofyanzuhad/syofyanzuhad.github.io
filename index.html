@@ -481,6 +481,17 @@
 	<script type="text/javascript" src="js/script.min.js"></script>
 
 	<script>
+		$(document).ready(function() {
+
+		})
+		if (window.location.hash) {
+			if($('a[href="'+window.location.hash+'"]')) {
+				$('a[href="'+window.location.hash+'"]').trigger('click')
+			}
+		}
+	</script>
+
+	<script>
 
 		// ===== DZIKIR GREET =====
 		var d = new Date();
