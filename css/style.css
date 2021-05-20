@@ -489,6 +489,10 @@ footer {
     font-size: 120% !important;
 }
 
+.tab-contact.active {
+    color: #f1f1f1;
+}
+
 @keyframes flux {
     0%,
     100% {
