@@ -485,6 +485,10 @@ footer {
     -o-animation: flux 2s linear infinite;
 }
 
+.tab-contact {
+    font-size: 125% !important;
+}
+
 @keyframes flux {
     0%,
     100% {

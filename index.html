@@ -144,12 +144,16 @@
 						<!-- Navbar -->
 					<ul class="nav mb-0 d-flex justify-content-center" id="pills-tab" role="tablist">
 						<li class="nav-item">
-								<a class="nav-link active gmail" id="pills-home-tab" data-toggle="pill" href="#gmail" role="tab"
+								<a class="tab-contact nav-link active gmail" id="pills-home-tab" data-toggle="pill" href="#gmail" role="tab"
 								aria-controls="pills-home" aria-selected="true"><i class="fa fa-envelope"></i> Gmail</a>
 						</li>
 						<li class="nav-item">
-								<a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#whatsapp" role="tab"
+								<a class="tab-contact nav-link" id="pills-profile-tab" data-toggle="pill" href="#whatsapp" role="tab"
 								aria-controls="pills-profile" aria-selected="false"><i class="fa fa-whatsapp"></i> WhatsApp</a>
+						</li>
+						<li class="nav-item">
+								<a class="tab-contact nav-link" id="pills-profile-tab" data-toggle="pill" href="#telegram" role="tab"
+								aria-controls="pills-profile" aria-selected="false"><i class="fa fa-telegram"></i> Telegram</a>
 						</li>
 					</ul>
 						<hr class="mb-0" style="border-bottom: 0.5px solid white;">
@@ -167,17 +171,17 @@
 									<div class="md-form">
 										<i class="fa fa-envelope prefix grey-text"></i>
 										<input type="email" name="email" id="form-email-e" class="form-control" required>
-										<label for="form-email">Your email</label>
+										<label for="form-email-e">Your email</label>
 									</div>
 									<div class="md-form">
 										<i class="fa fa-tag prefix grey-text"></i>
 										<input type="text" id="form-subject-e" class="form-control" required>
-										<label for="form-Subject">Subject</label>
+										<label for="form-Subject-e">Subject</label>
 									</div>
 									<div class="md-form">
 										<i class="fa fa-pencil prefix grey-text "></i>
 										<textarea name="pesan_email" id="form-text-e" class="form-control md-textarea" rows="3"></textarea>
-										<label for="pesan_email">Send message</label>
+										<label for="form-text-e">Send message</label>
 									</div>
 									<div class="text-center">
 									<button class="btn btn-sm btn-outline-blue" name="p_email">Send</button>
@@ -191,52 +195,50 @@
 									<form method="post" action="#!">
 									<div class="md-form">
 										<input type="text" id="form-name-wa" class="form-control" required>
-										<label for="form-name">Nama</label>
+										<label for="form-name-wa">Nama</label>
 									</div>
 									<div class="md-form">
 										<input type="text" id="form-email-wa" class="form-control" required>
-										<label for="form-email">Email</label>
+										<label for="form-email-wa">Email</label>
 										<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
 										else.</small>
 									</div>
 									<div class="md-form">
 										<input type="number" id="form-phone-wa" class="form-control" required>
-										<label for="form-phone">No. Telp</label>
+										<label for="form-phone-wa">No. Telp</label>
 										<small id="telpHelp" class="form-text text-muted">Number phone needed for message
 										end-to-end.</small>
 									</div>
 									<div class="md-form">
-										<textarea name="pesan_wa" id="pesan2" class="form-control md-textarea" required></textarea>
-										<label for="pesan_wa">Pesan</label>
+										<textarea name="pesan_wa" id="pesan-wa" class="form-control md-textarea" required></textarea>
+										<label for="pesan-wa">Pesan</label>
 									</div>
 									<button class="btn btn-sm btn-outline-blue" href="#!" onclick="chatWA()">Send</button>
 									</form>
 								</div>
 								<!-- Akhir Whatsapp -->
-		
-								<!-- CONTACT -->
-								<!-- <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="pills-contact-tab">
-									<form method="post" action="index.php">
-									<div class="form-group ">
-										<label for="name3">Nama</label>
-										<input type="name" class="form-control" name="namestr3" id="name3"
-										placeholder="Enter your name">
-									</div>
-									<div class="form-group">
-										<label for="email3">Email</label>
-										<input type="email" class="form-control" name="emailstr3" id="email3"
-										aria-describedby="emailHelp" placeholder="Enter your email">
-										<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
-										else.</small>
-									</div>
-									<div class="form-group ">
-										<label for="pesan3">Pesan</label>
-										<textarea name="pesan3" id="pesan3" class="form-control" placeholder="Write Massage"></textarea>
-									</div>
-									<button type="submit" name="message3" class="btn btn-primary"><a href="backend.php" class="text-light">SEND</a></button>
+
+								<!-- Telegram -->
+								<div class="tab-pane fade" id="telegram" role="tabpanel" aria-labelledby="pills-profile-tab">
+									<form method="post" id="form-telegram">
+										<div class="md-form">
+											<input type="text" id="form-name-tele" class="form-control" required>
+											<label for="form-name-tele">Nama</label>
+										</div>
+										<div class="md-form">
+											<input type="text" id="form-id-tele" class="form-control" required value="@">
+											<label for="form-id-tele">ID Telegram</label>
+											<small id="emailHelp" class="form-text text-muted">We'll never share your id with anyone
+												else.</small>
+										</div>
+										<div class="md-form">
+											<textarea name="form-text-tele" id="form-text-tele" class="form-control md-textarea" required></textarea>
+											<label for="form-text-tele">Pesan</label>
+										</div>
+										<button class="btn btn-sm btn-outline-blue" type="submit">Send</button>
 									</form>
-								</div> -->
-								<!-- Akhir CONTACT -->
+								</div>
+								<!-- Akhir Telegram -->
 								</div>
 								<!-- Akhir Navbar -->
 						</div>
@@ -523,9 +525,29 @@
 			});
 		});
 
+		// ===== SEND TELEGRAM =====
+		$('#form-telegram').on('submit', function (event) {
+				event.preventDefault(); // prevent reload
+
+				var form_name = $('#form-name-tele').val();
+				var form_id = $('#form-id-tele').val();
+				var form_text = $('#form-text-tele').val();
+				var message = `Sir, @syofyan_zuhad \nYou have a new message! \nFrom :\nName: ${form_name}\nMessage: ${form_text}\nText me: ${form_id}`;
+
+				$.ajax('https://api.telegram.org/bot1828574484:AAEu9mQ1rAkslZanQFmuUr7EWX7yq3a5HXE/sendMessage', {
+					method: 'POST',
+					data: { chat_id: "-4606653911", text: message },
+				}).done( function() {
+					$('#form-telegram').reset()
+					alert('Your message has been sent!');
+				}).fail(function (error) {
+					alert('Oops... \nTerjadi kesalahan !');
+				});
+		});
 
 		// ===== SEND EMAIL =====
 		$('#contact-form').on('submit', function (event) {
+				'https://api.telegram.org/bot1828574484:AAEu9mQ1rAkslZanQFmuUr7EWX7yq3a5HXE/sendMessage'
 			event.preventDefault(); // prevent reload
 			var contact = $('#contacts');
 			var form_name = $('#form-name-e').val();
