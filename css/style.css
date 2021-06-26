@@ -493,6 +493,38 @@ footer {
     color: #f1f1f1;
 }
 
+.bg-php {
+    background-color: #4F5B93 !important;
+}
+
+.bg-javascript {
+    background-color: #EFD827 !important;
+}
+
+.bg-jguery {
+    background-color: #0765A6 !important;
+}
+
+.bg-mysql {
+    background-color: #4479A1 !important;
+}
+
+.bg-pgsql {
+    background-color: #2F5E8D !important;
+}
+
+.bg-git {
+    background-color: #E94E31 !important;
+}
+
+.bg-bootstrap {
+    background-color: #8D68F3 !important;
+}
+
+.bg-laravel {
+    background-color: #F24420 !important;
+}
+
 @keyframes flux {
     0%,
     100% {
