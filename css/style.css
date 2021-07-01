@@ -91,6 +91,7 @@ nav .nav-link {
 }
 
 nav .nav-link:hover {
+    color: #f1f1f1;
     text-decoration-color: white;
     border-bottom: 2px solid white;
     border-bottom-width: 20%;
