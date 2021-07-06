@@ -469,6 +469,14 @@ a.img-top {
     max-width: 55%;
 }
 
+.avatar {
+    filter: grayscale(1);
+}
+
+.zoom:hover .avatar {
+    filter: grayscale(0);
+}
+
 #footerAbout {
     margin-top: 28vh;
     bottom: 0;
