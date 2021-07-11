@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HUT RI 76 TAHUN</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* lexend-regular - latin */
+        @font-face {
+        font-family: 'Lexend';
+        font-style: normal;
+        font-weight: 400;
+        src: url('./lexend-v5-latin/lexend-v5-latin-regular.eot'); /* IE9 Compat Modes */
+        src: local(''),
+            url('./lexend-v5-latin/lexend-v5-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+            url('./lexend-v5-latin/lexend-v5-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+            url('./lexend-v5-latin/lexend-v5-latin-regular.woff') format('woff'), /* Modern Browsers */
+            url('./lexend-v5-latin/lexend-v5-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+            url('./lexend-v5-latin/lexend-v5-latin-regular.svg#Lexend') format('svg'); /* Legacy iOS */
+        }
+        * {
+            font-family: 'Lexend';
+        }
+        .container {
+            margin-left: 50;
+            margin-right: 50;
+        }
+        .row {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .col {
+            min-width: 90vw;
+            display: flex;
+            justify-content: center;
+        }
+        .logo {
+            width: 30rem;
+            position: relative;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+        }
+        .tulisan {
+            width: 10rem;
+            max-width: 10rem;
+            position: relative;
+            justify-content: center;
+            align-items:stretch;
+            font-size: 2rem;
+            left: -4em;
+        }
+        .tulisan .atas {
+            color: red;
+        }
+        .tujuh .atas {
+            background-color: red;
+            width: 5rem;
+            height: 1.5em;
+            transform: skew(20deg);
+        }
+        .tujuh .bawah {
+            transform: rotate(25deg);
+            margin-top: 19%;
+            left: 20%;
+            position: relative;
+        }
+        .tujuh .samping {
+            background-color: red;
+            width: 1.5rem;
+            height: 5rem;
+            transform: skewY(-50deg);
+        }
+        .batas {
+            position: absolute;
+            width: 2rem;
+            height: 20em;
+            transform: rotate(25deg);
+            background-color: white;
+            right: 44%;
+        }
+        .enam .atas {
+            position: relative;
+            transform: rotate(25deg);
+            top: -1em;
+        }
+        .enam .sisi {
+            background-color: red;
+            position: relative;
+            width: 1.5rem;
+            height: 4rem;
+            transform: skewY(-50deg);
+        }
+        .enam .bawah {
+            left: -2.2em;
+            position: relative;
+            top: -1em;
+        }
+        .enam .roda {
+            border: 25px solid red;
+            position: absolute;
+            border-radius: 50%;
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+        .th {
+            color: red;
+            position: absolute;
+            top: 16%;
+            left: 59%;
+            width: 1em;
+            height: 1em;
+            background-color: white;
+            transform: skew(40deg);
+            padding: 1em;
+        }
+        .th span {
+            transform: skew(-40deg);
+            font-weight: 1000;
+            font-size: 1.5em;
+            position: absolute;
+            top: -25%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="logo">
+                    <div class="tujuh">
+                        <div class="atas"></div>
+                        <div class="bawah">
+                            <div class="samping"></div>
+                        </div>
+                    </div>
+                    <div class="batas"></div>
+                    <div class="enam">
+                        <div class="atas">
+                            <div class="sisi"></div>
+                        </div>
+                        <div class="bawah">
+                            <div class="roda"></div>
+                        </div>
+                    </div>
+                    <div class="th">
+                        <span>TH</span>
+                    </div>
+                </div>
+                <div class="tulisan">
+                    <div class="atas">
+                        Indonesia
+                        <br>
+                        Tangguh
+                    </div>
+                    <div class="bawah">
+                        <strong>
+                            Indonesia
+                            <br>
+                            Tumbuh
+                        </strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
