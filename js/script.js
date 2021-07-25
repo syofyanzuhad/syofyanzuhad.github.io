@@ -95,55 +95,59 @@ function closeNav() {
 
 // /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
 function openNav() {
-    console.log('open sideNav');
-    document.getElementById("mySideBlog").style.width    = "100%";
-    document.getElementById("mySideBlog").style.height = "100vh";
-    
-    document.getElementById("main").style.marginLeft = "100%";
-    
-    //========Script to fetching Medium API automatically ===========//
-    function myFunction(x) {
-        if (x.matches) { // If media query matches
-            MediumWidget.Init({
-                renderTo: '#medium-widget',
-                params: {
-                    "resource": "https://medium.com/@syofyanzuhad/",
-                    "postsPerLine": 1,
-                    "limit": 4,
-                    "picture": "big",
-                    "fields": [
-                        "description",
-                        "author",
-                        "claps",
-                        "likes",
-                        "publishAt"
-                    ],
-                    "ratio": "original"
-                }
-            });
-        } else {
-            MediumWidget.Init({
-                renderTo: '#medium-widget',
-                params: {
-                    "resource": "https://medium.com/@syofyanzuhad/",
-                    "postsPerLine": 2,
-                    "limit": 4,
-                    "picture": "big",
-                    "fields": [
-                        "description",
-                        "author",
-                        "claps",
-                        "likes",
-                        "publishAt"
-                    ],
-                    "ratio": "original"
-                }
-            });
+    if (document.getElementById("mySideBlog").clientWidth == 0) {
+        document.getElementById("mySideBlog").style.width = "100%";
+        document.getElementById("mySideBlog").style.height = "100vh";
+        
+        document.getElementById("main").style.marginLeft = "100%";
+        
+        //========Script to fetching Medium API automatically ===========//
+        function myFunction(x) {
+            if (x.matches) { // If media query matches
+                MediumWidget.Init({
+                    renderTo: '#medium-widget',
+                    params: {
+                        "resource": "https://medium.com/@syofyanzuhad/",
+                        "postsPerLine": 1,
+                        "limit": 4,
+                        "picture": "big",
+                        "fields": [
+                            "description",
+                            "author",
+                            "claps",
+                            "likes",
+                            "publishAt"
+                        ],
+                        "ratio": "original"
+                    }
+                });
+            } else {
+                MediumWidget.Init({
+                    renderTo: '#medium-widget',
+                    params: {
+                        "resource": "https://medium.com/@syofyanzuhad/",
+                        "postsPerLine": 2,
+                        "limit": 4,
+                        "picture": "big",
+                        "fields": [
+                            "description",
+                            "author",
+                            "claps",
+                            "likes",
+                            "publishAt"
+                        ],
+                        "ratio": "original"
+                    }
+                });
+            }
         }
+        var x = window.matchMedia("(max-width: 450px)")
+        myFunction(x) // Call listener function at run time
+        x.addListener(myFunction) // Attach listener function on state changes
+    } else {
+        document.getElementById("mySideBlog").style.width = "0px";
+        document.getElementById("main").style.marginLeft = "0%";
     }
-    var x = window.matchMedia("(max-width: 450px)")
-    myFunction(x) // Call listener function at run time
-    x.addListener(myFunction) // Attach listener function on state changes
 
     //========Script to fetching Medium API manually ===========//
 
@@ -265,17 +269,26 @@ function openNav() {
         //     document.getElementsByClassName('navig-n')[id].style.position = "absolute";
         // }
         function openRightNav() {
-            document.getElementById("about").style.width = "370px";
-            document.getElementById('footer').style.position = "relative";
+            console.log(document.getElementById("about").style.width)
+            if (document.getElementById("about").clientWidth == 0) {
+                document.getElementById("about").style.width = "370px";
+                document.getElementById('footerAbout').style.position = "relative";
+            } else {
+                document.getElementById("about").style.width = "0px";
+                document.getElementById('footerAbout').style.position = "absolute";
+            }
         }
         
         function openLeftNav() {
-            document.getElementById("contacts").style.width = "370px";
+            if (document.getElementById("contacts").clientWidth == 0) {
+                document.getElementById("contacts").style.width = "370px";
+            } else {
+                document.getElementById("contacts").style.width = "0px";
+            }
         }
 
         // ===== OPEN PORTFOLIO SIDE =====
         function openSlideUp() {
-            document.getElementById("portfolio").style.height = "100vh";
             var content = `
                 <a id="closebtn1" href="javascript:void(0)" class="closebtn mt-5" onclick="closeSlideUp()">&times;</a>
                 
@@ -448,13 +461,26 @@ function openNav() {
                 </div>`
             ;
             // console.log(content);
-            $("#portfolio").append(content);
-            document.getElementById('closebtn1').style.position = "fixed";
+
+            if (document.getElementById("portfolio").clientHeight == 0) {
+                document.getElementById("portfolio").style.height = "100vh";
+                $("#portfolio").append(content);
+                document.getElementById('closebtn1').style.position = "fixed";
+            } else {
+                document.getElementById("portfolio").style.height = "0";
+                $("#portfolio").empty();
+                document.getElementById('closebtn1').style.position = "absolute";
+            }
         }
         
         function openSlideUp2() {
-            document.getElementById("photography").style.height = "100vh";
-            document.getElementById('closebtn2').style.position = "fixed";
+            if (document.getElementById("photography").clientHeight == 0) {
+                document.getElementById("photography").style.height = "100vh";
+                document.getElementById('closebtn2').style.position = "fixed";
+            } else {
+                document.getElementById("photography").style.height = "0";
+                document.getElementById('closebtn2').style.position = "absolute";
+            }
         }
         
         
@@ -475,7 +501,7 @@ function openNav() {
 
         function closeRightNav() {
             document.getElementById("about").style.width = "0";
-            document.getElementById('footer').style.position = "absolute";
+            document.getElementById('footerAbout').style.position = "absolute";
         }
 
         function closeLeftNav() {

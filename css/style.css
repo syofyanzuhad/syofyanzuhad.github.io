@@ -130,7 +130,7 @@ a.closebtn {
 .sidenavRight {
     right: 0;
     height: 100%; /* 100% Full-height */
-    width: 0; /* 0 width - change this with JavaScript */
+    width: 0px; /* 0 width - change this with JavaScript */
     position: fixed; /* Stay in place */
     z-index: 1; /* Stay on top */
     top: 0; /* Stay at the top */
@@ -164,7 +164,7 @@ a.closebtn {
 .sidenavRight .closebtn, .sidenavLeft .closebtn, .slideUp .closebtn, .slideUp2 .closebtn {
     position: absolute;
     top: 0;
-    right: 25px;
+    right: 10px;
     font-size: 36px;
     margin-left: 50px;
     margin-top: 12%;
@@ -266,7 +266,7 @@ p.paragraph::first-line {
 .sidenavLeft {
     /* right: 0; */
     height: 100%; /* 100% Full-height */
-    width: 0; /* 0 width - change this with JavaScript */
+    width: 0px; /* 0 width - change this with JavaScript */
     position: fixed; /* Stay in place */
     z-index: 1; /* Stay on top */
     top: 0; /* Stay at the top */
@@ -345,7 +345,7 @@ p.paragraph::first-line {
 }
 
 .overlay {
-    width: 0;
+    width: 0px;
     height: 0;
     position: fixed;
     top : 0;
@@ -439,7 +439,7 @@ a.img-top {
 
 #mySideBlog {
     height: 100%; /* 100% Full-height */
-    width: 0; /* 0 width - change this with JavaScript */
+    width: 0px; /* 0 width - change this with JavaScript */
     position: fixed; /* Stay in place */
     z-index: 1; /* Stay on top */
     top: 0; /* Stay at the top */

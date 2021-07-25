@@ -541,13 +541,13 @@
 
 	<script>
 		$(document).ready(function() {
-
-		})
-		if (window.location.hash) {
-			if($('a[href="'+window.location.hash+'"]')) {
-				$('a[href="'+window.location.hash+'"]').trigger('click')
+			if (window.location.hash) {
+				// if($('a[href="'+window.location.hash+'"]')) {
+					$('a[href="'+window.location.hash+'"]').trigger('click')
+					// alert('clicked')
+				// }
 			}
-		}
+		})
 	</script>
 
 	<script>
@@ -584,22 +584,22 @@
 
 		// ===== SEND TELEGRAM =====
 		$('#form-telegram').on('submit', function (event) {
-				event.preventDefault(); // prevent reload
+			event.preventDefault(); // prevent reload
 
-				var form_name = $('#form-name-tele').val();
-				var form_id = $('#form-id-tele').val();
-				var form_text = $('#form-text-tele').val();
-				var message = `Sir, @syofyan_zuhad \nYou have a new message! \nFrom :\nName: ${form_name}\nMessage: ${form_text}\nText me: ${form_id}`;
+			var form_name = $('#form-name-tele').val();
+			var form_id = $('#form-id-tele').val();
+			var form_text = $('#form-text-tele').val();
+			var message = `Sir, @syofyan_zuhad \nYou have a new message! \nFrom :\nName: ${form_name}\nMessage: ${form_text}\nText me: ${form_id}`;
 
-				$.ajax('https://api.telegram.org/bot1828574484:AAEu9mQ1rAkslZanQFmuUr7EWX7yq3a5HXE/sendMessage', {
-					method: 'POST',
-					data: { chat_id: "-460665391", text: message },
-				}).done( function() {
-					$('#form-telegram').reset()
-					alert('Your message has been sent!');
-				}).fail(function (error) {
-					alert('Oops... \nTerjadi kesalahan !');
-				});
+			$.ajax('https://api.telegram.org/bot1828574484:AAEu9mQ1rAkslZanQFmuUr7EWX7yq3a5HXE/sendMessage', {
+				method: 'POST',
+				data: { chat_id: "-460665391", text: message },
+			}).done( function() {
+				$('#form-telegram').reset()
+				alert('Your message has been sent!');
+			}).fail(function (error) {
+				alert('Oops... \nTerjadi kesalahan !');
+			});
 		});
 
 		// ===== SEND EMAIL =====
