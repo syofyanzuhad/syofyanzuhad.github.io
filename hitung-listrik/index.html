@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title -->
+    <title>Hitung Listrik | Syofyan Zuhad</title>
+    <link rel="shortcut icon" type="image/x-icon" href="hitung-listrik.png" />
+
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Hitung Listrik | Syofyan Zuhad">
+    <meta name="description" content="Hitung Listrik | Syofyan Zuhad">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Hitung Listrik | Syofyan Zuhad" />
+    <meta property="og:description" content="Hitung Listrik | Syofyan Zuhad" />
+    <meta property="og:url" content="https://syofyanzuhad.netlify.app/hitung-listrik" />
+    <meta property="og:site_name" content="Hitung Listrik | Syofyan Zuhad" />
+    <meta property="og:image" content="hitung-listrik.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://syofyanzuhad.netlify.app/hitung-listrik">
+    <meta property="twitter:title" content="Hitung Listrik | Syofyan Zuhad">
+    <meta property="twitter:description" content="Hitung Listrik | Syofyan Zuhad">
+    <meta property="twitter:image" content="hitung-listrik.png">
+
+    <!-- Google Web Console -->
+    <meta name="google-site-verification" content="fZLqDAflWxb3O3WEefmzzQ2xVJiWqK_WatR7H-E4sPs" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-43019198-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-43019198-2');
+    </script>
+
+    <!-- Meta Tags requred for Progressive Web App -->
+    <meta name="apple-mobile-web-app-status-bar" content="#aa7700">
+    <meta name="theme-color" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Hitung Listrik | Syofyan Zuhad">
+    <meta name="msapplication-TileImage" content="hitung-listrik.png">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,400italic,700|Sansita+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amiri:400,400i,700,700i&amp;subset=arabic" rel="stylesheet">
+
+    <script src="https://use.fontawesome.com/cd93d717b2.js"></script>
+
+    <style>
+        .card-tools {
+            max-height: 30em;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container d-flex align-items-center justify-content-center" style="min-height: 100vh;">
+        <div class="row">
+            <div class="col-12 my-5">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Rumus menghitung biaya listrik</h4>
+                        <p class="alert alert-info card-text">
+                            Rumus untuk menghitung biaya pemakaian listrik adalah sebagai berikut (Tarif bisa berubah-ubah) :
+                            <br>
+                            <br>
+                            <q> <strong>Daya listrik</strong> (Kwh) x <strong>Waktu pemakaian</strong> x <strong><a href="https://id.wikipedia.org/wiki/Tarif_dasar_listrik">TDL</a> (Tarif Dasar listrik)</strong> </q>
+                            <br>
+                            <br>
+                            <i class="fa fa-warning"></i> Perlu diingat
+                            <br>
+                            <b> Taris dasar listrik berbeda-beda tiap jenis tegangan, dan berubah sesuai kebijakan pemerintah </b>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="card card-tools">
+                    <div class="card-header">
+                        <h2>Peralatan Listrik</h2>
+                    </div>
+                    <div class="card card-tool m-1 mt-2">
+                        <h4 class="card-title pt-3 px-3 pb-0 mb-0">Alat Listrik 1</h4>
+                        <div class="card-body">
+                            <form class="form-row" id="form-hitung">
+                                <div class="col-3 my-1">
+                                    <label class="text-muted" for="nama_alat">Nama Alat</label>
+                                    <input required type="text" class="form-control mb-2 mr-sm-2" name="nama_alat" id="nama_alat_1" placeholder="contoh: Lampu" title="Nama Alat Listrik">
+                                </div>
+    
+                                <div class="col-2 my-1">
+                                    <label class="text-muted" for="daya">Daya listrik</label>
+                                    <div class="input-group mb-2 mr-sm-2">
+                                        <input required type="number" class="form-control" name="daya" id="daya_1" placeholder="contoh: 5" title="Daya listrik dalam satuan watt">
+                                        <div class="input-group-append">
+                                            <div class="input-group-text">watt</div>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="col-auto my-1">
+                                    <label class="text-muted" for="jam">Jam</label>
+                                    <input required type="number" class="form-control mb-2 mr-sm-2" name="jam" id="jam_1" placeholder="contoh: 12" title="Lama waktu pemakaian dalam jam">
+                                </div>
+                                
+                                <div class="col-auto my-1">
+                                    <label for=":"></label>
+                                    <p style="line-height: 3em;">
+                                        <b>:</b>
+                                    </p>
+                                </div>
+                                
+                                <div class="col-auto my-1">
+                                    <label class="text-muted" for="menit">Menit</label>
+                                    <input required type="number" class="form-control mb-2 mr-sm-2" name="menit" id="menit_1" placeholder="contoh: 30" title="Lama waktu pemakaian dalam menit">
+                                </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="card mt-2">
+                    <div class="card-body p-1">
+                        <button type="button" id="add" class="btn btn-block btn-secondary">
+                            Tambah Alat
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 my-5"><div class="card">
+                <div class="card">
+                    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#contohTarif">
+                        Daftar tarif listrik terbaru April-Juni 2021
+                    </button>
+                    <div class="collapse mt-2" id="contohTarif">
+                        <div class="card card-body">
+                            <ul>
+                                <li><small> Golongan R-1/ Tegangan Rendah (TR) daya 900 VA, <strong> Rp 1.352 </strong> per kWh. </small></li>
+                                <li><small> Golongan R-1/ TR daya 1.300 VA, <strong> Rp 1.444,70 </strong> per kWh. </small></li>
+                                <li><small> Golongan R-1/ TR daya 2.200 VA, <strong> Rp 1.444,70 </strong> per kWh. </small></li>
+                                <li><small> Golongan R-2/ TR daya 3.500-5.500 VA, <strong> Rp 1.444,70 </strong> per kWh. </small></li>
+                                <li><small> Golongan R-3/ TR daya 6.600 VA ke atas, <strong> Rp 1.444,70 </strong> per kWh. </small></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-4 my-1">
+                                <label for="biaya">Tarif Listrik</label>
+                                <div class="input-group mb-2 mr-sm-2">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">Rp.</div>
+                                    </div>
+                                    <input required type="number" class="form-control" name="biaya" id="biaya" title="Pastikan biaya listrik sudah benar">
+                                </div>
+                                <small class="hint">Lihat biaya listrik di website resmi PLN, <a href="https://web.pln.co.id/kip/daftar-informasi-publik">disini</a></small>
+                            </div>
+                            <div class="col-4 my-1">
+                                <div class="form-group">
+                                    <label for="jenis">Jenis Penghitungan</label>
+                                    <select required class="form-control" name="jenis" id="jenis">
+                                        <option value="1">Harian</option>
+                                        <option value="2">Bulanan</option>
+                                        <option value="3">Tahunan</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-2 my-1 d-flex align-items-center">
+                                <button type="reset" class="btn btn-block btn-secondary">Reset</button>
+                            </div>
+                            <div class="col-2 my-1 d-flex align-items-center">
+                                <button type="submit" class="btn btn-block btn-success">Hitung</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                </form>
+                <div class="card mt-2">
+                    <div class="card-body">
+                        <h4 class="card-title result">Hasil :</h4>
+                        <p class="alert alert-success card-text">
+                            
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+	
+	<!-- MDB SCRIPTS -->
+	<!-- JQuery -->
+	<script type="text/javascript" src="../mdb/js/jquery-3.4.1.min.js"></script>
+	<!-- Bootstrap tooltips -->
+	<script type="text/javascript" src="../mdb/js/popper.min.js"></script>
+	<!-- Bootstrap core JavaScript -->
+	<script type="text/javascript" src="../mdb/js/bootstrap.min.js"></script>
+	<!-- MDB core JavaScript -->
+	<script type="text/javascript" src="../mdb/js/mdb.min.js"></script>
+
+	<!-- My Custom Script -->
+    <script>
+        $(document).ready(function () {
+            $(document).on("focusout", "input[required]", function (e) {
+                if ($(this).val().trim() == '')
+                    $(this).css('border-color', 'red');
+                else
+                    $(this).css('border-color', 'green');
+            });
+            $(document).on("focusout", "select[required]", function (e) {
+                if ($(this).val().trim() == '')
+                    $(this).css('border-color', 'red');
+                else
+                    $(this).css('border-color', 'green');
+            });
+
+            $(document).on("submit", "form", function (e) {
+                // e.preventDefault();
+                $form = $(this);
+                $i = 0;
+                $("form input[required],form select[required]").each(function () {
+                    if ($(this).val().trim() == '') {
+                        $(this).css('border-color', 'red');
+                        $i++;
+                    } else {
+                        $(this).css('border-color', 'green');
+                    }
+                })
+                
+                e.preventDefault();
+
+                // var input = $('form').serializeArray()
+
+                var all = []
+                var input = []
+                var tools = []
+                var inc = 0
+                $('input, select').each(
+                    function (index) {
+                        var name = $(this).attr('name')
+                        var val = $(this).val()
+                        var tool = []
+
+                        all += name+': '+val+', ';
+                        if (name=='biaya' || name=='jenis') {
+                            input[name] = val;
+                        } else {
+                            tool[name] = val
+                        }
+
+                        if (index % 4 == 0) {
+                            inc++
+                            tools[inc] += tool
+                            // tools.i = {
+                            //     tool
+                            // }
+                        }
+                    }
+                );
+                // tools.i = tool
+                // var arr = $.map(input, function (o) { return o["nama_alat"]; })
+                console.log(all)
+                console.log(input)
+                console.log(tools)
+                console.log(tool)
+                console.log(inc)
+            });
+
+            $('#add').click(function() {
+                var card_count = $('.card-tool').length
+                const card = `
+                    <div class="card card-tool mb-1" id="card_${card_count + 1}">
+                        <div class="card-body">
+                            <h3 class="card-title">Alat Listrik ${card_count+1}</h3>
+                            <form class="form-row">
+                                <div class="col-3 my-1">
+                                    <label class="text-muted" for="nama_alat">Nama Alat</label>
+                                    <input required type="text" class="form-control mb-2 mr-sm-2" name="nama_alat" id="nama_alat_${card_count+1}" placeholder="Lampu" title="Nama Alat Listrik">
+                                </div>
+    
+                                <div class="col-2 my-1">
+                                    <label class="text-muted" for="daya">Daya</label>
+                                    <div class="input-group mb-2 mr-sm-2">
+                                        <input required type="number" class="form-control" name="daya" id="daya_${card_count+1}" placeholder="5" title="Daya listrik dalam satuan watt">
+                                        <div class="input-group-append">
+                                            <div class="input-group-text">watt</div>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="col-auto my-1">
+                                    <label class="text-muted" for="jam">Jam</label>
+                                    <input required type="number" class="form-control mb-2 mr-sm-2" name="jam" id="jam_${card_count+1}" placeholder="12" title="Waktu pemakaian dalam jam">
+                                </div>
+    
+                                <div class="col-auto my-1">
+                                    <label for=":"></label>
+                                    <p style="line-height: 3em;">
+                                        <b>:</b>
+                                    </p>
+                                </div>
+    
+                                <div class="col-auto my-1">
+                                    <label class="text-muted" for="menit">Menit</label>
+                                    <input required type="number" class="form-control mb-2 mr-sm-2" name="menit" id="menit_${card_count+1}" placeholder="30" title="Waktu pemakaian dalam menit">
+                                </div>
+    
+    
+                                <div class="col-auto mt-3 ml-3 d-flex align-items-center">
+                                    <button type="button" class="btn btn-danger mb-2" onclick="deleteCard(${card_count + 1})" title="Hapus alat listrik">
+                                        <i class="fa fa-trash"></i>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>`
+    
+                // alert(card_count)
+                $('.card-tool').last().after(card)
+                $('.card-tool').last().find('input[name="nama_alat"]').trigger("focus")
+            })
+
+        })
+
+        function deleteCard(id) {
+            $('#card_'+id).remove()
+        }
+    </script>
+</body>

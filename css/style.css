@@ -101,6 +101,33 @@ nav .nav-link:hover {
     text-transform: uppercase;
 }
 
+/* big-shoulders-text-regular - latin */
+@font-face {
+    font-family: 'Big Shoulders Text';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/big-shoulders-text-v6-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local(''),
+        url('../fonts/big-shoulders-text-v6-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('../fonts/big-shoulders-text-v6-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+        url('../fonts/big-shoulders-text-v6-latin-regular.woff') format('woff'), /* Modern Browsers */
+        url('../fonts/big-shoulders-text-v6-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+        url('../fonts/big-shoulders-text-v6-latin-regular.svg#BigShouldersText') format('svg'); /* Legacy iOS */
+}
+/* big-shoulders-text-500 - latin */
+@font-face {
+    font-family: 'Big Shoulders Text';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/big-shoulders-text-v6-latin-500.eot'); /* IE9 Compat Modes */
+    src: local(''),
+        url('../fonts/big-shoulders-text-v6-latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('../fonts/big-shoulders-text-v6-latin-500.woff2') format('woff2'), /* Super Modern Browsers */
+        url('../fonts/big-shoulders-text-v6-latin-500.woff') format('woff'), /* Modern Browsers */
+        url('../fonts/big-shoulders-text-v6-latin-500.ttf') format('truetype'), /* Safari, Android, iOS */
+        url('../fonts/big-shoulders-text-v6-latin-500.svg#BigShouldersText') format('svg'); /* Legacy iOS */
+}
+
 nav, .nav-link, h5 {
     text-transform: uppercase;
     font-family: 'Big Shoulders Text', cursive !important;
@@ -593,7 +620,7 @@ footer {
         .sidenav a {font-size: 18px;}
     
         .navbar.navbar-expand-lg {
-            background-color: rgba(195, 195, 195, 0.609);
+            background-color: rgba(0, 0, 0, 0.734);
         }
     }
     
@@ -611,7 +638,12 @@ footer {
         }
     
         .navbar.navbar-expand-lg {
-            background-color: rgba(195, 195, 195, 0.609) !important;
+            background-color: rgba(0, 0, 0, 0.734) !important;
+        }
+
+        .navbar-nav {
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.734);
         }
     }
     

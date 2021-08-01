@@ -269,7 +269,6 @@ function openNav() {
         //     document.getElementsByClassName('navig-n')[id].style.position = "absolute";
         // }
         function openRightNav() {
-            console.log(document.getElementById("about").style.width)
             if (document.getElementById("about").clientWidth == 0) {
                 document.getElementById("about").style.width = "370px";
                 document.getElementById('footerAbout').style.position = "relative";
