@@ -102,99 +102,102 @@ function openNav() {
         document.getElementById("main").style.marginLeft = "100%";
         
         //========Script to fetching Medium API automatically ===========//
-        function myFunction(x) {
-            if (x.matches) { // If media query matches
-                MediumWidget.Init({
-                    renderTo: '#medium-widget',
-                    params: {
-                        "resource": "https://medium.com/@syofyanzuhad/",
-                        "postsPerLine": 1,
-                        "limit": 4,
-                        "picture": "big",
-                        "fields": [
-                            "description",
-                            "author",
-                            "claps",
-                            "likes",
-                            "publishAt"
-                        ],
-                        "ratio": "original"
-                    }
-                });
-            } else {
-                MediumWidget.Init({
-                    renderTo: '#medium-widget',
-                    params: {
-                        "resource": "https://medium.com/@syofyanzuhad/",
-                        "postsPerLine": 2,
-                        "limit": 4,
-                        "picture": "big",
-                        "fields": [
-                            "description",
-                            "author",
-                            "claps",
-                            "likes",
-                            "publishAt"
-                        ],
-                        "ratio": "original"
-                    }
-                });
+        // function myFunction(x) {
+        //     if (x.matches) { // If media query matches
+        //         MediumWidget.Init({
+        //             renderTo: '#medium-widget',
+        //             params: {
+        //                 "resource": "https://medium.com/@syofyanzuhad/",
+        //                 "postsPerLine": 1,
+        //                 "limit": 4,
+        //                 "picture": "big",
+        //                 "fields": [
+        //                     "description",
+        //                     "author",
+        //                     "claps",
+        //                     "likes",
+        //                     "publishAt"
+        //                 ],
+        //                 "ratio": "original"
+        //             }
+        //         });
+        //     } else {
+        //         MediumWidget.Init({
+        //             renderTo: '#medium-widget',
+        //             params: {
+        //                 "resource": "https://medium.com/@syofyanzuhad/",
+        //                 "postsPerLine": 2,
+        //                 "limit": 4,
+        //                 "picture": "big",
+        //                 "fields": [
+        //                     "description",
+        //                     "author",
+        //                     "claps",
+        //                     "likes",
+        //                     "publishAt"
+        //                 ],
+        //                 "ratio": "original"
+        //             }
+        //         });
+        //     }
+        // }
+        fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@syofyanzuhad/')
+        .then((res) => res.json())
+        .then((data) => {
+            // Filter for acctual posts. Comments don't have categories, therefore can filter for items with categories bigger than 0
+            const res = data.items //This is an array with the content. No feed, no info about author etc..
+            const posts = res.filter(item => item.categories.length > 0) // That's the main trick* !
+
+            console.log(res)
+            // Functions to create a short text out of whole blog's content
+            function toText(node) {
+                let tag = document.createElement('div')
+                tag.innerHTML = node
+                node = tag.innerText
+                return node
             }
-        }
-        var x = window.matchMedia("(max-width: 450px)")
-        myFunction(x) // Call listener function at run time
-        x.addListener(myFunction) // Attach listener function on state changes
+            function shortenText(text, startingPoint, maxLength) {
+                return text.length > maxLength ?
+                    text.slice(startingPoint, maxLength) :
+                    text
+            }
+
+            // Put things in right spots of markup
+            let output = '';
+            posts.forEach((item) => {
+                output += `
+                    <div class="blog__post">
+                        <a href="${item.link}" class="blog-link" style="text-decoration:none;">
+                        <img src="${item.thumbnail}" class="blog__topImg"></img>
+                        <div class="blog__content" style="color: white">
+                            <div class="blog_preview">
+                                <h2 class="blog__title">${item.title}</h2>
+                                <p class="blog__intro">${'[preview] ...' + shortenText(toText(item.content), 10, 100) + '...'}</p>
+                            </div>
+                            <div class="blog__info">
+                            <span class="blog__date">${shortenText(item.pubDate, 0, 10) + ' | '}</span>
+                            <span class="blog__author">${'by: ' + item.author}</span>
+                            <hr style="background-color:white;">
+                            </div>
+                        </div>
+                        <a/>
+                    </div>`
+            })
+            console.log(output)
+            document.querySelector('#medium-widget').innerHTML = output
+        })
+
+        // var x = window.matchMedia("(max-width: 450px)")
+        // myFunction(x) // Call listener function at run time
+        // x.addListener(myFunction) // Attach listener function on state changes
     } else {
         document.getElementById("mySideBlog").style.width = "0px";
         document.getElementById("main").style.marginLeft = "0%";
     }
+}
 
     //========Script to fetching Medium API manually ===========//
 
-    // fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@syofyanzuhad/')
-    //     .then((res) => res.json())
-    //     .then((data) => {
-    //         // Filter for acctual posts. Comments don't have categories, therefore can filter for items with categories bigger than 0
-    //         const res = data.items //This is an array with the content. No feed, no info about author etc..
-    //         const posts = res.filter(item => item.categories.length > 0) // That's the main trick* !
-
-    //         // Functions to create a short text out of whole blog's content
-    //         function toText(node) {
-    //             let tag = document.createElement('div')
-    //             tag.innerHTML = node
-    //             node = tag.innerText
-    //             return node
-    //         }
-    //         function shortenText(text, startingPoint, maxLength) {
-    //             return text.length > maxLength ?
-    //                 text.slice(startingPoint, maxLength) :
-    //                 text
-    //         }
-
-    //         // Put things in right spots of markup
-    //         let output = '';
-    //         posts.forEach((item) => {
-    //             output += `
-    //                 <li class="blog__post">
-    //                     <a id= href="${item.link}" class="blog-link">
-    //                     <img src="${item.thumbnail}" class="blog__topImg"></img>
-    //                     <div class="blog__content">
-    //                         <div class="blog_preview">
-    //                             <h2 class="blog__title">${shortenText(item.title, 0, 30) + '...'}</h2>
-    //                             <p class="blog__intro">${'...' + shortenText(toText(item.content), 50, 300) + '...'}</p>
-    //                         </div>
-    //                         <hr>
-    //                         <div class="blog__info">
-    //                             <span class="blog__author">${item.author}</span>
-    //                             <span class="blog__date">${shortenText(item.pubDate, 0, 10)}</span>
-    //                         </div>
-    //                     </div>
-    //                     <a/>
-    //                 </li>`
-    //         })
-    //         document.querySelector('.blog__slider').innerHTML = output
-    //     })
-}
 
 // /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
 // function closeNav() {
