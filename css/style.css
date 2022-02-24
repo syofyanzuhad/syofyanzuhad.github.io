@@ -504,8 +504,14 @@ a.img-top {
     filter: grayscale(0);
 }
 
+.row.about {
+    max-height: 85vh;
+    overflow: scroll;
+}
+
 #footerAbout {
-    margin-top: 28vh;
+    position: absolute !important;
+    width: 100% !important;
     bottom: 0;
     width: auto;
     text-align: center;
