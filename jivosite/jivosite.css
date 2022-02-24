@@ -1,0 +1,28 @@
+/* hide the original widget - that there were no two labels on the screen*/
+#jivo_chat_widget{
+	display: none;
+}
+
+/* the default style - for offline messages if no one is online */
+#jivo_custom_widget{
+	position: fixed;
+	left: -3px;
+	top: 30%;
+	width: 35px;
+	z-index: 300000;
+	cursor: pointer;
+	
+	height: 170px;
+	background-image: url(images/jivo_widget_offline.png);
+}
+
+/* when you hover the label should be shifted to the right by 3px */
+#jivo_custom_widget:hover{
+	left:0;
+}
+
+/* if there are operators online - show other label*/
+#jivo_custom_widget.jivo_online{
+	height: 215px;
+	background-image: url(images/jivo_widget_online.png);
+}
