@@ -517,6 +517,10 @@ a.img-top {
     text-align: center;
 }
 
+.blog__post {
+    max-width: 90vw;
+}
+
 footer {
     position: fixed;
     bottom: 0;
