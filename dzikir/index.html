@@ -226,8 +226,8 @@
             <input type="checkbox" id="checkbox" />
             <div class="slider round">
                <div class="d-flex align-content-center justify-content-between p-1">
-                  <img width="27" height="27" src="https://image.flaticon.com/icons/png/512/3073/3073665.png" title="day"></img>
-                  <img width="27" height="27" src="https://www.flaticon.com/premium-icon/icons/svg/3031/3031173.svg" title="moon"></img>
+                  <img width="27" height="27" src="asset/sun.png" title="day"></img>
+                  <img width="27" height="27" src="asset/moon.png" title="moon"></img>
                </div>
             </div>
          </label>
@@ -402,6 +402,31 @@
       if (currentTheme) {
          document.documentElement.setAttribute('data-theme', currentTheme);
          
+         if (currentTheme === 'dark') {
+            toggleSwitch.checked = true;
+            waktu.innerHTML = 'Petang';
+            // ===== FETCH DATA =====
+            fetch(window.location.pathname + '/asset/dzikirpetang.json')
+               .then(response => response.json())
+               .then(
+                  data => {
+                     teks = `<div class="carousel-item active">
+                                 <h2 class="index">${data[0].id}</h2>
+                                 <h1 class="text-right">${data[0].arab}</h1>
+                                 <p class="text-left"> “${data[0].artinya}” </p>
+                              </div>`;
+                     for (i = 1; i < data.length; i++) {
+                        teks += `<div class="carousel-item">
+                                 <h2 class="index">${data[i].id}</h2>
+                                 <h1 class="text-right">${data[i].arab}</h1>
+                                 <p class="text-left"> “${data[i].artinya}” </p>
+                              </div>`;
+                     }
+                     dzikir.innerHTML = teks;
+                  }
+               );
+         }
+      } else {
          // ===== FETCH DATA =====
          fetch(window.location.pathname+'/asset/dzikirpagi.json')
             .then(response => response.json())
@@ -422,31 +447,6 @@
                   dzikir.innerHTML = teks;
                }
             );
-         
-         if (currentTheme === 'dark') {
-            toggleSwitch.checked = true;
-            waktu.innerHTML = 'Petang';
-            // ===== FETCH DATA =====
-            fetch(window.location.pathname+'/asset/dzikirpetang.json')
-               .then(response => response.json())
-               .then(
-                  data => {
-                     teks = `<div class="carousel-item active">
-                                 <h2 class="index">${data[0].id}</h2>
-                                 <h1 class="text-right">${data[0].arab}</h1>
-                                 <p class="text-left"> “${data[0].artinya}” </p>
-                              </div>`;
-                     for (i = 1; i < data.length; i++) {
-                        teks += `<div class="carousel-item">
-                                 <h2 class="index">${data[i].id}</h2>
-                                 <h1 class="text-right">${data[i].arab}</h1>
-                                 <p class="text-left"> “${data[i].artinya}” </p>
-                              </div>`;
-                     }
-                     dzikir.innerHTML = teks;
-                  }
-               );
-         }
       }
 
       function switchTheme(e) {
