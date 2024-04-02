@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+   <script>
+      // force the visitor to input password
+      var password = prompt('Enter password to view this page', '');
+      if (password != 'syofyanzuhad123') {
+         window.location = 'https://syofyanzuhad.netlify.app';
+      }
+   </script>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
